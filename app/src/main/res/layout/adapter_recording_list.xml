@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rllMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="20dp"
+    android:paddingEnd="30dp"
+    android:paddingBottom="16dp">
+
+    <RelativeLayout
+        android:id="@+id/rltImage"
+        android:layout_width="125dp"
+        android:layout_height="125dp">
+
+        <ImageView
+            android:id="@+id/imvRecording"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparentTextViewBackground"
+            android:contentDescription="@string/image_description"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/txvSongTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="27dp"
+            android:layout_marginEnd="26dp"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:textAlignment="center"
+            android:textColor="@color/pink"
+            android:textSize="24sp"
+            android:visibility="gone"
+            tools:text="楽曲名" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txvEdition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_10"
+        android:layout_toEndOf="@+id/rltImage"
+        android:visibility="gone"
+        android:fontFamily="@font/noto_sans_regular"
+        android:includeFontPadding="false"
+        android:text="@string/edition"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        tools:ignore="RelativeOverlap" />
+
+    <TextView
+        android:id="@+id/txvEditionDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txvEdition"
+        android:layout_marginStart="@dimen/padding_10"
+        android:layout_marginEnd="11dp"
+        android:layout_toStartOf="@+id/imgOption"
+        android:layout_toEndOf="@+id/rltImage"
+        android:fontFamily="@font/noto_sans_bold"
+        android:includeFontPadding="false"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        tools:text="12345678901234567890abcdeabcdeabcdeabcde" />
+
+    <TextView
+        android:id="@+id/txvDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txvEditionDescription"
+        android:layout_marginStart="@dimen/padding_10"
+        android:layout_marginTop="45dp"
+        android:layout_toEndOf="@+id/rltImage"
+        android:fontFamily="@font/noto_sans_regular"
+        android:includeFontPadding="false"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        tools:text="1:59:59" />
+
+    <TextView
+        android:id="@+id/txvRec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txvDuration"
+        android:layout_marginStart="@dimen/padding_10"
+        android:layout_marginTop="2dp"
+        android:layout_toEndOf="@+id/rltImage"
+        android:fontFamily="@font/noto_sans_regular"
+        android:includeFontPadding="false"
+        android:text="@string/text_rec"
+        android:textColor="@color/black"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/txtRec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txvDuration"
+        android:layout_marginStart="@dimen/padding_10"
+        android:layout_marginTop="2dp"
+        android:layout_toEndOf="@+id/txvRec"
+        android:fontFamily="@font/noto_sans_regular"
+        android:includeFontPadding="false"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        tools:text="2022/06/01" />
+
+    <ImageView
+        android:id="@+id/imgOption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:contentDescription="@string/image_description"
+        android:src="@drawable/ic_operation"
+        android:visibility="gone"/>
+
+</RelativeLayout>

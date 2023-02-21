@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swpPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/scvBody"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:id="@+id/lnlView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="218dp">
+
+                        <ImageView
+                            android:id="@+id/imvTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:contentDescription="@string/image_description"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/ic_thumbnail" />
+
+                        <TextView
+                            android:id="@+id/txtTitleBand"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="18dp"
+                            android:layout_marginTop="18dp"
+                            android:layout_marginEnd="18dp"
+                            android:layout_marginBottom="18dp"
+                            android:fontFamily="@font/noto_sans_regular"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:textColor="@color/black_overlay"
+                            android:textSize="14sp"
+                            tools:text="りゅーとぴあ 新潟市民芸術文化会館コンサートホール" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/txtEngTitleMain"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="19dp"
+                        android:layout_marginEnd="20dp"
+                        android:fontFamily="@font/noto_sans_regular"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        tools:text="English Title" />
+
+                    <TextView
+                        android:id="@+id/txtJapTitleMain"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="20dp"
+                        android:fontFamily="@font/noto_sans_regular"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        tools:text="日本語表記の楽曲名" />
+
+                    <TextView
+                        android:id="@+id/txvBuy"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="56dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginEnd="56dp"
+                        android:background="@drawable/conductor_bg"
+                        android:fontFamily="@font/noto_sans_regular"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="6dp"
+                        android:text="@string/buy"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:visibility="visible" />
+
+                    <include
+                        android:id="@+id/incSubscribedOption"
+                        layout="@layout/layout_subscribed_options" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginEnd="14dp"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                            android:id="@+id/imgFavourite"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginEnd="7dp"
+                            android:contentDescription="@string/image_description"
+                            android:src="@drawable/ic_favourite_session" />
+
+                        <ImageView
+                            android:id="@+id/imgDownload"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginStart="7dp"
+                            android:contentDescription="@string/image_description"
+                            android:src="@drawable/ic_download"
+                            app:tint="@color/session_layout_heading_color" />
+
+                        <ImageView
+                            android:id="@+id/imgShare"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginStart="7dp"
+                            android:contentDescription="@string/image_description"
+                            android:src="@drawable/ic_share"
+                            android:visibility="gone"
+                            app:tint="@color/session_layout_heading_color" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txvDownloading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="@font/noto_sans_medium"
+                        android:text="@string/text_downloading"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:visibility="gone" />
+
+                    <com.google.android.material.progressindicator.LinearProgressIndicator
+                        android:id="@+id/progressBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginEnd="14dp"
+                        app:indicatorColor="?attr/colorAccent"
+                        app:trackColor="#EEEEEE" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="14dp"
+                        android:background="@color/light_grey" />
+
+                    <TextView
+                        android:id="@+id/band"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="33dp"
+                        android:layout_marginEnd="33dp"
+                        android:fontFamily="@font/noto_sans_regular"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        tools:text="りゅーとぴあ 新潟市民芸術文化会館コンサートホール" />
+
+                    <TextView
+                        android:id="@+id/txvDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="16dp"
+                        android:fontFamily="@font/noto_sans_regular"
+                        android:textColor="@color/black"
+                        tools:text="コンサートホール、劇場、能楽堂の3つのホールなどを備えるりゅーとぴあ。まあるく、ゆったりとした空間は、館内のあらゆる場所につながって人々の交流を支えています。芸術文化を発信するだけでなく、一期一会を創造する拠点ともなっています。
+舞台を客席が取り込み、 側面や後方からも舞台を望むことのできるアリーナ形式。波紋が増幅して重なり合うような客席と天井は、音を包み込みながら豊かに広げる効果を持つと同時に、客席間の親密で祝祭的なイメージの演出となっており、音響的にも、視覚的にもステージとの一体感・臨場感を楽しめます。音量感・残響感・広がり感の3つの要素をすべて満たし、交響楽に最も適したホールです。" />
+
+                    <ImageView
+                        android:id="@+id/imvDivider"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="22dp"
+                        android:contentDescription="@string/image_description"
+                        android:src="@drawable/ic_divider" />
+
+                    <TextView
+                        android:id="@+id/txtEngTitleSub"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="22dp"
+                        android:layout_marginEnd="20dp"
+                        android:fontFamily="@font/noto_sans_regular"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        tools:text="English Title" />
+
+                    <TextView
+                        android:id="@+id/txtJapTitleSub"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="20dp"
+                        android:fontFamily="@font/noto_sans_regular"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        tools:text="日本語表記の楽曲名" />
+
+                    <RelativeLayout
+                        android:id="@+id/rltComposer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txtComposer"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/noto_sans_regular"
+                            android:text="@string/composer"
+                            android:textColor="@color/black"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/txvComposerEng"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/txtComposer"
+                            android:fontFamily="@font/noto_sans_regular"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/txvComposerJpn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txvComposerEng"
+                            android:layout_toEndOf="@id/txtComposer"
+                            android:fontFamily="@font/noto_sans_regular"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnlOrchestraName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txtOrchestraName"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/noto_sans_regular"
+                            android:text="@string/orchestra_name"
+                            android:textColor="@color/black"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/txvOrchestraNameEng"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/noto_sans_regular"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rltConductor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txtConductorEng"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/noto_sans_regular"
+                            android:text="@string/trans_conductor"
+                            android:textColor="@color/black"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/txvConductorEng"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/txtConductorEng"
+                            android:fontFamily="@font/noto_sans_regular"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/txvConductorJpn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/txtConductorEng"
+                            android:layout_toEndOf="@id/txtConductorEng"
+                            android:fontFamily="@font/noto_sans_regular"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnlOrganization"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/noto_sans_regular"
+                            android:text="@string/organization"
+                            android:textColor="@color/black"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/txvOrganization"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/noto_sans_regular"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rltVenueName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/txtVenueName"
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/noto_sans_regular"
+                            android:text="@string/venue_name"
+                            android:textColor="@color/black"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/txvVenueNameEng"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/txtVenueName"
+                            android:fontFamily="@font/noto_sans_regular"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/txvVenueNameJpn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/txvVenueNameEng"
+                            android:layout_toEndOf="@id/txtVenueName"
+                            android:fontFamily="@font/noto_sans_regular"
+                            android:textColor="@color/black"
+                            android:textSize="12sp"
+                            android:visibility="gone" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnlLap"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/noto_sans_regular"
+                            android:text="@string/lap"
+                            android:textColor="@color/black"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/txvLap"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/noto_sans_regular"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnlData"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/noto_sans_regular"
+                            android:text="@string/release_date"
+                            android:textColor="@color/black"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/txvDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/noto_sans_regular"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lnlLicence"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/noto_sans_regular"
+                            android:text="@string/licence_number"
+                            android:textColor="@color/black"
+                            android:textSize="11sp" />
+
+                        <TextView
+                            android:id="@+id/txvLicence"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/noto_sans_regular"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/txvBusinessType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="13dp"
+                        android:layout_marginEnd="30dp"
+                        android:background="@drawable/conductor_bg_border_grey"
+                        android:fontFamily="@font/noto_sans_regular"
+                        android:includeFontPadding="false"
+                        android:paddingStart="12dp"
+                        android:paddingTop="2dp"
+                        android:paddingEnd="12dp"
+                        android:paddingBottom="3dp"
+                        android:text="Business type Client Client Client ClientClientClientClientClientClient"
+                        android:textColor="@color/light_grey_text"
+                        android:textSize="14sp" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginBottom="24dp"
+                        android:weightSum="3">
+
+                        <TextView
+                            android:id="@+id/txtConductor"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="8dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/conductor_bg"
+                            android:fontFamily="@font/helvetica_neue_bold_italic"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:paddingStart="2dp"
+                            android:paddingTop="6dp"
+                            android:paddingEnd="2dp"
+                            android:paddingBottom="6dp"
+                            android:text="@string/conductor"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtSession"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/conductor_bg"
+                            android:fontFamily="@font/helvetica_neue_bold_italic"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:paddingStart="2dp"
+                            android:paddingTop="6dp"
+                            android:paddingEnd="2dp"
+                            android:paddingBottom="6dp"
+                            android:text="@string/session"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtPlayer"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/conductor_bg"
+                            android:fontFamily="@font/helvetica_neue_bold_italic"
+                            android:gravity="center"
+                            android:includeFontPadding="false"
+                            android:paddingStart="2dp"
+                            android:paddingTop="6dp"
+                            android:paddingEnd="2dp"
+                            android:paddingBottom="6dp"
+                            android:text="@string/player"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+            <include
+                android:id="@+id/png"
+                layout="@layout/progressbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <FrameLayout
+        android:id="@+id/frtPlayer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    <string name="app_name">Brasso</string>-->
+
+    <string name="empty_email">メールアドレスは必須です</string>
+    <string name="empty_music_instrument">演奏楽器は必須です</string>
+    <string name="empty_otp">ワンタイムパスワードは必須です</string>
+    <string name="email_invalid">メールアドレスが違います</string>
+    <string name="empty_password">パスワードは必須です</string>
+    <string name="ok">OK</string>
+    <string name="session_expired">セッションの有効期限が切れました</string>
+
+    <string name="loading">ロード中</string>
+    <string name="login_with_line">LINEで続ける</string>
+    <string name="login_with_twitter">Twitterで続ける</string>
+    <string name="login_with_facebook">Facebookで続ける</string>
+    <string name="login_with_instagram">Instagramで続ける</string>
+    <string name="register_by_email">メールで登録</string>
+    <string name="register">アカウントを登録する</string>
+    <string name="self_introduction">自己紹介</string>
+    <string name="male">男性</string>
+    <string name="female">女性</string>
+    <string name="other">その他</string>
+    <string name="gender">性別</string>
+    <string name="first_name">ファーストネーム</string>
+    <string name="last_name">苗字</string>
+    <string name="profile_name">プロファイル名</string>
+    <string name="email">Eメール :</string>
+    <string name="email_address">メールアドレス</string>
+    <string name="password">パスワード</string>
+    <string name="image_description">画像</string>
+    <string name="login_user">ログインユーザー</string>
+    <string name="send">送信</string>
+    <string name="register_with_email">メールアドレスで登録する</string>
+    <string name="register_with_an_sns_account">SNSアカウントで登録する</string>
+    <string name="don_t_register_now">今は登録しない</string>
+    <string name="cancel"><u>キャンセル</u></string>
+    <string name="cancel_not_underlined">キャンセル</string>
+    <string name="please_enter_your_email">メールアドレスを入力してください</string>
+    <string name="to_register">登録する</string>
+    <string name="please_enter_your_password">パスワードを入力してください</string>
+    <string name="please_enter_your_one_time_password">ワンタイムパスワードを入力してください</string>
+    <string name="one_time_password">ワンタイムパスワード</string>
+    <string name="already_have_a_code"><u>すでにコードがあります</u></string>
+    <string name="empty_username">ユーザー名は必須です</string>
+    <string name="home">ホーム</string>
+    <string name="search">検索</string>
+    <string name="song_list">楽曲一覧</string>
+    <string name="favorites">お気に入り</string>
+    <string name="my_page">マイページ</string>
+
+    <string name="choose_an_icon">アイコンを選ぶ</string>
+    <string name="enter_your_name">氏名を入力してください</string>
+    <string name="full_name">氏名</string>
+    <string name="this_information_will_not_be_published">この情報は公開されません</string>
+    <string name="required">※必須</string>
+    <string name="save">保存する</string>
+    <string name="nickname_with_requirement">ニックネーム（全角12文字以内）</string>
+    <string name="please_enter_your_nick_name">ニックネームを入力してください</string>
+    <string name="please_enter_instrument_name">楽器名を入力してください</string>
+    <string name="musical_instrument">演奏楽器</string>
+    <string name="post_code">郵便番号</string>
+    <string name="prefectures_will_be_released">都道府県が公開されます</string>
+    <string name="please_enter_your_zip_code">郵便番号を入力してください</string>
+    <string name="age">生年月日</string>
+    <string name="profession">職業</string>
+    <string name="_1997">1997</string>
+    <string name="_12">12</string>
+    <string name="student">学生</string>
+    <string name="_15">15</string>
+    <string name="send_the_one_time_password_again">ワンタイムパスワードをもう一度送信する</string>
+    <string name="complete_input">入力を完了する</string>
+    <string name="register_password">パスワードを登録</string>
+    <string name="password_requirement">英字大文字・小文字、数字、記号を1文字以上使用 (!\"\"\#\$\%\&amp;\'()=~)、8文字以上15文字以内にしてください。</string>
+    <string name="select_gender">性別は必須です</string>
+    <string name="empty_dob">誕生日を入力してください</string>
+    <string name="profession_empty">職業は必須です</string>
+    <string name="postal_code_empty">郵便番号は必須です</string>
+    <string name="name_empty">氏名は必須です</string>
+    <string name="login_success">ログインしました</string>
+    <string name="to_the_next">次へ</string>
+    <string name="return_back">戻る</string>
+    <string name="how_to_use_this_app">このアプリの使い方</string>
+    <string name="i_will_explain_it">説明がはいります。説明がはいります。説明がはいります。説明がはいります。説明がはいります。説明がはいります。説明がはいります。説明がはいります。説明がはいります。</string>
+    <string name="completion">完了</string>
+    <string name="login">ログイン</string>
+    <string name="login_title">ログインする</string>
+
+    <string name="reset_password">パスワードがわからないとき・忘れたときは</string>
+
+    <string name="text_choose_from_library">ギャラリー</string>
+    <string name="text_take_photo">写真</string>
+    <string name="text_add_photo">新しい写真を追加</string>
+    <string name="profile_image_not_selected">プロフィール画像を選択してください</string>
+    <string name="error_no_internet_connection">インターネット接続がありません。接続を確認してください</string>
+    <string name="nick_name_empty">ニックネームは必須です</string>
+
+    <string name="profile">プロフィール</string>
+    <string name="registration_date">登録日</string>
+    <string name="change_photo">写真を変更する</string>
+    <string name="select_picture">写真を選択してください</string>
+
+    <string name="text_occupation">職業</string>
+
+    <string name="change_password">パスワードの変更</string>
+
+    <string name="list_of_purchased_contents">購入済みコンテンツ一覧</string>
+    <string name="recording_list">録音一覧</string>
+    <string name="billing_history">課金履歴</string>
+    <string name="logout">ログアウト</string>
+    <string name="withdrawal">退会</string>
+
+    <string name="text_crop">切り抜き</string>
+
+    <string name="setting">設定</string>
+    <string name="streaming_download">ストリーミング再生/ダウンロード</string>
+    <string name="recording">録音</string>
+    <string name="data_management">データ管理</string>
+    <string name="push_notification">プッシュ通知</string>
+    <string name="image_quality_adjustment">低速接続時の画質調整</string>
+    <string name="app_version_information">アプリのバージョン情報</string>
+    <string name="other_page">その他</string>
+    <string name="for_first_time_users">初めての方へ（チュートリアル）</string>
+    <string name="about_this_app">このアプリについて</string>
+    <string name="faq_Inquiries">FAQ・お問い合わせ</string>
+    <string name="opinions_and_requests">ご意見・ご要望</string>
+    <string name="brasso_official_website">BRASSO 公式ウェブサイト</string>
+    <string name="recommended_content">おすすめコンテンツ</string>
+    <string name="see_more">もっと見る</string>
+    <string name="ver_1_00_00">Ver. 1.00.00</string>
+
+    <string name="conductor">Conductor</string>
+    <string name="session">Session</string>
+    <string name="hall_sound">Hall Sound</string>
+    <string name="player">Player</string>
+    <string name="about">○○○○○○について</string>
+
+    <string name="tutorial">チュートリアル</string>
+    <string name="old_password">古いパスワード</string>
+    <string name="new_password">新しいパスワード</string>
+    <string name="new_password_confirmation_input">新しいパスワード（確認入力）</string>
+    <string name="change">変更する</string>
+    <string name="text_error_while_compressing_image">画像の圧縮中にエラーが発生しました</string>
+
+    <string name="text_sure_want_to_logout">ログアウトしますか？</string>
+    <string name="please_selected_profile_image_of_size_less_then_or_equal_to">以下の画像ファイルを選択してください</string>
+    <string name="forgot_password">パスワード忘れ</string>
+    <string name="to_reset">リセット</string>
+    <string name="password_and_confirm_password_must_be_same">確認用パスワードが一致していませ</string>
+
+    <string name="edit">編集</string>
+    <string name="your_profile">あなたのプロフィール</string>
+    <string name="nickname">ニックネーム（全角12文字以内)</string>
+    <string name="part">MinusOne :</string>
+    <string name="area_prefecture">エリア（都道府県）</string>
+    <string name="text_text">テキストテキスト</string>
+    <string name="tenor_Saxophone">テナーサックス</string>
+    <string name="tokyo">東京都</string>
+    <string name="_17_years_old">17 歳</string>
+    <string name="self_intro_text">自己紹介テキストがはいります。自己紹介テキストがはいります。自己紹介テキストがはいります。自己紹介テキストがはいります。自己紹介テキストがはいります。自己紹介テキストがはいります。</string>
+
+    <string name="text_cart">カート</string>
+
+    <string name="update_profile">プロフィールの更新</string>
+    <string name="profile_update_success">プロフィールが更新されました</string>
+
+    <string name="organization_chart">編成図をみる</string>
+    <string name="composer">作曲者</string>
+    <string name="orchestra_name">楽団名</string>
+    <string name="organization">編成</string>
+    <string name="venue_name">会場名</string>
+    <string name="lap">再生時間</string>
+    <string name="release_date">リリース日</string>
+    <string name="licence_number">ライセンス許諾番号</string>
+    <string name="new_password_empty">新しいパスワードは必須です</string>
+    <string name="confirm_password_empty">確認用パスワードは必須です</string>
+    <string name="old_password_empty">古いパスワードは必須です</string>
+
+    <string name="no_data">データがありません</string>
+
+    <string name="ver">Ver. </string>
+
+    <string name="txt_no_application_found">利用可能なアプリケーションがありません。Webブラウザをインストールしてください。</string>
+
+    <string name="login_failed">ログインに失敗しました</string>
+
+    <string name="businessType">R2 事業再構築</string>
+
+    <string name="text_notification">News</string>
+
+    <string name="buy">購入する</string>
+    <string name="center_seat">"センター席"</string>
+    <string name="right_seat">右フロア席</string>
+    <string name="left_seat">左フロア席</string>
+    <string name="back_seat">バックフロア席</string>
+    <string name="question_to_buy">を購入しますか？</string>
+    <string name="add_to_cart">カートに入れる</string>
+    <string name="text_error_in_twitter_login">Twitterでログインできませんでした</string>
+    <string name="text_search_hint">楽曲名、作曲者名、またはキーワード</string>
+    <string name="birthday">誕生日 :</string>
+    <string name="blood_type">血液型 :</string>
+    <string name="birth_place">出身地 :</string>
+    <string name="instrument_used">使用楽器 :</string>
+    <string name="message_from_player">◇奏者からのメッセージ◇</string>
+    <string name="detailed_profile">▶︎詳しいプロフィールはコチラ</string>
+    <string name="twitter">twiter</string>
+    <string name="instagram">instagram</string>
+    <string name="facebook">facebook</string>
+    <string name="youtube">youtube</string>
+    <string name="performance_music">演奏楽曲</string>
+    <string name="text_premium">PREMIUM</string>
+    <string name="please_login">続けるにはログインしてください</string>
+
+    <string name="date">Date</string>
+    <string name="seats">〇〇席</string>
+
+    <string name="session_layout_dialog">タップして楽器を選択してください</string>
+
+    <string name="session_layout_heading_back">一緒に演奏</string>
+    <string name="session_layout_heading_second">曲名</string>
+    <string name="session_layout_close_text">データ購入済</string>
+    <string name="session_layout_dialog_first">タップして</string>
+    <string name="session_layout_dialog_second">楽器を選択してください</string>
+    <string name="flute">Flute</string>
+    <string name="violin">Violin</string>
+    <string name="bass">Bass</string>
+    <string name="piano">Piano</string>
+    <string name="drum">Drum</string>
+    <string name="clarinet">Clarinet</string>
+    <string name="session_id">session_id</string>
+
+    <string name="recording_editing">録音／編集データ　一覧</string>
+    <string name="edition">edition</string>
+    <string name="original_recording">original recording</string>
+
+    <string name="billing_history_text">課金履歴</string>
+    <string name="date_of_purchase">購入年月日: </string>
+
+    <string name="_99_999">0</string>
+    <string name="purchase_cancellation">購入キャンセル</string>
+    <string name="to_buy">購入する</string>
+    <string name="cart">カート</string>
+
+    <string name="rec">録音する :</string>
+    <string name="text_rec">REC</string>
+    <string name="txt_lap">再生時間 :</string>
+    <string name="text_lap">Lap:</string>
+    <string name="delete_cart">このアイテムをカートから削除しますか？</string>
+    <string name="purchase_item_empty">購入するアイテムを選択してください</string>
+    <string name="yes">はい</string>
+    <string name="zero">0</string>
+    <string name="delete">削除する</string>
+    <string name="already_added_in_cart">すでにカートに入っています</string>
+    <string name="are_you_sure_you_want_to_buy">選択したアイテムを購入しますか？</string>
+    <string name="streaming_quality">ストリーミングの質</string>
+    <string name="during">中</string>
+    <string name="playback_on_wifi">ストリーミング再生はWi-Fi接続時のみ</string>
+    <string name="notify_on_data">モバイルデータを使用するときに通知する</string>
+    <string name="download_quality">ダウンロードの質</string>
+    <string name="high">高</string>
+    <string name="download_on_wifi">ダウンロードはWi-Fi接続時のみ</string>
+    <string name="automatic_download">自動ダウンロード</string>
+    <string name="valid">有効</string>
+    <string name="not_yet">今はまだしない</string>
+    <string name="file_format">ファイルフォーマット</string>
+    <string name="encoding_quality">エンコード品質</string>
+    <string name="sampling_rate">サンプリングレート</string>
+    <string name="bit_rate">ビットレート</string>
+    <string name="channel">チャンネル</string>
+    <string name="cache_data">キャッシュデータ</string>
+    <string name="capacity_used">使用容量</string>
+    <string name="temporary_storage_message">アプリのパフォーマンスを向上させるために、端末上に楽曲や画像などのキャッシュデータを一時的に保存しています。</string>
+    <string name="delete_cache_data">キャッシュデータを削除</string>
+    <string name="download_songs">ダウンロード楽曲</string>
+    <string name="download_complete">ダウンロード済み</string>
+    <string name="free_space">空き容量</string>
+    <string name="download_data">ダウンロードデータ</string>
+    <string name="delete_download_data">ダウンロードデータを削除</string>
+    <string name="_150_50_MB">150.50 MB</string>
+    <string name="_10_songs">10 曲</string>
+    <string name="_51_24_MB">51.24 MB</string>
+    <string name="_2_81_GB">2.81 GB</string>
+    <string name="m4a">M4A</string>
+    <string name="wav">WAV</string>
+    <string name="mp3">MP3</string>
+    <string name="medium">中</string>
+    <string name="low">低</string>
+    <string name="_11025hz">11,025Hz</string>
+    <string name="_22050hz">22,050Hz</string>
+    <string name="_44100hz">44,100Hz</string>
+    <string name="_48000hz">48,000Hz</string>
+    <string name="_48kbps">48kbps</string>
+    <string name="_64kbps">64kbps</string>
+    <string name="_128kbps">128kbps</string>
+    <string name="_192kbps">192kbps</string>
+    <string name="_256kbps">256kbps</string>
+    <string name="_320kbps">320kbps</string>
+    <string name="mono">モノ</string>
+    <string name="stereo">ステレオ</string>
+    <string name="imgProfile">PROFILE</string>
+    <string name="imgHome">Home</string>
+    <string name="imgSearch">Search</string>
+    <string name="imgListOfSongs">Playlist</string>
+    <string name="imgFavourite">Favorite</string>
+    <string name="imgMyPage">My Page</string>
+    <string name="purchase">購入手続き</string>
+    <string name="record">録音する</string>
+    <string name="c">C</string>
+    <string name="b">B</string>
+    <string name="l">L</string>
+    <string name="r">R</string>
+    <string name="logout_success">ログアウトしました</string>
+    <string name="whatIsPremium"><u>PREMIUM映像とは？</u></string>
+    <string name="playVideo">動画を再生する</string>
+    <string name="english_title">English Title</string>
+    <string name="songNameJap">日本語表記の楽曲名</string>
+    <string name="instrumentName">B♭トランペット</string>
+    <string name="playerName">奏者名</string>
+    <string name="organizationChart">編成図をみる</string>
+    <string name="discountOffer">リリース記念！表示価格の20％０FF</string>
+    <string name="explanationPremiumVideo">特典映像の詳細説明がはいります。特典映像の詳細説明がはいります。特典映像の詳細説明がはいります。特典映像の詳細説明がはいります。特典映像の詳細説明がはいります。特典映像の詳細説明がはいります。\n特典映像の詳細説明がはいります。特典映像の詳細説明がはいります。特典映像の詳細説明がはいります。特典映像の詳細説明がはいります。特典映像の詳細説明がはいります。特典映像の詳細説明がはいります\n特典映像の詳細説明がはいります。特典映像の詳細説明がはいります。特典映像の詳細説明がはいります。特典映像の詳細説明がはいります。特典映像の詳細説明がはいります。特典映像の詳細説明がはいります。</string>
+    <string name="afterBought">PREMIUM映像購入後に表示されます</string>
+    <string name="buyPart">MinusOne映像を購入</string>
+    <string name="checkPremiumVideo">奏者を堪能！PREMIUM映像はこちら</string>
+    <string name="buyMultiPart">他のMinusOneを購入する</string>
+    <string name="buyMultiPremium">複数セットをまとめて購入</string>
+    <string name="purchasePartAndPremium">MinusOne・PREMIUM映像 セット購入</string>
+    <string name="premiumAppendix">購入特典付録 映像はこちら</string>
+    <string name="premiumCannotBePurchasedSeparately">※PREMIUM映像単体での購入はできません</string>
+    <string name="returnToPart">前のページに戻る</string>
+    <string name="songs">曲</string>
+    <string name="wePurchasedInBulk">をまとめて購入しました</string>
+    <string name="IPutItIn">入れました</string>
+    <string name="moveToCart">カートに移動する</string>
+    <string name="returnTo">戻る</string>
+    <string name="doYouWantToBuy">購入しますか？</string>
+    <string name="recordingTitle">original recording/\nゲンバンヒョウキ</string>
+    <string name="partHarp">MinusOne【ハープ】</string>
+    <string name="iBought">を購入しました</string>
+    <string name="buyHarp">MinusOne【ハープ】\n¥200</string>
+    <string name="wouldYouLikeToBuy">を購入しますか？</string>
+    <string name="wasAddedToTheCart">をカートに入れました</string>
+    <string name="wantToStartRecording">録音を開始しますか？</string>
+    <string name="descGoes">録音された音は、今座っている位置ではなく、指揮者の位置で聴いた音として保存されます。</string>
+    <string name="mixSetting">マイクの設定</string>
+    <string name="recordStartCount">録音開始カウント</string>
+    <string name="three">3</string>
+    <string name="partAlreadyBought">このMinusOneは購入済</string>
+    <string name="buyPremiumFootage">PREMIUM映像を購入する</string>
+    <string name="trans_conductor">指揮者</string>
+    <string name="game_view_content_description">Game view</string>
+
+    <string name="text_no_video_file">ビデオファイルが空です。</string>
+
+    <string name="player_image">奏者画像</string>
+    <string name="harp">ハープ</string>
+    <string name="player_name">奏者名</string>
+    <string name="here_is_the_introductory_text_here_is_the_introductory_text">ここには紹介文が入ります。ここには紹介文が入ります。</string>
+    <string name="text_buy">購入</string>
+    <string name="text_select_one_instrument">カートに追加するのは1つ以上のMinusOneを選択してください</string>
+    <string name="text_buy_multi_part">まとめて購入</string>
+    <string name="add_to_cart_multipart">まとめてカートに入れる</string>
+    <string name="empty_video">No video found</string>
+    <string name="wouldYouLikeToBuyPremiumSet">PREMIUM映像セットを購入しますか？</string>
+    <string name="wouldYouLikeToBuyPremiumFootage">PREMIUM映像を購入しますか？</string>
+    <string name="checkPremiumAppendix">PREMIUM付録映像を確認する</string>
+    <string name="cannotBuyPremium">※PREMIUM映像単体での購入はできません</string>
+    <string name="buyThisPart">このMinusOneを購入する</string>
+
+    <string name="textPremium">PREMIUM映像を購入</string>
+    <string name="toBuy">を購入する</string>
+
+    <string name="zeroYen">0</string>
+    <string name="playSampleVideo">サンプル動画を再生する</string>
+    <string name="organizationChartUnderLined"><u>編成図をみる</u></string>
+    <string name="buyMultiPartSet">をセット購入しますか？</string>
+    <string name="premiumVideo">Premium映像</string>
+    <string name="premiumSet">Premiumセット</string>
+    <string name="text_record">録音する</string>
+    <string name="dateOfPurchase">購入年月日 :</string>
+    <string name="year">year</string>
+    <string name="month">month</string>
+    <string name="imgPart">MinusOne</string>
+    <string name="text_play_video">動画を再生する</string>
+    <string name="retake">撮り直しする</string>
+    <string name="confirm">確認する</string>
+    <string name="suspend">中断する</string>
+    <string name="date_of_birth">生年月日</string>
+    <string name="want_to_unsubscribe">退会しますか？</string>
+    <string name="withdraw">退会する</string>
+    <string name="withdraw_message">退会されると\n購入・編集済みコンテンツの\n復元ができなくります</string>
+    <string name="withdraw_confirm">それでも退会しますか？</string>
+    <string name="withdrawn">退会しました</string>
+    <string name="textPremiumVideo">PREMIUM映像</string>
+    <string name="textSetBought">をセット購入しました</string>
+
+    <string name="text_no_audio_file">オーディオファイルが空です。</string>
+    <string name="text_mic_permission_denied">このアプリケーションはマイクへのアクセス許可が必要です。マイクへのアクセスを許可しますか？</string>
+    <string name="text_file_is_downloading">ダウンロード中です</string>
+    <string name="confirmBuyThisPart">このMinusOneを購入しますか？</string>
+    <string name="confirmBuyThisPremium">PREMIUM映像を購入しますか？</string>
+    <string name="purchased">購入済</string>
+    <string name="in_a_cart">をまとめてカートに</string>
+
+    <string name="delete_image">画像を削除</string>
+    <string name="text_item_already_owned">有料コンテンツは既に購入済です</string>
+    <string name="text_subscription_purchased_canceled">有料コンテンツの購入をキャンセルしました</string>
+    <string name="text_product_not_found">有料コンテンツが見つかりません</string>
+    <string name="part_song">MinusOne曲:</string>
+    <string name="noInstrument">この演奏には楽器がありません</string>
+    <string name="removeImage">画像を削除しますか？</string>
+    <string name="buyPremium">プレミア</string>
+    <string name="manufacturer">使用楽器 :</string>
+    <string name="text_select_only_one_instrument">購入するには1つ以上のMinusOneを選択してください</string>
+    <string name="appendixDetailExplanation">特典映像の詳細説明がはいります。特典映像の詳細説明がはいります。</string>
+    <string name="faq">FAQ（よくあるご質問）・お問い合わせ</string>
+    <string name="frequently_asked_questions">よくあるご質問をまとめております。各種ボタンよりご確認くださいませ。</string>
+    <string name="click_here_for_frequently_asked_questions">よくあるご質問はコチラ</string>
+    <string name="contact_us_here">お問い合わせはコチラ</string>
+    <string name="text_wifi_download_only">Wi-Fi接続時のみダウンロードが可能です</string>
+    <string name="text_cellular_download_warning">モバイルデータ通信を使ってダウンロードを継続しますか？</string>
+    <string name="brief_overview">簡単な概要</string>
+    <string name="contains_introduction">演奏する人も、聴く人も。吹奏楽の楽しみ方が180°変わるVR アプリ Brasso。
+        \n\nまるで、その場にいるかの様な「立体音響（スペシャルオーディオ）」と「VR 映像」を楽しむなら、＜Conductor（コンダクター）＞か、＜Session（セッション）＞で。Conductor は、指揮者になった気分が…Session では、奏者になった気分が存分に味わえます。また、VRゴーグルを装着すれば、更なる没入感が得られ、まるでステージの上に立っているかの様な体験ができます。
+        \n\n本格的なホールの音を楽しむなら、＜Hall Sound＞。いろんなホールの音*1 が楽しめるだけでなく、聞いた事が無かった場所の音が聞くことができ、様々な場所で演奏を楽しむ事ができます。（映像はありません）*1 初期段階では1 会場・4 箇所での提供になります。
+        \n\nあなた自身が合奏に参加して、演奏を楽しむなら＜Session＞。一緒のステージに立っている疑似体験ができるほか、あなた自身の演奏で、足りない音を埋めて、楽曲を完成させる事ができます。また、録音機能*2 を使えば、あなたが合奏に参加した楽曲が完成します。*2 今後実装予定
+        \n\n＜Player＞では、演奏に参加していただいたプロ奏者全員のプロフィールを閲覧することができます。
+        \n\nもっと詳しく知りたい方は、Brasso のホームページ（https://brasso.jp/）をご覧ください。</string>
+    <string name="review_rating">レビュー評価</string>
+    <string name="terms_of_services">利用規約</string>
+    <string name="privacy_policy">プライバシーポリシー</string>
+    <string name="notation_based_on_the_act">特定商取引法に基づく表記</string>
+    <string name="software_license">ソフトウェアライセンス</string>
+    <string name="song_license">楽曲ライセンス</string>
+    <string name="clear_cache_confirmation">すべてのキャッシュをクリアしますか？</string>
+    <string name="delete_download_confirmation">ダウンロードしたすべてデータをクリアしますか？</string>
+    <string name="comment_request_query">ご意見・ご要望は、大変お手数ですが下記よりご連絡くださいませ。</string>
+    <string name="opinions_and_request_submission">ご意見・ご要望はコチラ</string>
+    <string name="text_wifi_stream_only">You can stream only from Wi-Fi.</string>
+    <string name="text_cellular_stream_warning">モバイルデータ通信を使ってビデオをストリーミング再生しますか？</string>
+    <string name="pause">Pause</string>
+    <string name="points">ポイント</string>
+    <string name="are_you_sure_you_want_to_buy_this_point">このポイントパッケージを購入しますか？</string>
+    <string name="service">サービス</string>
+    <string name="total_points">ポイント合計</string>
+    <string name="_10_000">0</string>
+    <string name="paid_points">うち有償ポイント</string>
+    <string name="limited_time_points">うち期間限定ポイント</string>
+    <string name="until">まで</string>
+    <string name="point_expiry_date">ポイント有効期限</string>
+    <string name="year_text">年</string>
+    <string name="month_text">月</string>
+    <string name="day_text">日</string>
+    <string name="pointBoughtSuccess">購入しました</string>
+    <string name="sort">sort</string>
+    <string name="filter">Filter</string>
+    <string name="musicTitle">Music Title</string>
+    <string name="duration">Duration</string>
+    <string name="venue_title">Venue Title</string>
+    <string name="part_multi_part">複数MinusOneをまとめて購入できます</string>
+    <string name="premium_multi_part">複数セットをまとめて購入できます</string>
+    <string name="cannotBuy">購入不可</string>
+    <string name="textSession">セッション</string>
+    <string name="textSessionPremium">PREMIUM映像</string>
+    <string name="textConductor">コンダクター</string>
+    <string name="textHallSound">サウンド</string>
+    <string name="textPoints">Point</string>
+    <string name="P">P</string>
+    <string name="skip">Skip</string>
+    <string name="to_play_part_download">動画を購入しました。フル機能を有効にするには動画を再ダウンロードしてください。</string>
+    <string name="terms_and_conditions"><a href="https://brasso.jp/terms">利用規約 </a> : 利用規約に同意する</string>
+    <string name="all_part_purchased">このMinusOneは購入済です</string>
+    <string name="all_multi_part_purchase">このセットは購入済です</string>
+    <string name="please_check_term_and_condition">続けるにはチェックボッスをチェックしてください</string>
+    <string name="no_parts_to_add_to_cart">カートに追加可能なMinusOneはありません</string>
+    <string name="no_combo_to_add_to_cart">カートに追加可能なセットはありません</string>
+    <string name="point_purchase_history">ポイント購入履歴</string>
+
+    <string name="msg_downloading">楽曲をダウンロードしています。</string>
+
+    <string name="text_conductor_display">最高の特等席で、プロの気迫を感じる！</string>
+    <string name="text_Session_display">プロの奏者と夢のセッションを楽しむ！</string>
+    <string name="text_hall_sound_display">客席のいろいろな場所から楽しむ！</string>
+    <string name="part_notice">こちらのVR動画は、入れ替わり体験を目的としている為 画角が制限されております。</string>
+    <string name="premiumNotice">PREMIUM映像は、プロのお手本動画になる為、 MinusOne映像購入者限定のコンテンツになります。</string>
+    <string name="minus_one">MinusOne</string>
+    <string name="sign_up_to_login">アカウントをお待ちの方はこちら</string>
+    <string name="text_downloading">Downloading...</string>
+    <string name="point_balance">ポイント残高</string>
+    <string name="register_an_account">登録する</string>
+
+</resources>

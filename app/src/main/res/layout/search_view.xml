@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lnlSearch"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/header"
+    android:orientation="horizontal"
+    android:paddingStart="22dp"
+    android:paddingTop="10dp"
+    android:paddingEnd="0dp"
+    android:paddingBottom="16dp">
+
+    <EditText
+        android:id="@+id/edvSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:layout_toStartOf="@+id/imvSort"
+        android:autofillHints="@string/text_search_hint"
+        android:background="@drawable/edittext_border_bg"
+        android:drawableStart="@drawable/ic_search_black"
+        android:drawablePadding="5dp"
+        android:fontFamily="@font/noto_sans_regular"
+        android:hint="@string/text_search_hint"
+        android:imeOptions="actionSearch"
+        android:includeFontPadding="false"
+        android:inputType="text"
+        android:maxLines="1"
+        android:padding="7dp"
+        android:textSize="11sp" />
+
+    <ImageView
+        android:id="@+id/imvSort"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:layout_toStartOf="@+id/imvFilter"
+        android:contentDescription="@string/image_description"
+        android:src="@drawable/ic_sort"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/imvFilter"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="30dp"
+        android:contentDescription="@string/image_description"
+        android:src="@drawable/ic_filter"
+        android:visibility="gone" />
+
+</RelativeLayout>

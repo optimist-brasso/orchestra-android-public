@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feature.session.SessionLayoutFragment">
+
+    <include
+        android:id="@+id/layout"
+        layout="@layout/layout_session_layout_header" />
+
+    <ImageView
+        android:id="@+id/imgBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/image_description" />
+
+    <RelativeLayout
+        android:id="@+id/areaLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layout"
+        android:layout_centerHorizontal="true"
+        android:background="@color/session_layout_background" />
+
+</RelativeLayout>

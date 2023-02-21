@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:layout_marginStart="@dimen/defaultMargin"
+    android:layout_marginEnd="@dimen/defaultMargin">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:layout_marginEnd="33dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="6dp"
+        app:cardElevation="0dp"
+        app:cardCornerRadius="@dimen/padding_6">
+
+        <ImageView
+            android:id="@+id/imvBanner"
+            android:layout_width="match_parent"
+            android:layout_height="172dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/image_description"
+            app:srcCompat="@drawable/ic_thumbnail" />
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

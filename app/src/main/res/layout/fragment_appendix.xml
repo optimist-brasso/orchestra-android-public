@@ -1,0 +1,722 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feature.session.sessionDetail.appendixFragment.AppendixFragment">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swpPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/scvBody"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:contentDescription="@string/image_description"
+                app:layout_constraintBottom_toTopOf="@+id/divEnd"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/cnlVideoPlayer"
+                        android:layout_width="match_parent"
+                        android:layout_height="210dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <ImageView
+                            android:id="@+id/imgSessionThumbnail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:contentDescription="@string/image_description"
+                            android:scaleType="centerCrop"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/imvPlay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:contentDescription="@string/image_description"
+                            android:src="@drawable/ic_session_detail_play"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <TextView
+                            android:id="@+id/txtPlayVideo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/imvPlay"
+                            android:layout_centerInParent="true"
+                            android:layout_marginTop="11dp"
+                            android:fontFamily="@font/noto_sans_regular"
+                            android:includeFontPadding="false"
+                            android:text="@string/playSampleVideo"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/imvPlay" />
+
+                        <TextView
+                            android:id="@+id/txtPremium"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="11dp"
+                            android:layout_marginEnd="8dp"
+                            android:background="@drawable/radius_five_gold"
+                            android:fontFamily="@font/noto_sans_regular"
+                            android:includeFontPadding="false"
+                            android:paddingStart="25dp"
+                            android:paddingTop="6dp"
+                            android:paddingEnd="22dp"
+                            android:paddingBottom="8dp"
+                            android:text="@string/text_premium"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            tools:ignore="RelativeOverlap" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/txtTitleEng"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="35dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="35dp"
+                        android:fontFamily="@font/noto_sans_regular"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/cnlVideoPlayer"
+                        tools:text="@string/english_title" />
+
+                    <TextView
+                        android:id="@+id/txtTitleJpn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="35dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginEnd="35dp"
+                        android:fontFamily="@font/noto_sans_regular"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtTitleEng"
+                        tools:text="@string/songNameJap" />
+
+                    <ImageView
+                        android:id="@+id/imgDivider"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginEnd="32dp"
+                        android:contentDescription="@string/image_description"
+                        android:src="@drawable/ic_divider"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtTitleJpn" />
+
+                    <TextView
+                        android:id="@+id/txtInstrument"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="76dp"
+                        android:layout_marginTop="9dp"
+                        android:layout_marginEnd="76dp"
+                        android:fontFamily="@font/noto_sans_regular"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imgDivider"
+                        tools:text="@string/instrumentName" />
+
+                    <TextView
+                        android:id="@+id/txtPlayerName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="76dp"
+                        android:layout_marginEnd="76dp"
+                        android:fontFamily="@font/noto_sans_regular"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:paddingBottom="10dp"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtInstrument"
+                        tools:text="@string/playerName" />
+
+                    <TextView
+                        android:id="@+id/txtOrganizationChart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="35dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/noto_sans_regular"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:paddingBottom="10dp"
+                        android:text="@string/organizationChartUnderLined"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtInstrument" />
+
+                    <LinearLayout
+                        android:id="@+id/lltDownload"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="35dp"
+                        android:gravity="end"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtInstrument">
+
+                        <ImageView
+                            android:id="@+id/imgFavourite"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginEnd="7dp"
+                            android:contentDescription="@string/image_description"
+                            android:src="@drawable/ic_favourite_session" />
+
+                        <ImageView
+                            android:id="@+id/imgDownload"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginStart="7dp"
+                            android:contentDescription="@string/image_description"
+                            android:src="@drawable/ic_download"
+                            android:visibility="gone"
+                            app:tint="@color/session_layout_heading_color" />
+
+                        <ImageView
+                            android:id="@+id/imgShare"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginStart="7dp"
+                            android:contentDescription="@string/image_description"
+                            android:src="@drawable/ic_share"
+                            android:visibility="gone"
+                            app:tint="@color/session_layout_heading_color" />
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/txvDownloading"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="@font/noto_sans_medium"
+                        android:text="@string/text_downloading"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/lltDownload" />
+
+                    <com.google.android.material.progressindicator.LinearProgressIndicator
+                        android:id="@+id/progressBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="25dp"
+                        android:layout_marginEnd="14dp"
+                        app:indicatorColor="?attr/colorAccent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txvDownloading"
+                        app:trackColor="#EEEEEE" />
+
+                    <View
+                        android:id="@+id/vwStartLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@color/dividerGrey"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+                    <!--            <LinearLayout-->
+                    <!--                android:id="@+id/lltAppendixBody"-->
+                    <!--                android:layout_width="match_parent"-->
+                    <!--                android:layout_height="wrap_content"-->
+                    <!--                android:layout_marginTop="11dp"-->
+                    <!--                android:orientation="vertical"-->
+                    <!--                android:visibility="gone"-->
+                    <!--                app:layout_constraintEnd_toEndOf="parent"-->
+                    <!--                app:layout_constraintStart_toStartOf="parent"-->
+                    <!--                app:layout_constraintTop_toBottomOf="@+id/vwStartLine">-->
+
+                    <!--                <TextView-->
+                    <!--                    android:id="@+id/txtAppendixDetail"-->
+                    <!--                    android:layout_width="match_parent"-->
+                    <!--                    android:layout_height="wrap_content"-->
+                    <!--                    android:layout_marginStart="35dp"-->
+                    <!--                    android:layout_marginTop="4dp"-->
+                    <!--                    android:layout_marginEnd="35dp"-->
+                    <!--                    android:layout_marginBottom="18dp"-->
+                    <!--                    android:background="@drawable/ic_appendix_body_bg"-->
+                    <!--                    android:fontFamily="@font/noto_sans_light"-->
+                    <!--                    android:gravity="center"-->
+                    <!--                    android:includeFontPadding="false"-->
+                    <!--                    android:text="@string/afterBought"-->
+                    <!--                    android:textAlignment="center"-->
+                    <!--                    android:textColor="@color/black"-->
+                    <!--                    android:textSize="14sp" />-->
+
+                    <!--            </LinearLayout>-->
+
+                    <LinearLayout
+                        android:id="@+id/lltPremiumBody"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="11dp"
+                        android:orientation="vertical"
+                        android:visibility="visible"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/vwStartLine">
+
+                        <TextView
+                            android:id="@+id/txtPremiumDetail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="35dp"
+                            android:layout_marginTop="22dp"
+                            android:layout_marginEnd="35dp"
+                            android:layout_marginBottom="18dp"
+                            android:ellipsize="end"
+                            android:fontFamily="@font/noto_sans_light"
+                            android:includeFontPadding="false"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            tools:text="@string/explanationPremiumVideo" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <RelativeLayout
+                                android:id="@+id/rltComposer"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginTop="18dp"
+                                android:layout_marginEnd="30dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/txtComposer"
+                                    android:layout_width="120dp"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/noto_sans_regular"
+                                    android:text="@string/composer"
+                                    android:textColor="@color/black"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/txvComposerEng"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toEndOf="@id/txtComposer"
+                                    android:fontFamily="@font/noto_sans_regular"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/txvComposerJpn"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/txvComposerEng"
+                                    android:layout_toEndOf="@id/txtComposer"
+                                    android:fontFamily="@font/noto_sans_regular"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp"
+                                    android:visibility="gone" />
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:id="@+id/lltOrchestraName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginEnd="30dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="120dp"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/noto_sans_regular"
+                                    android:text="@string/orchestra_name"
+                                    android:textColor="@color/black"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/txvOrchestraName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/noto_sans_regular"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rltConductor"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginEnd="30dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/txtConductor"
+                                    android:layout_width="120dp"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/noto_sans_regular"
+                                    android:text="@string/trans_conductor"
+                                    android:textColor="@color/black"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/txvConductorEng"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toEndOf="@id/txtConductor"
+                                    android:fontFamily="@font/noto_sans_regular"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/txvConductorJpn"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/txtConductor"
+                                    android:layout_toEndOf="@id/txtConductor"
+                                    android:fontFamily="@font/noto_sans_regular"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp"
+                                    android:visibility="gone" />
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:id="@+id/lltOrganization"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginEnd="30dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="120dp"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/noto_sans_regular"
+                                    android:text="@string/organization"
+                                    android:textColor="@color/black"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/txvOrganization"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/noto_sans_regular"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rltVenueName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginEnd="30dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/txtVenueName"
+                                    android:layout_width="120dp"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/noto_sans_regular"
+                                    android:text="@string/venue_name"
+                                    android:textColor="@color/black"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/txvVenueNameEng"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toEndOf="@id/txtVenueName"
+                                    android:fontFamily="@font/noto_sans_regular"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/txvVenueNameJpn"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/txvVenueNameEng"
+                                    android:layout_toEndOf="@id/txtVenueName"
+                                    android:fontFamily="@font/noto_sans_regular"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp"
+                                    android:visibility="gone" />
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:id="@+id/lltLap"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginEnd="30dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="120dp"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/noto_sans_regular"
+                                    android:text="@string/lap"
+                                    android:textColor="@color/black"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/txvLap"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/noto_sans_regular"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/lltDate"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginEnd="30dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="120dp"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/noto_sans_regular"
+                                    android:text="@string/release_date"
+                                    android:textColor="@color/black"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/txvDate"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/noto_sans_regular"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/lltLicence"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="30dp"
+                                android:layout_marginTop="2dp"
+                                android:layout_marginEnd="30dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="120dp"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/noto_sans_regular"
+                                    android:text="@string/licence_number"
+                                    android:textColor="@color/black"
+                                    android:textSize="11sp" />
+
+                                <TextView
+                                    android:id="@+id/txvLicence"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/noto_sans_regular"
+                                    android:textColor="@color/black"
+                                    android:textSize="12sp" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:id="@+id/txvBusinessType"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="25dp"
+                                android:layout_marginTop="13dp"
+                                android:layout_marginEnd="30dp"
+                                android:layout_marginBottom="22dp"
+                                android:background="@drawable/conductor_bg_border_grey"
+                                android:fontFamily="@font/noto_sans_regular"
+                                android:includeFontPadding="false"
+                                android:paddingStart="12dp"
+                                android:paddingTop="2dp"
+                                android:paddingEnd="12dp"
+                                android:paddingBottom="3dp"
+                                android:text="@string/businessType"
+                                android:textColor="@color/light_grey_text"
+                                android:textSize="14sp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+            <View
+                android:id="@+id/divEnd"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/dividerGrey"
+                app:layout_constraintBottom_toTopOf="@+id/lltBuyPart"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <LinearLayout
+                android:id="@+id/lltBuyPart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="28dp"
+                android:paddingBottom="28dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <TextView
+                    android:id="@+id/txtAddToCart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="33dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginBottom="12dp"
+                    android:background="@drawable/radius_eight_gold"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/noto_sans_regular"
+                    android:includeFontPadding="false"
+                    android:maxLines="1"
+                    android:paddingStart="10dp"
+                    android:paddingTop="8dp"
+                    android:paddingEnd="4dp"
+                    android:paddingBottom="8dp"
+                    android:text="@string/add_to_cart"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/txtBuyAppendixVideo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="33dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="@drawable/radius_eight_gold"
+                    android:fontFamily="@font/noto_sans_regular"
+                    android:includeFontPadding="false"
+                    android:paddingStart="4dp"
+                    android:paddingTop="13dp"
+                    android:paddingEnd="4dp"
+                    android:paddingBottom="13dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+                <!--        <TextView-->
+                <!--            android:id="@+id/txtNotice"-->
+                <!--            android:layout_width="match_parent"-->
+                <!--            android:layout_height="wrap_content"-->
+                <!--            android:layout_marginStart="53dp"-->
+                <!--            android:layout_marginTop="6dp"-->
+                <!--            android:layout_marginEnd="53dp"-->
+                <!--            android:fontFamily="@font/noto_sans_medium"-->
+                <!--            android:includeFontPadding="false"-->
+                <!--            android:text="@string/premiumCannotBePurchasedSeparately"-->
+                <!--            android:textColor="@color/black"-->
+                <!--            android:textSize="14sp"-->
+                <!--            android:visibility="gone" />-->
+
+                <TextView
+                    android:id="@+id/txtReturnToPart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="33dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="@drawable/radius_eight_black"
+                    android:fontFamily="@font/noto_sans_regular"
+                    android:includeFontPadding="false"
+                    android:paddingStart="10dp"
+                    android:paddingTop="12dp"
+                    android:paddingEnd="4dp"
+                    android:paddingBottom="12dp"
+                    android:text="@string/returnToPart"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <include
+                android:id="@+id/png"
+                layout="@layout/progressbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

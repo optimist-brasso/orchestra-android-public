@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/txvDateOfPurchase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/dim_18dp"
+        android:text="@string/dateOfPurchase"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txvPurchaseDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="@dimen/dim_18dp"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/txvDateOfPurchase"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="2022. 6. 1" />
+
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/dim_22dp"
+        android:layout_marginEnd="17dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/txvDateOfPurchase"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txvDateOfPurchase"
+        tools:text="¥500" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="@dimen/dim_16dp"
+        android:layout_marginEnd="17dp"
+        android:background="@color/favouriteTabSelected"
+        android:paddingBottom="@dimen/dim_16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvDateOfPurchase">
+
+        <TextView
+            android:id="@+id/tvSession"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dim_22dp"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="9dp"
+            android:fontFamily="@font/noto_sans_bold"
+            android:includeFontPadding="false"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="[Session]" />
+
+        <TextView
+            android:id="@+id/txvPremiumType"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dim_22dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="9dp"
+            android:fontFamily="@font/noto_sans_bold"
+            android:includeFontPadding="false"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/tvSession"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Premium映像" />
+
+        <TextView
+            android:id="@+id/tvOriginalRecording"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dim_22dp"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSession"
+            tools:text="original recording/ゲンバンヒョウキ" />
+
+        <TextView
+            android:id="@+id/txvPart"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dim_22dp"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:text="@string/part_song"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvOriginalRecording" />
+
+        <TextView
+            android:id="@+id/tvPartSong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txvPart"
+            app:layout_constraintTop_toBottomOf="@+id/tvOriginalRecording"
+            tools:text="トランペット 1st" />
+
+        <TextView
+            android:id="@+id/txtMusicianName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvPartSong"
+            app:layout_constraintTop_toBottomOf="@+id/tvOriginalRecording"
+            tools:text="トランペット 1st" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dim_2dp"
+        android:layout_marginStart="@dimen/dim_20dp"
+        android:layout_marginTop="@dimen/dim_16dp"
+        android:layout_marginEnd="@dimen/dim_20dp"
+        android:background="@color/view_background_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

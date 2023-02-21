@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rllMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="25dp"
+    android:layout_marginTop="13dp"
+    android:layout_marginEnd="28dp"
+    android:layout_marginBottom="16dp">
+
+    <ImageView
+        android:id="@+id/imvPlayerImage"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/image_description"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_multi_part_thumbnail" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@+id/rllCheckBox"
+        android:layout_toEndOf="@+id/imvPlayerImage">
+
+        <TextView
+            android:id="@+id/txvPlayerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_10"
+            android:ellipsize="end"
+            android:fontFamily="@font/noto_sans_light"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            tools:text="パート１" />
+
+        <TextView
+            android:id="@+id/txvPlayerInstrument"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txvPlayerName"
+            android:layout_marginStart="@dimen/padding_10"
+            android:layout_marginTop="6dp"
+            android:ellipsize="end"
+            android:fontFamily="@font/noto_sans_light"
+            android:includeFontPadding="false"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            tools:text="奏者太郎" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rllCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/checkbox_unselected">
+
+        <CheckBox
+            android:id="@+id/chbBuyButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:button="@drawable/custom_multipart_checkbox"
+            android:fontFamily="@font/noto_sans_light"
+            android:includeFontPadding="false"
+            android:paddingStart="8dp"
+            android:paddingTop="7dp"
+            android:paddingEnd="9dp"
+            android:paddingBottom="8dp"
+            android:text="@string/text_buy"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rllBoughtBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/checkbox_bought"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/txtAlreadyBought"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_light"
+            android:includeFontPadding="false"
+            android:paddingStart="15dp"
+            android:paddingTop="7dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="8dp"
+            android:text="@string/purchased"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rllCannotBuyBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/checkbox_bought"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/txtCannotBuy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_light"
+            android:includeFontPadding="false"
+            android:paddingStart="15dp"
+            android:paddingTop="7dp"
+            android:paddingEnd="15dp"
+            android:paddingBottom="8dp"
+            android:text="@string/cannotBuy"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

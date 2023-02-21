@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lltHeader"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:paddingStart="12dp"
+        android:paddingTop="11dp"
+        android:paddingEnd="6dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imvConductor"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/header_image_height"
+                android:layout_marginEnd="@dimen/header_padding"
+                android:scaleType="centerCrop"
+                android:src="@drawable/header_conductor"
+                app:civ_border_color="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/txvConductor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="3dp"
+                android:fontFamily="@font/helvetica_neue_bold_italic"
+                android:text="@string/conductor"
+                android:textColor="@color/header_title"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imvSession"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/header_image_height"
+                android:layout_marginStart="@dimen/header_padding"
+                android:layout_marginEnd="@dimen/header_padding"
+                android:scaleType="centerCrop"
+                android:src="@drawable/header_session"
+                app:civ_border_color="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/txvSession"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="3dp"
+                android:fontFamily="@font/helvetica_neue_bold_italic"
+                android:text="@string/session"
+                android:textColor="@color/header_title"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imvHallsound"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/header_image_height"
+                android:layout_marginStart="@dimen/header_padding"
+                android:layout_marginEnd="@dimen/header_padding"
+                android:scaleType="centerCrop"
+                android:src="@drawable/header_hall_sound"
+                app:civ_border_color="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/txvHallSound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="3dp"
+                android:fontFamily="@font/helvetica_neue_bold_italic"
+                android:text="@string/hall_sound"
+                android:textColor="@color/header_title"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imvPlayer"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/header_image_height"
+                android:layout_marginStart="@dimen/header_padding"
+                android:scaleType="centerCrop"
+                android:src="@drawable/header_player"
+                app:civ_border_color="@color/colorAccent" />
+
+            <TextView
+                android:id="@+id/txvPlayer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="3dp"
+                android:fontFamily="@font/helvetica_neue_bold_italic"
+                android:text="@string/player"
+                android:textColor="@color/header_title"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

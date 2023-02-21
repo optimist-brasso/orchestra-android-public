@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".feature.landing.myPage.tab.myPage.recordList.recordPlayer.RecordingPlayerActivity">
+
+    <include
+        android:id="@+id/incToolBar"
+        layout="@layout/custom_toolbar_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgMusicThumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="25dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/image_description"
+        android:scaleType="centerCrop"
+        android:src="@color/transparentTextViewBackground"
+        app:layout_constraintBottom_toTopOf="@+id/txtEdition"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/incToolBar"
+        tools:ignore="ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/txtEdition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/noto_sans_regular"
+        android:includeFontPadding="false"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/txtTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="edition" />
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="26dp"
+        android:fontFamily="@font/noto_sans_regular"
+        android:includeFontPadding="false"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtLap"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="ORIGINAL NAME" />
+
+    <TextView
+        android:id="@+id/txtLap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:layout_marginBottom="6dp"
+        android:fontFamily="@font/noto_sans_regular"
+        android:includeFontPadding="false"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtRecord"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="0:15:45" />
+
+    <TextView
+        android:id="@+id/txtRecord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="21dp"
+        android:fontFamily="@font/noto_sans_regular"
+        android:includeFontPadding="false"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/imgShare"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="2022/01/04" />
+
+    <ImageView
+        android:id="@+id/imgDownload"
+        android:layout_width="14dp"
+        android:layout_height="17dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="26dp"
+        android:contentDescription="@string/image_description"
+        android:src="@drawable/ic_download"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/exoMusicPlayer"
+        app:layout_constraintEnd_toStartOf="@+id/imgShare" />
+
+    <ImageView
+        android:id="@+id/imgShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="26dp"
+        android:contentDescription="@string/image_description"
+        android:src="@drawable/ic_share"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/exoMusicPlayer"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/exoMusicPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_marginBottom="21dp"
+        android:visibility="visible"
+        app:controller_layout_id="@layout/view_recording_player_controller"
+        app:hide_on_touch="false"
+        app:layout_constraintBottom_toTopOf="@+id/rltVolumeControl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:show_timeout="0" />
+
+    <RelativeLayout
+        android:id="@+id/rltVolumeControl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="20dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/imgVolLow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="34dp"
+            android:contentDescription="@string/image_description"
+            app:srcCompat="@drawable/ic_volume_low" />
+
+        <SeekBar
+            android:id="@+id/skbVolume"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toStartOf="@+id/imgVolHigh"
+            android:layout_toEndOf="@+id/imgVolLow"
+            android:progress="50"
+            android:progressTint="@color/light_grey_text"
+            android:thumb="@drawable/custom_thumb" />
+
+        <ImageView
+            android:id="@+id/imgVolHigh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="34dp"
+            android:contentDescription="@string/image_description"
+            app:srcCompat="@drawable/ic_volume_high" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txvSongTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/noto_sans_regular"
+        android:includeFontPadding="false"
+        android:padding="3dp"
+        android:textColor="@color/pink"
+        android:textSize="24sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/imgMusicThumbnail"
+        app:layout_constraintEnd_toEndOf="@+id/imgMusicThumbnail"
+        app:layout_constraintStart_toStartOf="@+id/imgMusicThumbnail"
+        app:layout_constraintTop_toTopOf="@+id/imgMusicThumbnail"
+        tools:text="楽曲名" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

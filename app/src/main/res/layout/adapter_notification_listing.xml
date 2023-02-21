@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rllNotification"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="23dp"
+    android:background="@drawable/drawable_radius_twelve">
+
+    <RelativeLayout
+        android:id="@+id/rllMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:id="@+id/lltNotificationImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/crdIndicator"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                app:cardCornerRadius="50dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/red"
+                android:layout_gravity="center_vertical" />
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/crdNotification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:clipToPadding="false"
+                app:cardCornerRadius="8dp">
+
+                <ImageView
+                    android:id="@+id/imvNotification"
+                    android:layout_width="117dp"
+                    android:layout_height="86dp"
+                    android:contentDescription="@string/image_description"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/ic_thumbnail" />
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/lltNotificationImage">
+
+            <TextView
+                android:id="@+id/txvNotificationTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/noto_sans_regular"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:includeFontPadding="false"
+                tools:text="見出しコピー日本語の説明文が入ります。日本語の説明文が入ります。日本語の説明文が..." />
+
+            <TextView
+                android:id="@+id/txvNotificationDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txvNotificationTitle"
+                android:fontFamily="@font/noto_sans_regular"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:maxLines="3"
+                android:layout_marginTop="4dp"
+                android:includeFontPadding="false"
+                tools:text="見出しコピー日本語の説明文が入ります。日本語の説明文が入ります。日本語の説明文が..." />
+
+
+            <TextView
+                android:id="@+id/txvNotificationDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txvNotificationDescription"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/noto_sans_regular"
+                android:textColor="@color/black"
+                android:textSize="11sp"
+                android:includeFontPadding="false"
+                tools:text="2022/02/10" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imvIndicatorVertical"
+        android:layout_width="5dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/rllMain"
+        android:layout_alignBottom="@+id/rllMain"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="7dp"
+        android:background="@color/red"
+        android:contentDescription="@string/image_description" />
+
+</RelativeLayout>

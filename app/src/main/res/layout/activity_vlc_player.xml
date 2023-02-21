@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/crdMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feature.vlcPlayer.VLCPlayerActivity">
+
+    <org.videolan.libvlc.util.VLCVideoLayout
+        android:id="@+id/view_vlc_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="false"
+        android:visibility="visible" />
+
+    <include
+        android:id="@+id/custom_player"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        layout="@layout/custom_vlc_controller" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

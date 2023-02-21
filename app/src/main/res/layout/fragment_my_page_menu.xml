@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feature.landing.myPage.tab.myPage.MyPageMenuFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/textViewBackground"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:paddingStart="28dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="13dp"
+            android:text="@string/my_page"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/txtProfile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:paddingStart="3dp"
+            android:paddingTop="25dp"
+            android:paddingBottom="25dp"
+            android:text="@string/profile"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@id/imgProfileTab"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+            tools:ignore="RtlSymmetry" />
+
+        <ImageView
+            android:id="@+id/imgProfileTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="23dp"
+            android:contentDescription="@string/image_description"
+            android:paddingTop="25dp"
+            android:paddingEnd="9dp"
+            android:paddingBottom="25dp"
+            android:src="@drawable/ic_forward"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+            tools:ignore="RtlSymmetry" />
+
+        <View
+            android:id="@+id/vwProfile"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:background="?android:attr/listDivider"
+            android:contentDescription="@string/image_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtProfile" />
+
+        <TextView
+            android:id="@+id/txtChangePassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:paddingStart="3dp"
+            android:paddingTop="25dp"
+            android:paddingBottom="25dp"
+            android:text="@string/change_password"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/imgChangePasswordTab"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vwProfile"
+            tools:ignore="RtlSymmetry" />
+
+        <ImageView
+            android:id="@+id/imgChangePasswordTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="23dp"
+            android:contentDescription="@string/image_description"
+            android:paddingTop="25dp"
+            android:paddingEnd="9dp"
+            android:paddingBottom="25dp"
+            android:src="@drawable/ic_forward"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vwProfile"
+            tools:ignore="RtlSymmetry" />
+
+        <View
+            android:id="@+id/vwChangePassword"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:background="?android:attr/listDivider"
+            android:contentDescription="@string/image_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtChangePassword" />
+
+        <TextView
+            android:id="@+id/txtListContent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:paddingStart="3dp"
+            android:paddingTop="25dp"
+            android:paddingBottom="25dp"
+            android:text="@string/list_of_purchased_contents"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/imgListContentTab"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vwChangePassword" />
+
+        <ImageView
+            android:id="@+id/imgListContentTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="23dp"
+            android:contentDescription="@string/image_description"
+            android:paddingTop="25dp"
+            android:paddingEnd="9dp"
+            android:paddingBottom="25dp"
+            android:src="@drawable/ic_forward"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vwChangePassword"
+            tools:ignore="RtlSymmetry" />
+
+        <View
+            android:id="@+id/vwListContent"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:background="?android:attr/listDivider"
+            android:contentDescription="@string/image_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtListContent" />
+
+        <TextView
+            android:id="@+id/txtRecordingList"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:paddingStart="3dp"
+            android:paddingTop="25dp"
+            android:paddingBottom="25dp"
+            android:text="@string/recording_list"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@+id/imgRecordingListTab"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vwListContent"
+            tools:ignore="RtlSymmetry" />
+
+        <ImageView
+            android:id="@+id/imgRecordingListTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="23dp"
+            android:contentDescription="@string/image_description"
+            android:paddingTop="25dp"
+            android:paddingEnd="9dp"
+            android:visibility="gone"
+            android:paddingBottom="25dp"
+            android:src="@drawable/ic_forward"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/vwListContent"
+            tools:ignore="RtlSymmetry" />
+
+        <View
+            android:id="@+id/vwRecordingList"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:background="?android:attr/listDivider"
+            android:contentDescription="@string/image_description"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtRecordingList" />
+
+        <TextView
+            android:id="@+id/txtBillingHistory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:paddingStart="3dp"
+            android:paddingTop="25dp"
+            android:paddingBottom="25dp"
+            android:text="@string/point_purchase_history"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/imgBillingHistoryTab"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vwRecordingList"
+            tools:ignore="RtlSymmetry" />
+
+        <ImageView
+            android:id="@+id/imgBillingHistoryTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="23dp"
+            android:contentDescription="@string/image_description"
+            android:paddingTop="25dp"
+            android:paddingEnd="9dp"
+            android:paddingBottom="25dp"
+            android:src="@drawable/ic_forward"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vwRecordingList"
+            tools:ignore="RtlSymmetry" />
+
+        <View
+            android:id="@+id/vwBillingHistory"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:background="?android:attr/listDivider"
+            android:contentDescription="@string/image_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtBillingHistory" />
+
+        <TextView
+            android:id="@+id/txtLogout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:paddingStart="3dp"
+            android:paddingTop="25dp"
+            android:paddingBottom="25dp"
+            android:text="@string/logout"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/imgLogoutTab"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vwBillingHistory"
+            tools:ignore="RtlSymmetry" />
+
+        <ImageView
+            android:id="@+id/imgLogoutTab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="23dp"
+            android:contentDescription="@string/image_description"
+            android:paddingTop="25dp"
+            android:paddingEnd="9dp"
+            android:paddingBottom="25dp"
+            android:src="@drawable/ic_forward"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vwBillingHistory"
+            tools:ignore="RtlSymmetry" />
+
+        <View
+            android:id="@+id/vwLogout"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:background="?android:attr/listDivider"
+            android:contentDescription="@string/image_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtLogout" />
+
+        <TextView
+            android:id="@+id/txtWithDrawl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:paddingStart="3dp"
+            android:paddingTop="25dp"
+            android:paddingBottom="25dp"
+            android:text="@string/withdrawal"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/imgWithDrawl"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vwLogout"
+            tools:ignore="RtlSymmetry" />
+
+        <ImageView
+            android:id="@+id/imgWithDrawl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="23dp"
+            android:contentDescription="@string/image_description"
+            android:paddingTop="25dp"
+            android:paddingEnd="9dp"
+            android:paddingBottom="25dp"
+            android:src="@drawable/ic_forward"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vwLogout"
+            tools:ignore="RtlSymmetry" />
+
+        <View
+            android:id="@+id/vwWithDrawl"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:background="?android:attr/listDivider"
+            android:contentDescription="@string/image_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtWithDrawl" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/clnInnerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvBackSessionLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/session_layout_heading_back"
+        android:textColor="@color/session_layout_heading_color"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dim_16dp"
+        android:layout_marginTop="@dimen/dim_21dp"
+        android:layout_marginBottom="@dimen/padding_8"
+        android:text="@string/session_layout_heading_second"
+        android:textColor="@color/session_layout_heading_color"
+        android:textSize="@dimen/dim_18sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvBackSessionLayout"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imvSessionLayoutClick"
+        android:layout_width="@dimen/dim_18dp"
+        android:layout_height="@dimen/dim_18dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="@dimen/dim_6dp"
+        android:contentDescription="@string/image_description"
+        android:scaleType="fitCenter"
+        android:src="@drawable/session_layout_click"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/txvBoughtStatus"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/txvBoughtStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:text="@string/session_layout_close_text"
+        android:textColor="@color/session_layout_heading_color"
+        android:textSize="@dimen/dim_18sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/imvSessionLayoutClose"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imvSessionLayoutClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/image_description"
+        android:paddingStart="24dp"
+        android:paddingTop="@dimen/dim_9dp"
+        android:paddingEnd="@dimen/dim_9dp"
+        android:paddingBottom="10dp"
+        android:src="@drawable/ic_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

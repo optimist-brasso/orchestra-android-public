@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="384dp"
+    android:layout_height="108dp"
+    android:layout_gravity="center"
+    android:alpha="0.6"
+    android:background="@color/black"
+    app:cardCornerRadius="@dimen/dim_20dp">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparent80Black">
+
+        <TextView
+            android:id="@+id/tvDialogSessionLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/noto_sans_bold"
+            android:includeFontPadding="false"
+            android:text="@string/session_layout_dialog_first"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvSecondText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/noto_sans_bold"
+            android:includeFontPadding="false"
+            android:text="@string/session_layout_dialog_second"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDialogSessionLayout"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:layout_width="@dimen/dim_32dp"
+            android:layout_height="@dimen/dim_32dp"
+            android:src="@drawable/handpointing"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.277"
+            app:layout_constraintStart_toEndOf="@+id/tvSecondText"
+            app:layout_constraintTop_toTopOf="@+id/tvDialogSessionLayout"
+            app:layout_constraintVertical_bias="0.395"
+            app:tint="@color/white" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

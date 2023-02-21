@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mypage_nav_graph"
+    app:startDestination="@id/myPageMenuFragment">
+
+    <fragment
+        android:id="@+id/myPageMenuFragment"
+        android:name="com.co.brasso.feature.landing.myPage.tab.myPage.MyPageMenuFragment"
+        android:label="MyPageFragment">
+
+        <action
+            android:id="@+id/action_myPageMenuFragment_to_myProfileFragment"
+            app:destination="@id/myProfileFragment" />
+        <action
+            android:id="@+id/action_myPageMenuFragment_to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment" />
+
+        <action
+            android:id="@+id/action_myPageMenuFragment_to_billingHistoryFragment"
+            app:destination="@id/billingHistoryFragment" />
+        <action
+            android:id="@+id/action_myPageMenuFragment_to_recordingListFragment"
+            app:destination="@id/recordingListFragment" />
+        <action
+            android:id="@+id/action_myPageMenuFragment_to_purchaseListFragment"
+            app:destination="@id/purchaseListFragment" />
+        <action
+            android:id="@+id/action_myPageMenuFragment_to_withdrawalFragment"
+            app:destination="@id/withdrawalFragment" />
+        <action
+            android:id="@+id/action_myPageMenuFragment_to_bundleManagementFragment"
+            app:destination="@id/bundleManagementFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.co.brasso.feature.landing.myPage.tab.myPage.changePassword.ChangePasswordFragment"
+        android:label="fragment_change_password"
+        tools:layout="@layout/fragment_change_password" />
+
+    <fragment
+        android:id="@+id/myProfileFragment"
+        android:name="com.co.brasso.feature.landing.myPage.tab.myPage.profile.MyProfileFragment"
+        android:label="fragment_my_profile"
+        tools:layout="@layout/fragment_my_profile" />
+
+    <fragment
+        android:id="@+id/purchaseListFragment"
+        android:name="com.co.brasso.feature.landing.myPage.tab.myPage.purchaseList.PurchaseListFragment"
+        android:label="fragment_recording"
+        tools:layout="@layout/fragment_purchase_list" />
+
+    <fragment
+        android:id="@+id/recordingListFragment"
+        android:name="com.co.brasso.feature.landing.myPage.tab.myPage.recordList.RecordingFragment"
+        android:label="fragment_recording"
+        tools:layout="@layout/fragment_recording_list" />
+
+    <fragment
+        android:id="@+id/billingHistoryFragment"
+        android:name="com.co.brasso.feature.landing.myPage.tab.myPage.billingHistory.BillingHistoryFragment"
+        android:label="fragment_billing_history"
+        tools:layout="@layout/fragment_billing_history" />
+
+    <fragment
+        android:id="@+id/withdrawalFragment"
+        android:name="com.co.brasso.feature.landing.myPage.tab.myPage.withdrawal.WithdrawalFragment"
+        android:label="fragment_withdrawal"
+        tools:layout="@layout/fragment_withdrawal" />
+
+</navigation>

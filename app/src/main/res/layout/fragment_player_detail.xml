@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".feature.player.playerDetail.PlayerDetailFragment">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swpPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/srvMainView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="46dp">
+
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/vwPlayer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/txtName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:fontFamily="sans-serif-thin"
+                        android:rotation="90"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="42sp"
+                        android:visibility="gone"
+                        app:layout_constraintBottom_toBottomOf="@+id/vwPlayer"
+                        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="Yuko Kumashiro " />
+
+                    <LinearLayout
+                        android:id="@+id/llyIndicatorContainer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="18dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="@+id/vwPlayer"
+                        app:layout_constraintEnd_toEndOf="@+id/vwPlayer"
+                        app:layout_constraintStart_toStartOf="@+id/vwPlayer" />
+
+                    <ImageButton
+                        android:id="@+id/btnFavorite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:contentDescription="@string/image_description"
+                        android:paddingStart="16dp"
+                        android:paddingTop="7dp"
+                        android:paddingEnd="16dp"
+                        android:paddingBottom="7dp"
+                        android:src="@drawable/ic_favourite_session"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/vwPlayer"
+                        tools:ignore="RtlSymmetry,UseSwitchCompatOrMaterialXml" />
+
+                    <TextView
+                        android:id="@+id/txtNameMain"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:fontFamily="@font/noto_sans_light"
+                        android:includeFontPadding="false"
+                        android:paddingStart="72dp"
+                        android:paddingEnd="84dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="36sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/vwPlayer"
+                        tools:text="熊代 祐子" />
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:contentDescription="@string/image_description"
+                        android:src="@drawable/ic_divider"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtNameMain" />
+
+                    <TextView
+                        android:id="@+id/txtInstrument"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="@font/noto_sans_light"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+                        tools:text="B♭トランペット" />
+
+                    <TextView
+                        android:id="@+id/txtBand"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:fontFamily="@font/noto_sans_light"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtInstrument"
+                        tools:text="シエナ・ウインド・オーケストラ所属" />
+
+                    <View
+                        android:id="@+id/divider"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="46dp"
+                        android:layout_marginEnd="19dp"
+                        android:background="@color/divider_gold"
+                        app:layout_constraintTop_toBottomOf="@+id/txtBand"
+                        tools:layout_editor_absoluteX="14dp" />
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/noto_sans_light"
+                        android:includeFontPadding="false"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:text="@string/imgProfile"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+                    <View
+                        android:id="@+id/divider2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="2dp"
+                        android:layout_marginEnd="19dp"
+                        android:background="@color/divider_gold"
+                        app:layout_constraintTop_toBottomOf="@+id/textView12"
+                        tools:layout_editor_absoluteX="14dp" />
+
+                    <TextView
+                        android:id="@+id/txtBirthDayTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="22dp"
+                        android:layout_marginTop="25dp"
+                        android:fontFamily="@font/noto_sans_light"
+                        android:includeFontPadding="false"
+                        android:text="@string/birthday"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/divider2" />
+
+                    <TextView
+                        android:id="@+id/txtBirthDay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="25dp"
+                        android:fontFamily="@font/noto_sans_light"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toEndOf="@+id/txtBirthDayTitle"
+                        app:layout_constraintTop_toBottomOf="@+id/divider2"
+                        tools:ignore="RtlSymmetry"
+                        tools:text="3月19日" />
+
+                    <TextView
+                        android:id="@+id/txtBloodGroupTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="22dp"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/noto_sans_light"
+                        android:includeFontPadding="false"
+                        android:text="@string/blood_type"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtBirthDayTitle" />
+
+                    <TextView
+                        android:id="@+id/txtBloodGroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/noto_sans_light"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toEndOf="@+id/txtBloodGroupTitle"
+                        app:layout_constraintTop_toBottomOf="@+id/txtBirthDay"
+                        tools:ignore="RtlSymmetry"
+                        tools:layout_editor_absoluteX="100dp"
+                        tools:text="AB型" />
+
+                    <TextView
+                        android:id="@+id/txtBirthPlaceTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="22dp"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/noto_sans_light"
+                        android:includeFontPadding="false"
+                        android:text="@string/birth_place"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtBloodGroupTitle" />
+
+                    <TextView
+                        android:id="@+id/txtBirthPlace"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/noto_sans_light"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toEndOf="@+id/txtBirthPlaceTitle"
+                        app:layout_constraintTop_toBottomOf="@+id/txtBloodGroup"
+                        tools:ignore="RtlSymmetry"
+                        tools:layout_editor_absoluteX="100dp"
+                        tools:text="岡山県岡山市" />
+
+                    <TextView
+                        android:id="@+id/txtInstrumentUsedTitle"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="22dp"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/noto_sans_light"
+                        android:includeFontPadding="false"
+                        android:text="@string/manufacturer"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtBirthPlaceTitle" />
+
+                    <TextView
+                        android:id="@+id/txtInstrumentUsed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/noto_sans_light"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        app:layout_constraintStart_toEndOf="@+id/txtInstrumentUsedTitle"
+                        app:layout_constraintTop_toBottomOf="@+id/txtBirthPlace"
+                        tools:ignore="RtlSymmetry"
+                        tools:layout_editor_absoluteX="100dp"
+                        tools:text="Bach" />
+
+
+                    <TextView
+                        android:id="@+id/txtMessageTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="22dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/message_from_player"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtInstrumentUsedTitle" />
+
+                    <TextView
+                        android:id="@+id/txtMessage"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="22dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="21dp"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtMessageTitle"
+                        tools:text="奏者からユーザーに向けたメッセージが入ります。奏者からユーザーに向けたメッセージが入ります。奏者からユーザーに向けたメッセージが入ります。奏者からユーザーに向けたメッセージが入ります。奏者からユーザーに向けたメッセージが入ります。奏者からユーザーに向けたメッセージが入ります。" />
+
+                    <TextView
+                        android:id="@+id/txtDetailProfileTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="22dp"
+                        android:layout_marginTop="16dp"
+                        android:text="@string/detailed_profile"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtMessage" />
+
+                    <TextView
+                        android:id="@+id/txtDetailProfile"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="22dp"
+                        android:autoLink="web"
+                        android:linksClickable="true"
+                        android:paddingTop="8dp"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtDetailProfileTitle"
+                        tools:text="https://www.xxxxxxxx.com" />
+
+                    <TextView
+                        android:id="@+id/txtTwitter"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="22dp"
+                        android:layout_marginTop="25dp"
+                        android:text="@string/twitter"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="@id/guideline3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtDetailProfile" />
+
+                    <TextView
+                        android:id="@+id/txtTwitterLink"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="21dp"
+                        android:autoLink="web"
+                        android:linksClickable="true"
+                        android:paddingTop="25dp"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/guideline3"
+                        app:layout_constraintTop_toBottomOf="@+id/txtDetailProfile"
+                        tools:text="https://twitter.com/xxxxxxx" />
+
+                    <TextView
+                        android:id="@+id/txtInstagram"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="22dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/instagram"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="@id/guideline3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtTwitterLink" />
+
+                    <TextView
+                        android:id="@+id/txtInstagramLink"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="21dp"
+                        android:autoLink="web"
+                        android:linksClickable="true"
+                        android:paddingTop="10dp"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/guideline3"
+                        app:layout_constraintTop_toBottomOf="@+id/txtTwitterLink"
+                        tools:text="https://www.instagram.com/xxxxxxx" />
+
+                    <TextView
+                        android:id="@+id/txtFacebook"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="22dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/facebook"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="@id/guideline3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtInstagramLink" />
+
+                    <TextView
+                        android:id="@+id/txtFacebookLink"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="21dp"
+                        android:autoLink="web"
+                        android:linksClickable="true"
+                        android:paddingTop="10dp"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/guideline3"
+                        app:layout_constraintTop_toBottomOf="@+id/txtInstagramLink"
+                        tools:text="https://www.facebook.com/xxxxxxx" />
+
+                    <TextView
+                        android:id="@+id/txtYoutube"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="22dp"
+                        android:layout_marginTop="10dp"
+                        android:text="@string/youtube"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="@id/guideline3"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtFacebookLink" />
+
+                    <TextView
+                        android:id="@+id/txtYoutubeLink"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginEnd="21dp"
+                        android:autoLink="web"
+                        android:linksClickable="true"
+                        android:paddingTop="10dp"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="@+id/guideline3"
+                        app:layout_constraintTop_toBottomOf="@+id/txtFacebookLink"
+                        tools:text="https://www.youtube.com/channel/xxxxxxx" />
+
+                    <androidx.constraintlayout.widget.Guideline
+                        android:id="@+id/guideline3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintGuide_percent="0.25" />
+
+                    <View
+                        android:id="@+id/divider3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="92dp"
+                        android:layout_marginEnd="19dp"
+                        android:background="@color/divider_gold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtYoutubeLink" />
+
+                    <TextView
+                        android:id="@+id/txtPerformanceMusic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/performance_music"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/divider3" />
+
+                    <View
+                        android:id="@+id/divider4"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="11dp"
+                        android:layout_marginEnd="19dp"
+                        android:background="@color/divider_gold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txtPerformanceMusic" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcvPerformanceMusic"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:layout_marginTop="11dp"
+                        android:layout_marginEnd="7dp"
+                        android:background="@color/viewPagerBg"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/divider4"
+                        tools:listitem="@layout/adapter_performance_music" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+            <include
+                android:id="@+id/png"
+                layout="@layout/progressbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </RelativeLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</RelativeLayout>

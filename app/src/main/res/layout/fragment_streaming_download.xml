@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feature.landing.myPage.tab.setting.streamingDownload.StreamingDownloadFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.75" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/textViewBackground"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:paddingStart="28dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="13dp"
+            android:text="@string/streaming_download"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/txtStreamDownload"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:paddingStart="2dp"
+            android:paddingTop="34dp"
+            android:paddingBottom="20dp"
+            android:text="@string/streaming_quality"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/txtStreamDownloadTab"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:paddingTop="34dp"
+            android:paddingBottom="20dp"
+            android:text="@string/during"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@+id/imgStreamDownloadTab"
+            app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
+
+        <ImageView
+            android:id="@+id/imgStreamDownloadTab"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:contentDescription="@string/image_description"
+            android:paddingTop="24dp"
+            android:paddingEnd="30dp"
+            android:paddingBottom="18dp"
+            android:src="@drawable/ic_forward"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/vwStreamDownload"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+            tools:ignore="RtlSymmetry" />
+
+        <View
+            android:id="@+id/vwStreamDownload"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="14dp"
+            android:background="?android:attr/listDivider"
+            android:contentDescription="@string/image_description"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtStreamDownload"
+            tools:ignore="RtlSymmetry" />
+
+        <Switch
+            android:id="@+id/swtStreamingOnWifi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_marginEnd="22dp"
+            android:checked="true"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:paddingStart="2dp"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            android:text="@string/playback_on_wifi"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vwStreamDownload"
+            tools:ignore="RtlSymmetry,UseSwitchCompatOrMaterialXml" />
+
+        <View
+            android:id="@+id/vwSwtStreamingOnWifi"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="14dp"
+            android:background="?android:attr/listDivider"
+            android:contentDescription="@string/image_description"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/swtStreamingOnWifi"
+            tools:ignore="RtlSymmetry" />
+
+        <Switch
+            android:id="@+id/swtNotifyUsingMobileData"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_marginEnd="22dp"
+            android:checked="true"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:paddingStart="2dp"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            android:text="@string/notify_on_data"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/swtStreamingOnWifi"
+            tools:ignore="RtlSymmetry,UseSwitchCompatOrMaterialXml" />
+
+        <View
+            android:id="@+id/vwDataManagement"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="14dp"
+            android:background="?android:attr/listDivider"
+            android:contentDescription="@string/image_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/swtNotifyUsingMobileData"
+            tools:ignore="RtlSymmetry" />
+
+        <View
+            android:id="@+id/vwDataManagement2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="27dp"
+            android:layout_marginEnd="14dp"
+            android:background="?android:attr/listDivider"
+            android:contentDescription="@string/image_description"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vwDataManagement"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/swtPushNotification"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:paddingStart="2dp"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            android:text="@string/download_quality"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vwDataManagement2"
+            tools:ignore="RtlSymmetry,UseSwitchCompatOrMaterialXml" />
+
+        <TextView
+            android:id="@+id/txtPushNotification"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            android:text="@string/high"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@id/imgPushNotification"
+            app:layout_constraintTop_toBottomOf="@+id/vwDataManagement2" />
+
+        <ImageView
+            android:id="@+id/imgPushNotification"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:contentDescription="@string/image_description"
+            android:paddingTop="24dp"
+            android:paddingEnd="30dp"
+            android:paddingBottom="18dp"
+            android:src="@drawable/ic_forward"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vwDataManagement2"
+            tools:ignore="RtlSymmetry" />
+
+        <View
+            android:id="@+id/vwContents"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="14dp"
+            android:background="?android:attr/listDivider"
+            android:contentDescription="@string/image_description"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/swtPushNotification" />
+
+        <Switch
+            android:id="@+id/swtDownloadWhenWifi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:layout_marginEnd="23dp"
+            android:checked="true"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:paddingStart="2dp"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            android:text="@string/download_on_wifi"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vwContents"
+            tools:ignore="RtlSymmetry,UseSwitchCompatOrMaterialXml" />
+
+        <View
+            android:id="@+id/vwImageManagement"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="14dp"
+            android:background="?android:attr/listDivider"
+            android:contentDescription="@string/image_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/swtDownloadWhenWifi"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/txtAppVersion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:paddingStart="2dp"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            android:text="@string/automatic_download"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vwImageManagement"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/txtAppVersionNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            android:text="@string/valid"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@+id/imgAppVersionNumber"
+            app:layout_constraintTop_toBottomOf="@+id/vwImageManagement" />
+
+        <ImageView
+            android:id="@+id/imgAppVersionNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:contentDescription="@string/image_description"
+            android:paddingTop="24dp"
+            android:paddingEnd="30dp"
+            android:paddingBottom="18dp"
+            android:src="@drawable/ic_forward"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vwImageManagement"
+            tools:ignore="RtlSymmetry" />
+
+        <View
+            android:id="@+id/vwLogout"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="14dp"
+            android:background="?android:attr/listDivider"
+            android:contentDescription="@string/image_description"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtAppVersion" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

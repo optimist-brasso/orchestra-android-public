@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/search"
+        layout="@layout/search_view" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tbLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/search"
+        android:layout_marginTop="14dp"
+        app:tabBackground="@drawable/favourite_tab_indicator"
+        app:tabGravity="fill"
+        app:tabIndicator="@android:color/transparent"
+        app:tabIndicatorColor="@color/header_title"
+        app:tabRippleColor="@android:color/transparent"
+        app:tabSelectedTextColor="@color/colorAccent"
+        app:tabTextAppearance="@style/tab_text" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swrPlayList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tbLayout">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/vwPager"
+            android:saveEnabled="false"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <include
+        android:id="@+id/pgb"
+        layout="@layout/progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tbLayout" />
+
+</RelativeLayout>

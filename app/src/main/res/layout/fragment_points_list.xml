@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/png"
+        layout="@layout/progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swrPointsList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rltPointDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:paddingStart="16dp"
+                    android:paddingTop="21dp"
+                    android:paddingEnd="17dp"
+                    android:paddingBottom="24dp">
+
+                    <RelativeLayout
+                        android:id="@+id/rltTotalPoints"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/radius_five_gold"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="7dp">
+
+                        <TextView
+                            android:id="@+id/txvTotalPoints"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/noto_sans_regular"
+                            android:includeFontPadding="false"
+                            android:text="@string/total_points"
+                            android:textColor="@color/white"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/txtTotalPoints"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="4dp"
+                            android:layout_toEndOf="@+id/txvTotalPoints"
+                            android:fontFamily="@font/noto_sans_regular"
+                            android:includeFontPadding="false"
+                            android:text="@string/_99_999"
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/white"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/txvPaidPoints"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rltTotalPoints"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="18dp"
+                        android:fontFamily="@font/noto_sans_regular"
+                        android:includeFontPadding="false"
+                        android:text="@string/paid_points"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/txtPaidPointsCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rltTotalPoints"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_toEndOf="@+id/txvPaidPoints"
+                        android:fontFamily="@font/noto_sans_medium"
+                        android:includeFontPadding="false"
+                        android:text="@string/_10_000"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txvLimitedPoints"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txvPaidPoints"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="14dp"
+                        android:fontFamily="@font/noto_sans_regular"
+                        android:includeFontPadding="false"
+                        android:text="@string/limited_time_points"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/txvLimitedPointsCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txvPaidPoints"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="14dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_toEndOf="@+id/txvLimitedPoints"
+                        android:fontFamily="@font/noto_sans_medium"
+                        android:includeFontPadding="false"
+                        android:text="@string/_10_000"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txvExpiryDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txvLimitedPoints"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/noto_sans_regular"
+                        android:includeFontPadding="false"
+                        android:text="@string/until"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/txtExpiryPointsCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txvLimitedPoints"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_toEndOf="@+id/txvExpiryDate"
+                        android:fontFamily="@font/noto_sans_medium"
+                        android:includeFontPadding="false"
+                        android:text="@string/_10_000"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/txvFreePointsExpiry"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txvExpiryDate"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/noto_sans_regular"
+                        android:includeFontPadding="false"
+                        android:text="@string/until"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/txvConfirm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/txvExpiryDate"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="7dp"
+                        android:background="@drawable/radius_four_blue"
+                        android:fontFamily="@font/noto_sans_medium"
+                        android:includeFontPadding="false"
+                        android:paddingStart="16dp"
+                        android:paddingTop="4dp"
+                        android:paddingEnd="16dp"
+                        android:paddingBottom="8dp"
+                        android:text="@string/confirm"
+                        android:textColor="@color/white"
+                        android:textSize="16sp" />
+
+                </RelativeLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcvPointList"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/adapter_point_list" />
+
+                <include
+                    android:id="@+id/lltNoData"
+                    layout="@layout/layout_no_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+</LinearLayout>

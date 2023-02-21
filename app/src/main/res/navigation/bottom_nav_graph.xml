@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.co.brasso.feature.landing.home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_notificationListingFragment"
+            app:destination="@id/notificationListing" />
+        <action
+            android:id="@+id/action_home_to_orchestra"
+            app:destination="@+id/orchestraFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_bannerDetailFragment2"
+            app:destination="@id/bannerDetailFragment" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_notification_detail"
+            app:destination="@id/notificationDetails" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/listSongFragment"
+        android:name="com.co.brasso.feature.landing.listSong.ListSongFragment"
+        android:label="ListSongFragment"
+        tools:layout="@layout/fragment_list_song" />
+
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.co.brasso.feature.landing.favorite.FavoriteFragment"
+        android:label="FavoriteFragment"
+        tools:layout="@layout/fragment_favorite" />
+
+    <fragment
+        android:id="@+id/myPageFragment"
+        android:name="com.co.brasso.feature.landing.myPage.MyPageFragment"
+        android:label="MyPageFragment"
+        tools:layout="@layout/fragment_my_page_menu" />
+
+    <fragment
+        android:id="@+id/notificationListing"
+        android:name="com.co.brasso.feature.notification.NotificationFragment"
+        android:label="NotificationListing"
+        tools:layout="@layout/fragment_notification_listing">
+
+        <action
+            android:id="@+id/action_notificationListing_to_notificationDetailsFragment"
+            app:destination="@id/notificationDetails" />
+
+        <action
+            android:id="@+id/action_home_to_orchestra"
+            app:destination="@+id/orchestraFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/notificationDetails"
+        android:name="com.co.brasso.feature.notification.notificationDetails.NotificationDetailActivity"
+        android:label="NotificationDetails"
+        tools:layout="@layout/fragment_notification_details" />
+
+    <fragment
+        android:id="@+id/conductorDetailFragment"
+        android:name="com.co.brasso.feature.orchestra.conductorDetail.ConductorDetailFragment"
+        android:label="Conductor Detail Fragment"
+        tools:layout="@layout/fragment_conductor_detail">
+        <action
+            android:id="@+id/action_conductorDetailFragment_to_sessionLayoutFragment"
+            app:destination="@id/sessionLayoutFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/hallSoundDetailFragment"
+        android:name="com.co.brasso.feature.hallSound.hallSoundDetail.HallSoundDetailFragment"
+        android:label="Hall sound Detail Fragment"
+        tools:layout="@layout/fragment_hallsound_detail">
+        <action
+            android:id="@+id/action_hallSoundDetailFragment_to_orchestraPlayerFragment"
+            app:destination="@id/orchestraPlayerFragment" />
+        <action
+            android:id="@+id/action_hallSoundDetailFragment_to_sessionLayoutFragment"
+            app:destination="@id/sessionLayoutFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/orchestraFragment"
+        android:name="com.co.brasso.feature.orchestra.OrchestraFragment"
+        tools:layout="@layout/fragment_orchestra">
+        <action
+            android:id="@+id/action_orchestra_to_hall_sound_detail"
+            app:destination="@+id/hallSoundDetailFragment" />
+        <action
+            android:id="@+id/action_orchestraFragment_to_sessionLayoutFragment"
+            app:destination="@id/sessionLayoutFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/playerDetailFragment"
+        android:name="com.co.brasso.feature.player.playerDetail.PlayerDetailFragment"
+        android:label="fragment_player_detail"
+        tools:layout="@layout/fragment_player_detail" />
+
+    <fragment
+        android:id="@+id/cartListFragment"
+        android:name="com.co.brasso.feature.cart.CartListFragment"
+        android:label="CartListFragment"
+        tools:layout="@layout/fragment_cart_list">
+
+        <action
+            android:id="@+id/action_home_to_orchestra"
+            app:destination="@+id/orchestraFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/orchestraPlayerFragment"
+        android:name="com.co.brasso.feature.orchestraPlayer.OrchestraPlayerFragment"
+        android:label="fragment_orchestra_player"
+        tools:layout="@layout/fragment_orchestra_player" />
+
+    <fragment
+        android:id="@+id/bannerDetailFragment"
+        android:name="com.co.brasso.feature.bannerDetail.BannerDetailFragment"
+        android:label="fragment_banner_details"
+        tools:layout="@layout/fragment_banner_details" />
+
+    <fragment
+        android:id="@+id/sessionLayoutFragment"
+        android:name="com.co.brasso.feature.session.SessionLayoutFragment"
+        android:label="activity_session_layout"
+        tools:layout="@layout/activity_session_layout" />
+
+    <fragment
+        android:id="@+id/sessionDetailPremiumFragment"
+        android:name="com.co.brasso.feature.session.sessionDetail.sessionDetailPremium.SessionDetailPremiumFragment"
+        android:label="fragment_session_detail_premium"
+        tools:layout="@layout/fragment_session_detail_premium">
+        <action
+            android:id="@+id/action_sessionDetailPremiumFragment_to_appendixFragment"
+            app:destination="@id/appendixFragment" />
+        <action
+            android:id="@+id/action_sessionDetailPremiumFragment_to_buyMultiPartFragment"
+            app:destination="@id/buyMultiPartFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/sessionDetailFragment"
+        android:name="com.co.brasso.feature.session.sessionDetail.sessionDetail.SessionDetailFragment"
+        android:label="fragment_session_detail"
+        tools:layout="@layout/fragment_session_detail">
+        <action
+            android:id="@+id/action_sessionDetailFragment_to_sessionDetailPremiumFragment"
+            app:destination="@id/sessionDetailPremiumFragment" />
+        <action
+            android:id="@+id/action_sessionDetailFragment_to_buyMultiPartFragment"
+            app:destination="@id/buyMultiPartFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/buyMultiPartFragment"
+        android:name="com.co.brasso.feature.session.sessionDetail.buyMultiPart.BuyMultiPartFragment"
+        android:label="fragment_buy_mulitiple_part"
+        tools:layout="@layout/fragment_buy_mulitiple_part" />
+
+    <fragment
+        android:id="@+id/appendixFragment"
+        android:name="com.co.brasso.feature.session.sessionDetail.appendixFragment.AppendixFragment"
+        android:label="fragment_appendix"
+        tools:layout="@layout/fragment_appendix" />
+
+    <fragment
+        android:id="@+id/sessionVideoPlayerFragment"
+        android:name="com.co.brasso.feature.session.sessionVideoPlayer.SessionVideoPlayerFragment"
+        android:label="activity_session_video_player"
+        tools:layout="@layout/activity_session_video_player">
+        <action
+            android:id="@+id/action_sessionVideoPlayerFragment_to_buyMultiPartFragment"
+            app:destination="@id/buyMultiPartFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/bundleManagementFragment"
+        android:name="com.co.brasso.feature.landing.myPage.tab.myPage.points.PointsListFragment"
+        android:label="fragment_bundle_management"
+        tools:layout="@layout/fragment_points_list" />
+
+    <fragment
+        android:id="@+id/freePointsListFragment"
+        android:name="com.co.brasso.feature.landing.myPage.tab.myPage.points.freePoints.FreePointsListFragment"
+        android:label="fragment_free_points_list"
+        tools:layout="@layout/fragment_free_points_list" />
+    <fragment
+        android:id="@+id/conductorPlayerFragment"
+        android:name="com.co.brasso.feature.orchestra.conductorDetail.conductorPlayer.ConductorPlayerFragment"
+        android:label="fragment_conductor_player"
+        tools:layout="@layout/fragment_conductor_player" />
+
+</navigation>

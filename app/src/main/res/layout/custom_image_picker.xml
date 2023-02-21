@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cslMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="30dp"
+    android:layout_marginTop="35dp"
+    android:layout_marginEnd="30dp"
+    android:background="@drawable/radius_four_white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/imvProfilePic"
+        android:layout_width="match_parent"
+        android:layout_height="229dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="22dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:background="@drawable/image_picker_background"
+        android:contentDescription="@string/image_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txvSelectPicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/noto_sans_light"
+        android:includeFontPadding="false"
+        android:text="@string/select_picture"
+        app:layout_constraintBottom_toBottomOf="@+id/imvProfilePic"
+        app:layout_constraintEnd_toEndOf="@+id/imvProfilePic"
+        app:layout_constraintStart_toStartOf="@+id/imvProfilePic"
+        app:layout_constraintTop_toTopOf="@+id/imvProfilePic" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gdlCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <ImageView
+        android:id="@+id/imvGallery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="12dp"
+        android:contentDescription="@string/image_description"
+        app:layout_constraintEnd_toStartOf="@+id/gdlCenter"
+        app:layout_constraintTop_toBottomOf="@+id/imvProfilePic"
+        app:srcCompat="@drawable/ic_gallery" />
+
+    <ImageView
+        android:id="@+id/imvCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="20dp"
+        android:contentDescription="@string/image_description"
+        app:layout_constraintStart_toStartOf="@+id/gdlCenter"
+        app:layout_constraintTop_toBottomOf="@+id/imvProfilePic"
+        app:srcCompat="@drawable/ic_camera" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/radius_four_black"
+        android:fontFamily="@font/noto_sans_medium"
+        android:includeFontPadding="false"
+        android:paddingStart="44dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="44dp"
+        android:paddingBottom="5dp"
+        android:text="@string/save"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imvGallery" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

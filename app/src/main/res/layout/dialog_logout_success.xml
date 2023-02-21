@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:alpha=".8"
+        android:background="@drawable/black_bg_dialog"
+        tools:ignore="UselessParent">
+
+        <ImageView
+            android:id="@+id/imvCancel"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="17dp"
+            android:contentDescription="@string/image_description"
+            android:src="@drawable/ic_cancel" />
+
+        <TextView
+            android:id="@+id/txvLogout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imvCancel"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="191dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="242dp"
+            android:fontFamily="@font/noto_sans_regular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/logout_success"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

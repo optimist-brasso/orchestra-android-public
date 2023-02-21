@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/radius_ten_69_white"
+        android:orientation="vertical"
+        android:paddingBottom="48dp">
+
+        <ImageView
+            android:id="@+id/imgClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:contentDescription="@string/image_description"
+            android:paddingStart="8dp"
+            android:paddingTop="14dp"
+            android:paddingEnd="13dp"
+            android:paddingBottom="8dp"
+            app:srcCompat="@drawable/ic_close" />
+
+        <TextView
+            android:id="@+id/txtConfirmation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/noto_sans_light"
+            android:includeFontPadding="false"
+            android:text="@string/wouldYouLikeToBuyPremiumSet"
+            android:textColor="@color/session_layout_heading_color"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txtBuyPremium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="77dp"
+            android:layout_marginTop="23dp"
+            android:layout_marginEnd="74dp"
+            android:background="@drawable/radius_eight_gold"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:paddingStart="17dp"
+            android:paddingTop="9dp"
+            android:paddingEnd="17dp"
+            android:paddingBottom="11dp"
+            android:text="@string/purchasePartAndPremium"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/txtAddToCart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="77dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="74dp"
+            android:background="@drawable/radius_eight_gold"
+            android:fontFamily="@font/noto_sans_bold"
+            android:includeFontPadding="false"
+            android:paddingTop="9dp"
+            android:paddingBottom="7dp"
+            android:text="@string/add_to_cart"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txtWhatISPremiumVideo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="85dp"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="90dp"
+            android:fontFamily="@font/noto_sans_bold"
+            android:includeFontPadding="false"
+            android:text="@string/cannotBuyPremium"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/txtAppendixVideo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="77dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="74dp"
+            android:background="@drawable/radius_ten_buy_black"
+            android:fontFamily="@font/noto_sans_bold"
+            android:includeFontPadding="false"
+            android:paddingStart="56dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="56dp"
+            android:paddingBottom="8dp"
+            android:text="@string/checkPremiumAppendix"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+</ScrollView>

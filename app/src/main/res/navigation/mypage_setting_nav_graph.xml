@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mypage_setting_nav_graph"
+    app:startDestination="@id/myPageSettingFragment">
+
+    <fragment
+        android:id="@+id/myPageSettingFragment"
+        android:name="com.co.brasso.feature.landing.myPage.tab.setting.MyPageSettingFragment"
+        android:label="fragment_my_page_setting"
+        tools:layout="@layout/fragment_my_page_setting" >
+        <action
+            android:id="@+id/action_myPageSettingFragment_to_streamingDownloadFragment"
+            app:destination="@id/streamingDownloadFragment" />
+        <action
+            android:id="@+id/action_myPageSettingFragment_to_recordingFragment2"
+            app:destination="@id/recordingFragment" />
+        <action
+            android:id="@+id/action_myPageSettingFragment_to_dataManagementFragment"
+            app:destination="@id/dataManagementFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/streamingDownloadFragment"
+        android:name="com.co.brasso.feature.landing.myPage.tab.setting.streamingDownload.StreamingDownloadFragment"
+        android:label="fragment_streaming_download"
+        tools:layout="@layout/fragment_streaming_download" />
+    <fragment
+        android:id="@+id/recordingFragment"
+        android:name="com.co.brasso.feature.landing.myPage.tab.setting.recording.RecordingFragment"
+        android:label="fragment_recording"
+        tools:layout="@layout/fragment_recording" />
+    <fragment
+        android:id="@+id/dataManagementFragment"
+        android:name="com.co.brasso.feature.landing.myPage.tab.setting.dataManagement.DataManagementFragment"
+        android:label="fragment_data_management"
+        tools:layout="@layout/fragment_data_management" />
+</navigation>

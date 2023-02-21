@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lnlSubscribedOption"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="23dp"
+    android:layout_marginTop="15dp"
+    android:layout_marginEnd="22dp"
+    android:baselineAligned="false"
+    android:gravity="start"
+    android:orientation="horizontal"
+    android:visibility="gone"
+    android:weightSum="4">
+
+    <LinearLayout
+        android:id="@+id/llt1stSeat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:id="@+id/imv1stSeat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/image_description"
+            android:src="@drawable/ic_play_accent" />
+
+        <TextView
+            android:id="@+id/txv1stSeat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:fontFamily="@font/noto_sans_regular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            tools:text="@string/center_seat" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llt2ndSeat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:id="@+id/imv2ndSeat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="@string/image_description"
+            android:src="@drawable/ic_play_accent" />
+
+        <TextView
+            android:id="@+id/txv2ndSeat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:fontFamily="@font/noto_sans_regular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            tools:text="@string/right_seat" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llt3rdSeat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:id="@+id/imv3rdSeat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="@string/image_description"
+            android:src="@drawable/ic_play_accent" />
+
+        <TextView
+            android:id="@+id/txv3rdSeat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:fontFamily="@font/noto_sans_regular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            tools:text="@string/left_seat" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llt4thSeat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:ignore="UseCompoundDrawables">
+
+        <ImageView
+            android:id="@+id/imv4thSeat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:contentDescription="@string/image_description"
+            android:src="@drawable/ic_play_accent" />
+
+        <TextView
+            android:id="@+id/txv4thSeat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ellipsize="end"
+            android:fontFamily="@font/noto_sans_regular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="italic"
+            tools:text="@string/back_seat" />
+
+    </LinearLayout>
+
+</LinearLayout>

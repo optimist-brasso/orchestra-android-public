@@ -1,0 +1,842 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feature.auth.signUp.registration.RegistrationFragment">
+
+    <RelativeLayout
+        android:id="@+id/rltMainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="21dp"
+        android:paddingTop="10dp"
+        android:paddingEnd="21dp"
+        android:paddingBottom="24dp">
+
+        <TextView
+            android:id="@+id/txvRegisterAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_bold"
+            android:includeFontPadding="false"
+            android:text="@string/register"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imvProfilePic"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:layout_below="@id/txvRegisterAccount"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/ic_profile_pic"
+            android:contentDescription="@string/image_description" />
+
+        <LinearLayout
+            android:id="@+id/llnUpdatePic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/imvProfilePic"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btnImagePicker"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/radius_six_black"
+                android:fontFamily="@font/noto_sans_medium"
+                android:includeFontPadding="false"
+                android:minHeight="0dp"
+                android:paddingStart="24dp"
+                android:paddingTop="6dp"
+                android:paddingEnd="24dp"
+                android:paddingBottom="6dp"
+                android:text="@string/change_photo"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnDeleteImage"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/radius_six_black"
+                android:fontFamily="@font/noto_sans_medium"
+                android:includeFontPadding="false"
+                android:minHeight="0dp"
+                android:paddingStart="15dp"
+                android:paddingTop="6dp"
+                android:paddingEnd="15dp"
+                android:paddingBottom="6dp"
+                android:text="@string/delete_image"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lltFullName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llnUpdatePic"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rltFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtFullName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:fontFamily="@font/noto_sans_regular"
+                    android:includeFontPadding="false"
+                    android:text="@string/full_name"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txtNameRequired"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_toEndOf="@id/txtFullName"
+                    android:fontFamily="@font/noto_sans_regular"
+                    android:includeFontPadding="false"
+                    android:text="@string/required"
+                    android:textColor="#DD2C00"
+                    android:textSize="12sp"
+                    tools:ignore="RelativeOverlap" />
+
+                <TextView
+                    android:id="@+id/txtNotPublished"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_toEndOf="@+id/txtNameRequired"
+                    android:fontFamily="@font/noto_sans_light"
+                    android:gravity="end"
+                    android:includeFontPadding="false"
+                    android:text="@string/this_information_will_not_be_published"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    tools:ignore="RelativeOverlap" />
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/edtFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/radius_five_black"
+                android:fontFamily="@font/noto_sans_regular"
+                android:hint="@string/enter_your_name"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:includeFontPadding="false"
+                android:inputType="text"
+                android:minHeight="48dp"
+                android:paddingStart="16dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/txtColorSilver"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lltGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lltFullName"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <RelativeLayout
+                android:id="@+id/rltGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtGender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:fontFamily="@font/noto_sans_regular"
+                    android:includeFontPadding="false"
+                    android:text="@string/gender"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txtGenderRequired"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_toEndOf="@id/txtGender"
+                    android:fontFamily="@font/noto_sans_regular"
+                    android:includeFontPadding="false"
+                    android:text="@string/required"
+                    android:textColor="#DD2C00"
+                    android:textSize="12sp"
+                    tools:ignore="RelativeOverlap" />
+
+                <TextView
+                    android:id="@+id/txtGenderNotPublished"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_toEndOf="@+id/txtGenderRequired"
+                    android:fontFamily="@font/noto_sans_light"
+                    android:gravity="end"
+                    android:includeFontPadding="false"
+                    android:text="@string/this_information_will_not_be_published"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    tools:ignore="RelativeOverlap" />
+
+            </RelativeLayout>
+
+            <RadioGroup
+                android:id="@+id/rdgGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <RadioButton
+                    android:id="@+id/rdbMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:buttonTint="@color/black"
+                    android:checked="true"
+                    android:fontFamily="@font/noto_sans_regular"
+                    android:includeFontPadding="false"
+                    android:minHeight="48dp"
+                    android:paddingEnd="8dp"
+                    android:text="@string/male"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    tools:ignore="RtlSymmetry,TouchTargetSizeCheck" />
+
+                <RadioButton
+                    android:id="@+id/rdbFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:buttonTint="@color/black"
+                    android:checked="false"
+                    android:fontFamily="@font/noto_sans_regular"
+                    android:includeFontPadding="false"
+                    android:minHeight="48dp"
+                    android:paddingEnd="8dp"
+                    android:text="@string/female"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    tools:ignore="RtlSymmetry" />
+
+                <RadioButton
+                    android:id="@+id/rdbOther"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:buttonTint="@color/black"
+                    android:checked="false"
+                    android:fontFamily="@font/noto_sans_regular"
+                    android:includeFontPadding="false"
+                    android:minHeight="48dp"
+                    android:paddingEnd="8dp"
+                    android:text="@string/other"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    tools:ignore="RtlSymmetry" />
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/rltAddGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="2">
+
+                <EditText
+                    android:id="@+id/edtOtherGender"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="1.25"
+                    android:background="@drawable/radius_four_grey"
+                    android:fontFamily="@font/noto_sans_regular"
+                    android:importantForAutofill="no"
+                    android:includeFontPadding="false"
+                    android:inputType="textPersonName"
+                    android:minHeight="48dp"
+                    android:paddingStart="16dp"
+                    android:paddingTop="10dp"
+                    android:paddingEnd="16dp"
+                    android:paddingBottom="10dp" />
+
+                <Button
+                    android:id="@+id/btnSave"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_weight="0.75"
+                    android:background="@drawable/radius_four_black"
+                    android:fontFamily="@font/noto_sans_medium"
+                    android:includeFontPadding="false"
+                    android:minHeight="0dp"
+                    android:paddingStart="24dp"
+                    android:paddingTop="13dp"
+                    android:paddingEnd="24dp"
+                    android:paddingBottom="13dp"
+                    android:text="@string/save"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lltNickName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lltGender"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <RelativeLayout
+                android:id="@+id/rltNickName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtNickName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:fontFamily="@font/noto_sans_regular"
+                    android:includeFontPadding="false"
+                    android:text="@string/nickname_with_requirement"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txtNickNameRequired"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_toEndOf="@id/txtNickName"
+                    android:fontFamily="@font/noto_sans_regular"
+                    android:includeFontPadding="false"
+                    android:text="@string/required"
+                    android:textColor="#DD2C00"
+                    android:textSize="12sp"
+                    tools:ignore="RelativeOverlap" />
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/edtNickName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/radius_five_black"
+                android:fontFamily="@font/noto_sans_regular"
+                android:hint="@string/please_enter_your_nick_name"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:includeFontPadding="false"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:paddingStart="16dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/txtColorSilver"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lltMusicalInstruments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lltNickName"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <RelativeLayout
+                android:id="@+id/rltMusicalInstruments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtMusicalInstruments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:fontFamily="@font/noto_sans_regular"
+                    android:includeFontPadding="false"
+                    android:text="@string/musical_instrument"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/textMusicalInstrumentsRequired"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_toEndOf="@id/txtMusicalInstruments"
+                    android:fontFamily="@font/noto_sans_regular"
+                    android:includeFontPadding="false"
+                    android:text="@string/required"
+                    android:textColor="#DD2C00"
+                    android:textSize="12sp"
+                    tools:ignore="RelativeOverlap" />
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/edtMusicalInstruments"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/radius_five_black"
+                android:fontFamily="@font/noto_sans_regular"
+                android:hint="@string/please_enter_instrument_name"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:includeFontPadding="false"
+                android:inputType="textPersonName"
+                android:minHeight="48dp"
+                android:paddingStart="16dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/txtColorSilver"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lltPostalCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lltMusicalInstruments"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <RelativeLayout
+                android:id="@+id/rltPostalCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtPostalCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:fontFamily="@font/noto_sans_regular"
+                    android:includeFontPadding="false"
+                    android:text="@string/post_code"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txtPostalCodeRequired"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_toEndOf="@id/txtPostalCode"
+                    android:fontFamily="@font/noto_sans_regular"
+                    android:includeFontPadding="false"
+                    android:text="@string/required"
+                    android:textColor="#DD2C00"
+                    android:textSize="12sp"
+                    tools:ignore="RelativeOverlap" />
+
+                <TextView
+                    android:id="@+id/txtStateProvince"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_toEndOf="@+id/txtPostalCodeRequired"
+                    android:fontFamily="@font/noto_sans_light"
+                    android:gravity="end"
+                    android:includeFontPadding="false"
+                    android:text="@string/prefectures_will_be_released"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    tools:ignore="RelativeOverlap" />
+
+            </RelativeLayout>
+
+            <EditText
+                android:id="@+id/edtPostalCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/radius_five_black"
+                android:fontFamily="@font/noto_sans_regular"
+                android:hint="@string/please_enter_your_zip_code"
+                android:imeOptions="actionNext"
+                android:importantForAutofill="no"
+                android:includeFontPadding="false"
+                android:inputType="number"
+                android:minHeight="48dp"
+                android:paddingStart="16dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/txtColorSilver"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lltAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lltPostalCode"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <RelativeLayout
+                android:id="@+id/rltAge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtAge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:fontFamily="@font/noto_sans_regular"
+                    android:includeFontPadding="false"
+                    android:text="@string/age"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txtAgeRequired"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_toEndOf="@id/txtAge"
+                    android:fontFamily="@font/noto_sans_regular"
+                    android:includeFontPadding="false"
+                    android:text="@string/required"
+                    android:textColor="#DD2C00"
+                    android:textSize="12sp"
+                    tools:ignore="RelativeOverlap" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/lltBirthday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:baselineAligned="false"
+                android:orientation="horizontal"
+                android:weightSum="5">
+
+                <RelativeLayout
+                    android:id="@+id/rltYear"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/radius_six_grey">
+
+                    <TextView
+                        android:id="@+id/txvYear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginEnd="8dp"
+                        android:layout_toStartOf="@+id/imvYear"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/noto_sans_regular"
+                        android:gravity="start|center_vertical"
+                        android:includeFontPadding="false"
+                        android:minHeight="48dp"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/txtColorSilver"
+                        android:textSize="14sp"
+                        tools:ignore="RtlSymmetry" />
+
+                    <ImageView
+                        android:id="@+id/imvYear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="16dp"
+                        android:contentDescription="@string/image_description"
+                        android:src="@drawable/ic_forward" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rltMonth"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="1.5"
+                    android:background="@drawable/radius_six_grey">
+
+                    <TextView
+                        android:id="@+id/txvMonth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginEnd="8dp"
+                        android:layout_toStartOf="@+id/imvMonth"
+                        android:background="@android:color/transparent"
+                        android:gravity="center_vertical"
+                        android:minHeight="48dp"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/txtColorSilver"
+                        android:textSize="14sp"
+                        tools:ignore="RtlSymmetry" />
+
+                    <ImageView
+                        android:id="@+id/imvMonth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="12dp"
+                        android:contentDescription="@string/image_description"
+                        android:fontFamily="@font/noto_sans_regular"
+                        android:includeFontPadding="false"
+                        android:src="@drawable/ic_forward" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rltDay"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:layout_weight="1.5"
+                    android:background="@drawable/radius_six_grey">
+
+                    <TextView
+                        android:id="@+id/txvDay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginEnd="8dp"
+                        android:layout_toStartOf="@+id/imvDay"
+                        android:background="@android:color/transparent"
+                        android:gravity="center_vertical"
+                        android:minHeight="48dp"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/txtColorSilver"
+                        android:textSize="14sp"
+                        tools:ignore="RtlSymmetry" />
+
+                    <ImageView
+                        android:id="@+id/imvDay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="12dp"
+                        android:contentDescription="@string/image_description"
+                        android:src="@drawable/ic_forward" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lltOccupation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lltAge"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
+
+            <RelativeLayout
+                android:id="@+id/rltOccupation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txtOccupation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:fontFamily="@font/noto_sans_regular"
+                    android:includeFontPadding="false"
+                    android:text="@string/profession"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/txtOccupationRequired"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_toEndOf="@id/txtOccupation"
+                    android:fontFamily="@font/noto_sans_regular"
+                    android:includeFontPadding="false"
+                    android:text="@string/required"
+                    android:textColor="#DD2C00"
+                    android:textSize="12sp"
+                    tools:ignore="RelativeOverlap" />
+
+                <TextView
+                    android:id="@+id/txtOccupationNotPublished"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="16dp"
+                    android:layout_toEndOf="@+id/txtOccupationRequired"
+                    android:fontFamily="@font/noto_sans_light"
+                    android:gravity="end"
+                    android:includeFontPadding="false"
+                    android:text="@string/this_information_will_not_be_published"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    tools:ignore="RelativeOverlap" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rltSpinnerOccupation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/radius_six_grey">
+
+                <Spinner
+                    android:id="@+id/spnOccupation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/noto_sans_regular"
+                    android:gravity="start|center_vertical"
+                    android:includeFontPadding="false"
+                    android:minHeight="48dp"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:spinnerMode="dropdown"
+                    android:textSize="14sp"
+                    tools:ignore="RtlSymmetry" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp"
+                    android:contentDescription="@string/image_description"
+                    android:src="@drawable/ic_forward" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tsvSelfIntro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lltOccupation"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:text="@string/self_introduction"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/edtSelfIntroduction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tsvSelfIntro"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/radius_five_black"
+            android:fontFamily="@font/noto_sans_regular"
+            android:gravity="top|start"
+            android:hint="@string/self_introduction"
+            android:imeOptions="actionDone"
+            android:importantForAutofill="no"
+            android:includeFontPadding="false"
+            android:inputType="textMultiLine"
+            android:lines="20"
+            android:minLines="5"
+            android:padding="16dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/txtColorSilver"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtSelfIntroduction"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/radius_eight_accent"
+            android:fontFamily="@font/noto_sans_medium"
+            android:includeFontPadding="false"
+            android:paddingStart="18dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="18dp"
+            android:paddingBottom="10dp"
+            android:text="@string/register_an_account"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+    </RelativeLayout>
+
+</ScrollView>

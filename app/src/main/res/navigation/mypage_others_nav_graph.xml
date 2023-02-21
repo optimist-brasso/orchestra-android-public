@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mypage_others_nav_graph"
+    app:startDestination="@id/myPageOtherFragment">
+
+    <fragment
+        android:id="@+id/myPageOtherFragment"
+        android:name="com.co.brasso.feature.landing.myPage.tab.more.MyPageOtherFragment"
+        android:label="fragment_my_page_other"
+        tools:layout="@layout/fragment_my_page_other" >
+        <action
+            android:id="@+id/action_myPageOtherFragment_to_aboutAppFragment"
+            app:destination="@id/aboutAppFragment" />
+        <action
+            android:id="@+id/action_myPageOtherFragment_to_faqFragment"
+            app:destination="@id/faqFragment" />
+        <action
+            android:id="@+id/action_myPageOtherFragment_to_opinionAndRequestFragment"
+            app:destination="@id/opinionAndRequestFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/aboutAppFragment"
+        android:name="com.co.brasso.feature.landing.myPage.tab.more.aboutApp.AboutAppFragment"
+        android:label="fragment_about_app"
+        tools:layout="@layout/fragment_about_app" />
+
+    <fragment
+        android:id="@+id/faqFragment"
+        android:name="com.co.brasso.feature.landing.myPage.tab.more.faq.FAQFragment"
+        android:label="fragment_about_app"
+        tools:layout="@layout/fragment_faq" />
+
+    <fragment
+        android:id="@+id/opinionAndRequestFragment"
+        android:name="com.co.brasso.feature.landing.myPage.tab.more.opinionsAndRequest.OpinionAndRequestFragment"
+        android:label="OpinionAndRequestFragment"
+        tools:layout="@layout/fragment_opinion_and_request" />
+
+</navigation>

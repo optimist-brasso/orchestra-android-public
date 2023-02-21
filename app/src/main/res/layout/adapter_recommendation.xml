@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rllMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="18dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/crvImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp">
+
+        <ImageView
+            android:id="@+id/imvRecommendation"
+            android:layout_width="175dp"
+            android:layout_height="118dp"
+            android:contentDescription="@string/image_description"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_thumbnail" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txvPrLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="7dp"
+                android:layout_marginBottom="7dp"
+                android:background="@drawable/new_bg"
+                android:fontFamily="@font/noto_sans_regular"
+                android:includeFontPadding="false"
+                android:paddingStart="8dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="4dp"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                tools:text="新着" />
+
+            <TextView
+                android:id="@+id/txvNewLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="7dp"
+                android:layout_marginBottom="7dp"
+                android:layout_toEndOf="@+id/txvPrLabel"
+                android:background="@drawable/new_bg"
+                android:fontFamily="@font/noto_sans_regular"
+                android:includeFontPadding="false"
+                android:paddingStart="8dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="4dp"
+                android:textColor="@color/white"
+                android:textSize="11sp"
+                tools:text="新着" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/txvRecommendedTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="@dimen/padding_10"
+        android:layout_toEndOf="@+id/crvImageView"
+        android:fontFamily="@font/noto_sans_regular"
+        android:includeFontPadding="false"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        tools:text="見出しコピー" />
+
+    <TextView
+        android:id="@+id/txvRecommendedDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txvRecommendedTitle"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="@dimen/padding_10"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_toEndOf="@+id/crvImageView"
+        android:fontFamily="@font/noto_sans_regular"
+        android:includeFontPadding="false"
+        android:inputType="none"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        tools:text="日本語の説明文が入ります。日本語の説明文が入ります。日本語の説明文が入ります。日本語の説明文が入ります。日本語の説明文" />
+
+    <TextView
+        android:id="@+id/txvRecommendedTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txvRecommendedDescription"
+        android:layout_marginStart="@dimen/padding_10"
+        android:layout_marginTop="8dp"
+        android:layout_toEndOf="@+id/crvImageView"
+        android:fontFamily="@font/noto_sans_regular"
+        android:includeFontPadding="false"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        tools:text="1:59:59" />
+
+    <TextView
+        android:id="@+id/txvRecommendedDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txvRecommendedTime"
+        android:layout_marginStart="@dimen/padding_10"
+        android:layout_marginTop="6dp"
+        android:layout_toEndOf="@+id/crvImageView"
+        android:fontFamily="@font/noto_sans_regular"
+        android:includeFontPadding="false"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        tools:text="2022/2/10" />
+
+</RelativeLayout>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:alpha=".8"
+        android:background="@drawable/black_bg_dialog"
+        tools:ignore="UselessParent">
+
+        <ImageView
+            android:id="@+id/imvCancel"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="12dp"
+            android:contentDescription="@string/image_description"
+            android:src="@drawable/ic_cancel" />
+
+        <TextView
+            android:id="@+id/txvPurchase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imvCancel"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="26dp"
+            android:fontFamily="@font/noto_sans_regular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/purchase"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txvPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txvPurchase"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="123dp"
+            android:layout_marginEnd="26dp"
+            android:fontFamily="@font/noto_sans_regular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/password"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txvPassword"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="26dp"
+            app:hintEnabled="false"
+            app:passwordToggleEnabled="true">
+
+            <EditText
+                android:id="@+id/edvPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radius_four_white"
+                android:fontFamily="@font/noto_sans_medium"
+                android:hint="@string/please_enter_your_password"
+                android:imeOptions="actionDone"
+                android:importantForAutofill="no"
+                android:includeFontPadding="false"
+                android:inputType="textPassword"
+                android:minHeight="48dp"
+                android:paddingStart="24dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="24dp"
+                android:paddingBottom="10dp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/txtColorSilver"
+                android:textSize="16sp"
+                tools:ignore="LabelFor" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/txvForgotPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tilPassword"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="26dp"
+            android:fontFamily="@font/noto_sans_regular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="@string/forgot_password"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btnCheckout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txvForgotPassword"
+            android:layout_marginStart="67dp"
+            android:layout_marginTop="176dp"
+            android:layout_marginEnd="67dp"
+            android:background="@drawable/button_bg_white"
+            android:fontFamily="@font/noto_sans_regular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:paddingTop="6dp"
+            android:paddingBottom="9dp"
+            android:text="@string/to_buy"
+            android:textAllCaps="false"
+            android:textColor="@color/txtColorGrey"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txvCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnCheckout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="22dp"
+            android:layout_marginBottom="42dp"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:text="@string/cancel"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

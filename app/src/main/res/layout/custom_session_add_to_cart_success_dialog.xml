@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/radius_ten_black"
+        android:paddingBottom="39dp">
+
+        <ImageView
+            android:id="@+id/imgClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/image_description"
+            android:paddingStart="17dp"
+            android:paddingTop="18dp"
+            android:paddingEnd="13dp"
+            android:paddingBottom="8dp"
+            app:srcCompat="@drawable/ic_close"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imgClose"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="14dp"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:textAlignment="center"
+            android:text="@string/recordingTitle"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="64dp"
+            android:textAlignment="center"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:text="@string/partHarp"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtPlus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtDescription"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:textAlignment="center"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:text="+" />
+
+        <TextView
+            android:id="@+id/txtPremiumVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtPlus"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:visibility="gone"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:text="@string/textPremiumVideo" />
+
+        <TextView
+            android:id="@+id/txtConfirmation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtPremiumVideo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="54dp"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:text="@string/wasAddedToTheCart"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtMoveCart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtConfirmation"
+            android:layout_marginStart="67dp"
+            android:layout_marginTop="159dp"
+            android:layout_marginEnd="67dp"
+            android:background="@drawable/radius_six_white"
+            android:fontFamily="@font/noto_sans_medium"
+            android:includeFontPadding="false"
+            android:paddingStart="13dp"
+            android:paddingTop="9dp"
+            android:paddingEnd="14dp"
+            android:paddingBottom="10dp"
+            android:text="@string/moveToCart"
+            android:textAlignment="center"
+            android:textColor="@color/txtColorGrey"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+</ScrollView>

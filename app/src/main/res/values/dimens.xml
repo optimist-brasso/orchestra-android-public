@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padding_10">10dp</dimen>
+    <dimen name="padding_8">8dp</dimen>
+    <dimen name="padding_6">6dp</dimen>
+    <dimen name="height">30dp</dimen>
+    <dimen name="header_image_height">88dp</dimen>
+    <dimen name="header_padding">3dp</dimen>
+    <dimen name="viewpager_current_item_horizontal_margin">42dp</dimen>
+    <dimen name="defaultMargin_3_5x">35dp</dimen>
+    <dimen name="defaultMargin">20dp</dimen>
+    <dimen name="dim_4">4dp</dimen>
+    <dimen name="dim_20dp">20dp</dimen>
+    <dimen name="dim_18sp">18sp</dimen>
+    <dimen name="dim_12dp">12dp</dimen>
+    <dimen name="dim_48dp">48dp</dimen>
+    <dimen name="dim_18dp">18dp</dimen>
+    <dimen name="dim_6dp">6dp</dimen>
+    <dimen name="dim_21dp">21dp</dimen>
+    <dimen name="dim_57dp">57dp</dimen>
+    <dimen name="dim_22dp">22dp</dimen>
+    <dimen name="dim_9dp">9dp</dimen>
+    <dimen name="dim_16dp">16dp</dimen>
+    <dimen name="dim_280dp">280dp</dimen>
+    <dimen name="dim_130dp">130dp</dimen>
+    <dimen name="dim_40dp">40dp</dimen>
+    <dimen name="dim_32dp">32dp</dimen>
+    <dimen name="dim_2dp">2dp</dimen>
+    <dimen name="dim_14dp">14dp</dimen>
+    <dimen name="dim_8dp">8dp</dimen>
+
+</resources>

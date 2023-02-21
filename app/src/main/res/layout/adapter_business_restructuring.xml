@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    android:id="@+id/txvBusinessType"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    android:layout_marginStart="20dp"
+    android:background="@drawable/conductor_bg_border_grey"
+    android:ellipsize="end"
+    android:fontFamily="@font/noto_sans_regular"
+    android:includeFontPadding="false"
+    android:maxLines="1"
+    android:padding="@dimen/padding_6"
+    android:paddingStart="21dp"
+    android:paddingEnd="21dp"
+    android:text="@string/businessType"
+    android:textColor="@color/light_grey_text"
+    android:textSize="14sp"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

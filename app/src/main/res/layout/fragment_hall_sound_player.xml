@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.co.brasso.utils.customView.singletouchmotionlayout.SingleViewTouchableMotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mtnMainContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/fragment_hall_sound_player_scene">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cnsCollapsedLayout"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="43dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/cnsMainLayout"
+        app:layout_constraintStart_toStartOf="@+id/cnsMainLayout"
+        app:layout_constraintTop_toBottomOf="@+id/imgDragDown">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imgDragDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:contentDescription="@string/image_description"
+        android:padding="20dp"
+        android:src="@drawable/ic_drag_down"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/cnsMainLayout"
+        app:layout_constraintStart_toStartOf="@+id/cnsMainLayout"
+        app:layout_constraintTop_toTopOf="@+id/cnsMainLayout"
+        tools:ignore="ImageContrastCheck" />
+
+    <ImageView
+        android:id="@+id/imgMusicThumbnail"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="43dp"
+        android:contentDescription="@string/image_description"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_thumbnail"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/cnsMainLayout"
+        app:layout_constraintStart_toStartOf="@+id/cnsMainLayout"
+        app:layout_constraintTop_toBottomOf="@+id/imgDragDown"
+        tools:ignore="ImageContrastCheck" />
+
+    <ImageView
+        android:id="@+id/imgPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/image_description"
+        android:paddingStart="10dp"
+        android:paddingTop="24dp"
+        android:paddingEnd="9dp"
+        android:paddingBottom="24dp"
+        android:src="@drawable/ic_play_collapsed"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/cnsCollapsedLayout"
+        app:layout_constraintStart_toEndOf="@+id/imgMusicThumbnail"
+        app:layout_constraintTop_toTopOf="@+id/cnsCollapsedLayout"
+        tools:ignore="ImageContrastCheck" />
+
+    <ImageView
+        android:id="@+id/imgPause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/image_description"
+        android:paddingStart="10dp"
+        android:paddingTop="24dp"
+        android:paddingEnd="9dp"
+        android:paddingBottom="24dp"
+        android:src="@drawable/ic_pause_collapsed"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/cnsCollapsedLayout"
+        app:layout_constraintStart_toEndOf="@+id/imgMusicThumbnail"
+        app:layout_constraintTop_toTopOf="@+id/cnsCollapsedLayout"
+        tools:ignore="ImageContrastCheck" />
+
+    <ImageView
+        android:id="@+id/imgFfw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/image_description"
+        android:paddingStart="9dp"
+        android:paddingTop="24dp"
+        android:paddingEnd="22dp"
+        android:paddingBottom="24dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_next_collapsed"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/cnsCollapsedLayout"
+        app:layout_constraintEnd_toEndOf="@+id/cnsMainLayout"
+        app:layout_constraintStart_toEndOf="@+id/imgPlay"
+        app:layout_constraintTop_toTopOf="@+id/cnsCollapsedLayout"
+        tools:ignore="ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/txtTitleEng"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textSize="14sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/cnsMainLayout"
+        app:layout_constraintStart_toStartOf="@+id/cnsMainLayout"
+        app:layout_constraintTop_toBottomOf="@+id/imgMusicThumbnail"
+        tools:text="aasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdffffffffffffffffffffffffffffffffffffffff" />
+
+    <TextView
+        android:id="@+id/txtTitleJpn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/noto_sans_regular"
+        android:includeFontPadding="false"
+        android:textSize="18sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/imgPlay"
+        app:layout_constraintStart_toStartOf="@+id/cnsMainLayout"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitleEng"
+        tools:text="TextView" />
+
+    <ImageView
+        android:id="@+id/imgDivider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="9dp"
+        android:contentDescription="@string/image_description"
+        android:src="@drawable/ic_divider"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/cnsMainLayout"
+        app:layout_constraintStart_toStartOf="@+id/cnsMainLayout"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitleJpn"
+        tools:ignore="ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/txtBand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="7dp"
+        android:fontFamily="@font/noto_sans_regular"
+        android:includeFontPadding="false"
+        android:textSize="14sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/cnsMainLayout"
+        app:layout_constraintStart_toStartOf="@+id/cnsMainLayout"
+        app:layout_constraintTop_toBottomOf="@+id/imgDivider"
+        tools:text="TextView" />
+
+    <TextView
+        android:id="@+id/txtPlace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="7dp"
+        android:fontFamily="@font/noto_sans_regular"
+        android:includeFontPadding="false"
+        android:text="@string/seats"
+        android:textSize="14sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/cnsMainLayout"
+        app:layout_constraintStart_toStartOf="@+id/cnsMainLayout"
+        app:layout_constraintTop_toBottomOf="@+id/txtBand" />
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/exoMusicPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_above="@id/rltVolumeControl"
+        android:layout_marginBottom="20dp"
+        android:visibility="visible"
+        app:controller_layout_id="@layout/view_player_controller"
+        app:hide_on_touch="false"
+        app:layout_constraintBottom_toTopOf="@+id/rltVolumeControl"
+        app:layout_constraintEnd_toEndOf="@+id/cnsMainLayout"
+        app:layout_constraintStart_toStartOf="@+id/cnsMainLayout"
+        app:show_timeout="0" />
+
+    <RelativeLayout
+        android:id="@+id/rltVolumeControl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="20dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/cnsMainLayout"
+        app:layout_constraintEnd_toEndOf="@+id/cnsMainLayout"
+        app:layout_constraintStart_toStartOf="@+id/cnsMainLayout">
+
+        <ImageView
+            android:id="@+id/imgVolLow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="34dp"
+            android:contentDescription="@string/image_description"
+            app:srcCompat="@drawable/ic_volume_low" />
+
+        <SeekBar
+            android:id="@+id/skbVolume"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toStartOf="@+id/imgVolHigh"
+            android:layout_toEndOf="@+id/imgVolLow"
+            android:progress="50"
+            android:progressTint="@color/light_grey_text"
+            android:thumb="@drawable/custom_thumb" />
+
+        <ImageView
+            android:id="@+id/imgVolHigh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="34dp"
+            android:contentDescription="@string/image_description"
+            app:srcCompat="@drawable/ic_volume_high" />
+
+    </RelativeLayout>
+
+</com.co.brasso.utils.customView.singletouchmotionlayout.SingleViewTouchableMotionLayout>

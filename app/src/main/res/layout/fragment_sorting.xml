@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feature.sort.SortingFragment">
+
+    <LinearLayout
+        android:id="@+id/lltToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/image_description"
+            android:padding="12dp"
+            android:src="@drawable/ic_arrow_back" />
+
+        <TextView
+            android:id="@+id/txtReturn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:text="@string/return_back"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lltTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lltToolbar"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:paddingStart="35dp"
+        android:paddingTop="22dp"
+        android:paddingEnd="39dp"
+        android:paddingBottom="25dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="23dp"
+            android:layout_weight="1"
+            android:background="@drawable/radius_eight_black_border"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="13dp"
+                android:contentDescription="@string/image_description"
+                android:src="@drawable/ic_sort" />
+
+            <TextView
+                android:id="@+id/txtSort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="20dp"
+                android:text="@string/sort"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_weight="1"
+            android:background="@drawable/radius_eight_grey_border"
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:id="@+id/imgFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="13dp"
+                android:contentDescription="@string/image_description"
+                android:src="@drawable/ic_sort"
+                app:tint="@color/unselected_white" />
+
+            <TextView
+                android:id="@+id/txtFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="20dp"
+                android:text="@string/filter"
+                android:textColor="@color/unselected_white" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divTitle"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/lltTitle"
+        android:background="@color/black" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/divTitle"
+        android:paddingStart="42dp"
+        android:paddingTop="46dp"
+        android:paddingEnd="45dp"
+        android:paddingBottom="46dp">
+
+        <View
+            android:id="@+id/divMiddleBar"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:background="?android:attr/listDivider" />
+
+        <TextView
+            android:id="@+id/edtReleaseDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="20dp"
+            android:layout_toStartOf="@+id/divMiddleBar"
+            android:background="@drawable/radius_four_white_with_black_stroke"
+            android:paddingStart="31dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="31dp"
+            android:paddingBottom="10dp"
+            android:text="@string/release_date"
+            android:textAlignment="center"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/edtMusicTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@+id/divMiddleBar"
+            android:background="@drawable/radius_four_white_with_black_stroke"
+            android:paddingStart="31dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="31dp"
+            android:paddingBottom="10dp"
+            android:text="@string/musicTitle"
+            android:textAlignment="center"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/edtDuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtReleaseDate"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="20dp"
+            android:layout_toStartOf="@+id/divMiddleBar"
+            android:background="@drawable/radius_four_white_with_black_stroke"
+            android:paddingStart="31dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="31dp"
+            android:paddingBottom="10dp"
+            android:text="@string/duration"
+            android:textAlignment="center"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/edtVenueTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtReleaseDate"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="21dp"
+            android:layout_toEndOf="@+id/divMiddleBar"
+            android:background="@drawable/radius_four_white_with_black_stroke"
+            android:paddingStart="31dp"
+            android:paddingTop="10dp"
+            android:paddingEnd="31dp"
+            android:paddingBottom="10dp"
+            android:text="@string/venue_title"
+            android:textAlignment="center"
+            android:textColor="@color/black" />
+    </RelativeLayout>
+
+</RelativeLayout>

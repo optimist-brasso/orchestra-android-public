@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rltMainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="16dp">
+
+    <RelativeLayout
+        android:id="@+id/rltImage"
+        android:layout_width="151dp"
+        android:layout_height="83dp">
+
+        <ImageView
+            android:id="@+id/imvFavouriteOrchestra"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/image_description"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_thumbnail" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="4dp"
+        android:layout_toStartOf="@+id/rllMoreAndFavourite"
+        android:layout_toEndOf="@+id/rltImage">
+
+        <TextView
+            android:id="@+id/txvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/sf_pro_semi_bold"
+            android:includeFontPadding="false"
+            android:textColor="@color/black"
+            tools:text="original recording"
+            tools:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/txvTitleJp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txvTitle"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/sf_pro_semi_bold"
+            android:includeFontPadding="false"
+            android:inputType="none"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            tools:text="ゲンバンヒョウキ" />
+
+        <TextView
+            android:id="@+id/txvInstrument"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txvTitleJp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/padding_10"
+            android:ellipsize="marquee"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:inputType="none"
+            android:maxLines="2"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            tools:text="パート：トランペット 1st" />
+
+        <TextView
+            android:id="@+id/txvPlayerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txvInstrument"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="@dimen/padding_10"
+            android:ellipsize="marquee"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:inputType="none"
+            android:maxLines="2"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            tools:text="パート：トランペット 1st" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rllMoreAndFavourite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true">
+
+        <ImageView
+            android:id="@+id/imvFavourite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/image_description"
+            android:src="@drawable/ic_favourite_selected" />
+
+        <ImageView
+            android:id="@+id/imvMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/imvFavourite"
+            android:contentDescription="@string/image_description"
+            android:src="@drawable/ic_operation"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

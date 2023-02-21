@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@id/end"
+        motion:constraintSetStart="@id/start"
+        motion:duration="500"
+        motion:motionInterpolator="easeInOut">
+
+        <KeyFrameSet>
+
+            <KeyAttribute
+                android:alpha="0"
+                motion:framePosition="10"
+                motion:motionTarget="@id/imgDragDown" />
+
+            <KeyPosition
+                motion:curveFit="linear"
+                motion:framePosition="10"
+                motion:motionTarget="@id/imgMusicThumbnail"
+                motion:percentWidth="0"
+                motion:percentX="0" />
+
+            <KeyPosition
+                motion:curveFit="linear"
+                motion:framePosition="85"
+                motion:motionTarget="@id/cnsCollapsedLayout"
+                motion:percentWidth="0"
+                motion:percentX="0" />
+
+        </KeyFrameSet>
+
+        <OnSwipe
+            motion:dragDirection="dragUp"
+            motion:maxAcceleration="50"
+            motion:touchAnchorId="@id/cnsCollapsedLayout" />
+
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+
+        <Constraint
+            android:id="@+id/cnsCollapsedLayout"
+            android:layout_width="match_parent"
+            android:layout_height="112dp"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent">
+            <CustomAttribute
+                motion:attributeName="backgroundColor"
+                motion:customColorValue="@color/blackWith80Transparent" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/imgDragDown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0"
+            android:src="@drawable/ic_drag_down"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent" />
+
+        <Constraint
+            android:id="@+id/imgMusicThumbnail"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginBottom="0dp"
+            motion:layout_constraintBottom_toBottomOf="@+id/cnsCollapsedLayout"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="@+id/cnsCollapsedLayout" />
+
+        <Constraint
+            android:id="@+id/imgPlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingTop="24dp"
+            android:paddingEnd="9dp"
+            android:paddingBottom="24dp"
+            android:src="@drawable/ic_play_collapsed"
+            android:visibility="visible"
+            motion:layout_constraintBottom_toBottomOf="@+id/cnsCollapsedLayout"
+            motion:layout_constraintEnd_toStartOf="@+id/imgFfw"
+            motion:layout_constraintTop_toTopOf="@+id/cnsCollapsedLayout">
+            <PropertySet
+                android:visibility="visible"
+                app:visibilityMode="ignore" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/imgPause"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="9dp"
+            android:paddingTop="24dp"
+            android:paddingEnd="22dp"
+            android:paddingBottom="24dp"
+            android:src="@drawable/ic_pause_collapsed"
+            android:visibility="invisible"
+            motion:layout_constraintBottom_toBottomOf="@+id/cnsCollapsedLayout"
+            motion:layout_constraintEnd_toStartOf="@+id/imgFfw"
+            motion:layout_constraintTop_toTopOf="@+id/cnsCollapsedLayout">
+            <PropertySet
+                android:visibility="invisible"
+                app:visibilityMode="ignore" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/imgFfw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="9dp"
+            android:paddingTop="24dp"
+            android:paddingEnd="22dp"
+            android:paddingBottom="24dp"
+            android:src="@drawable/ic_next_collapsed"
+            android:visibility="visible"
+            motion:layout_constraintBottom_toBottomOf="@+id/cnsCollapsedLayout"
+            motion:layout_constraintEnd_toEndOf="@+id/cnsCollapsedLayout"
+            motion:layout_constraintTop_toTopOf="@+id/cnsCollapsedLayout" />
+
+        <Constraint
+            android:id="@+id/txtTitleEng"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="22dp"
+            motion:layout_constraintEnd_toStartOf="@+id/imgPlay"
+            motion:layout_constraintStart_toEndOf="@+id/imgMusicThumbnail"
+            motion:layout_constraintTop_toTopOf="@+id/cnsCollapsedLayout">
+            <CustomAttribute
+                motion:attributeName="textColor"
+                motion:customColorValue="@color/white" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/txtTitleJpn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="3dp"
+            motion:layout_constraintEnd_toStartOf="@+id/imgPlay"
+            motion:layout_constraintStart_toEndOf="@+id/imgMusicThumbnail"
+            motion:layout_constraintTop_toBottomOf="@+id/txtTitleEng">
+            <CustomAttribute
+                motion:attributeName="textColor"
+                motion:customColorValue="@color/white" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/imgDivider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:alpha="0"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@+id/txtTitleJpn" />
+
+        <Constraint
+            android:id="@+id/txtBand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:alpha="0"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toBottomOf="@+id/imgDivider" />
+
+        <Constraint
+            android:id="@+id/txtPlace"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            motion:layout_constraintEnd_toStartOf="@+id/imgPlay"
+            motion:layout_constraintStart_toEndOf="@+id/imgMusicThumbnail"
+            motion:layout_constraintTop_toBottomOf="@+id/txtTitleJpn">
+            <CustomAttribute
+                motion:attributeName="textColor"
+                motion:customColorValue="@color/white" />
+        </Constraint>
+
+        <Constraint
+            android:id="@+id/exoMusicPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="0dp"
+            android:alpha="0"
+            motion:layout_constraintBottom_toTopOf="@+id/rltVolumeControl"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent" />
+
+        <Constraint
+            android:id="@+id/rltVolumeControl"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="45dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="34dp"
+            android:layout_marginBottom="0dp"
+            android:alpha="0"
+            motion:layout_constraintBottom_toBottomOf="parent"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent" />
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+
+        <Constraint
+            android:id="@+id/cnsCollapsedLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:paddingStart="35dp"
+            android:paddingEnd="35dp"
+            motion:layout_constraintEnd_toEndOf="parent"
+            motion:layout_constraintStart_toStartOf="parent"
+            motion:layout_constraintTop_toTopOf="parent">
+            <CustomAttribute
+                motion:attributeName="backgroundColor"
+                motion:customColorValue="@color/white" />
+        </Constraint>
+
+        <Constraint
+            android:id="@id/imgDragDown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:alpha="1"
+            android:contentDescription="@string/image_description"
+            android:padding="20dp"
+            android:src="@drawable/ic_drag_down"
+            motion:layout_constraintEnd_toEndOf="@id/cnsCollapsedLayout"
+            motion:layout_constraintStart_toStartOf="@id/cnsCollapsedLayout"
+            motion:layout_constraintTop_toTopOf="@id/cnsCollapsedLayout" />
+
+        <Constraint
+            android:id="@id/imgMusicThumbnail"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:alpha="1"
+            android:contentDescription="@string/image_description"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_thumbnail"
+            motion:layout_constraintEnd_toEndOf="@id/cnsCollapsedLayout"
+            motion:layout_constraintStart_toStartOf="@id/cnsCollapsedLayout"
+            motion:layout_constraintTop_toBottomOf="@+id/imgDragDown" />
+
+        <Constraint
+            android:id="@id/imgPlay"
+            android:layout_width="10dp"
+            android:layout_height="16dp"
+            android:contentDescription="@string/image_description"
+            android:paddingStart="10dp"
+            android:paddingTop="24dp"
+            android:paddingEnd="9dp"
+            android:paddingBottom="24dp"
+            android:src="@drawable/ic_play_collapsed"
+            android:visibility="invisible"
+            motion:layout_constraintBottom_toBottomOf="@+id/cnsCollapsedLayout"
+            motion:layout_constraintStart_toEndOf="@+id/imgMusicThumbnail"
+            motion:layout_constraintTop_toTopOf="@+id/cnsCollapsedLayout" />
+
+        <Constraint
+            android:id="@+id/imgPause"
+            android:layout_width="10dp"
+            android:layout_height="16dp"
+            android:contentDescription="@string/image_description"
+            android:paddingStart="10dp"
+            android:paddingTop="24dp"
+            android:paddingEnd="9dp"
+            android:paddingBottom="24dp"
+            android:src="@drawable/ic_pause_collapsed"
+            android:visibility="invisible"
+            motion:layout_constraintBottom_toBottomOf="@+id/cnsCollapsedLayout"
+            motion:layout_constraintStart_toEndOf="@+id/imgMusicThumbnail"
+            motion:layout_constraintTop_toTopOf="@+id/cnsCollapsedLayout" />
+
+        <Constraint
+            android:id="@+id/imgFfw"
+            android:layout_width="10dp"
+            android:layout_height="16dp"
+            android:contentDescription="@string/image_description"
+            android:paddingStart="9dp"
+            android:paddingTop="24dp"
+            android:paddingEnd="22dp"
+            android:paddingBottom="24dp"
+            android:src="@drawable/ic_next_collapsed"
+            android:visibility="invisible"
+            motion:layout_constraintBottom_toBottomOf="@+id/cnsCollapsedLayout"
+            motion:layout_constraintEnd_toEndOf="@+id/cnsCollapsedLayout"
+            motion:layout_constraintTop_toTopOf="@+id/cnsCollapsedLayout" />
+
+        <Constraint
+            android:id="@+id/txtTitleEng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="35dp"
+            android:alpha="1"
+            android:paddingTop="20dp"
+            android:text="TextView"
+            motion:layout_constraintEnd_toEndOf="@id/cnsCollapsedLayout"
+            motion:layout_constraintStart_toStartOf="@id/cnsCollapsedLayout"
+            motion:layout_constraintTop_toBottomOf="@+id/imgMusicThumbnail">
+            <CustomAttribute
+                motion:attributeName="textColor"
+                motion:customColorValue="@color/black" />
+        </Constraint>
+
+        <Constraint
+            android:id="@id/txtTitleJpn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="35dp"
+            android:alpha="1"
+            android:text="TextView"
+            motion:layout_constraintEnd_toEndOf="@id/cnsCollapsedLayout"
+            motion:layout_constraintStart_toStartOf="@id/cnsCollapsedLayout"
+            motion:layout_constraintTop_toBottomOf="@+id/txtTitleEng">
+            <CustomAttribute
+                motion:attributeName="textColor"
+                motion:customColorValue="@color/black" />
+        </Constraint>
+
+        <Constraint
+            android:id="@id/imgDivider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="9dp"
+            android:alpha="1"
+            android:src="@drawable/ic_divider"
+            motion:layout_constraintEnd_toEndOf="@id/cnsCollapsedLayout"
+            motion:layout_constraintStart_toStartOf="@id/cnsCollapsedLayout"
+            motion:layout_constraintTop_toBottomOf="@+id/txtTitleJpn" />
+
+        <Constraint
+            android:id="@id/txtBand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:alpha="1"
+            android:text="TextView"
+            motion:layout_constraintEnd_toEndOf="@id/cnsCollapsedLayout"
+            motion:layout_constraintStart_toStartOf="@id/cnsCollapsedLayout"
+            motion:layout_constraintTop_toBottomOf="@+id/imgDivider" />
+
+        <Constraint
+            android:id="@id/txtPlace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="4dp"
+            android:alpha="1"
+            android:text="TextView"
+            motion:layout_constraintEnd_toEndOf="@id/cnsCollapsedLayout"
+            motion:layout_constraintStart_toStartOf="@id/cnsCollapsedLayout"
+            motion:layout_constraintTop_toBottomOf="@+id/txtBand">
+            <CustomAttribute
+                motion:attributeName="textColor"
+                motion:customColorValue="@color/black" />
+        </Constraint>
+
+        <Constraint
+            android:id="@id/exoMusicPlayer"
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:layout_above="@id/rltVolumeControl"
+            android:layout_marginBottom="20dp"
+            android:alpha="1"
+            motion:controller_layout_id="@layout/view_player_controller"
+            motion:hide_on_touch="false"
+            motion:layout_constraintBottom_toTopOf="@+id/rltVolumeControl"
+            motion:layout_constraintEnd_toEndOf="@id/cnsCollapsedLayout"
+            motion:layout_constraintStart_toStartOf="@id/cnsCollapsedLayout"
+            motion:show_timeout="0" />
+
+        <Constraint
+            android:id="@id/rltVolumeControl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="34dp"
+            android:layout_marginBottom="20dp"
+            android:alpha="1"
+            motion:layout_constraintBottom_toBottomOf="@id/cnsCollapsedLayout"
+            motion:layout_constraintEnd_toEndOf="@id/cnsCollapsedLayout"
+            motion:layout_constraintStart_toStartOf="@id/cnsCollapsedLayout" />
+
+    </ConstraintSet>
+</MotionScene>

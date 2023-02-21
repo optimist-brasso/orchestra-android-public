@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/radius_ten_69_white"
+        android:orientation="vertical"
+        android:paddingBottom="11dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txtConfirmation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="22dp"
+                android:fontFamily="@font/noto_sans_light"
+                android:includeFontPadding="false"
+                android:text="@string/confirmBuyThisPart"
+                android:textAlignment="center"
+                android:textColor="@color/session_layout_heading_color"
+                android:textSize="16sp"
+                tools:ignore="RelativeOverlap" />
+
+            <ImageView
+                android:id="@+id/imgClose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="end"
+                android:contentDescription="@string/image_description"
+                android:paddingStart="8dp"
+                android:paddingTop="19dp"
+                android:paddingEnd="13dp"
+                android:paddingBottom="8dp"
+                app:srcCompat="@drawable/ic_close" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txtBuyThisPart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="77dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="74dp"
+            android:background="@drawable/radius_ten_buy_black"
+            android:fontFamily="@font/noto_sans_bold"
+            android:includeFontPadding="false"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="@string/buyThisPart"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/lltAlreadyBought"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="77dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="74dp"
+            android:background="@drawable/radius_ten_buy_black"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20dp"
+                android:contentDescription="@string/image_description"
+                app:srcCompat="@drawable/ic_golden_tick" />
+
+            <TextView
+                android:id="@+id/txtAlreadyBought"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/noto_sans_bold"
+                android:includeFontPadding="false"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:text="@string/partAlreadyBought"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtAddToCart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="77dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="74dp"
+            android:background="@drawable/radius_ten_buy_black"
+            android:fontFamily="@font/noto_sans_bold"
+            android:includeFontPadding="false"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="@string/add_to_cart"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txtBuyPremium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="77dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="74dp"
+            android:background="@drawable/radius_fifteen"
+            android:fontFamily="@font/noto_sans_bold"
+            android:includeFontPadding="false"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="@string/buyPremiumFootage"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txtBuyMultiPart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="77dp"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="74dp"
+            android:background="@drawable/radius_ten_buy_black"
+            android:fontFamily="@font/noto_sans_bold"
+            android:includeFontPadding="false"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="@string/buyMultiPart"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/txtWhatISPremiumVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/noto_sans_bold"
+            android:includeFontPadding="false"
+            android:text="@string/whatIsPremium"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</ScrollView>

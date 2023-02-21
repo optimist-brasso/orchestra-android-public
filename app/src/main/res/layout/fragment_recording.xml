@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feature.landing.myPage.tab.setting.recording.RecordingFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.57" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/textViewBackground"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:paddingStart="28dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="13dp"
+            android:text="@string/recording"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/txtFileFormat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:paddingTop="34dp"
+            android:paddingBottom="18dp"
+            android:text="@string/file_format"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@id/guideline2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
+
+        <ImageView
+            android:id="@+id/imgFileFormatLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:contentDescription="@string/image_description"
+            android:paddingStart="24dp"
+            android:paddingTop="34dp"
+            android:paddingBottom="17dp"
+            android:src="@drawable/ic_settings_left"
+            app:layout_constraintBottom_toTopOf="@+id/vwFileFormatRight"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/txvFileFormat"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fontFamily="@font/noto_sans_regular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:paddingTop="34dp"
+            android:paddingBottom="17dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/vwFileFormatRight"
+            app:layout_constraintEnd_toStartOf="@+id/imgFileFormatRight"
+            app:layout_constraintStart_toEndOf="@+id/imgFileFormatLeft"
+            app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+            tools:text="@string/m4a" />
+
+        <ImageView
+            android:id="@+id/imgFileFormatRight"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:contentDescription="@string/image_description"
+            android:paddingTop="34dp"
+            android:paddingEnd="24dp"
+            android:paddingBottom="17dp"
+            android:src="@drawable/ic_settings_right"
+            app:layout_constraintBottom_toTopOf="@+id/vwFileFormatRight"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtTitle"
+            tools:ignore="RtlSymmetry" />
+
+        <View
+            android:id="@+id/vwFileFormatRight"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="14dp"
+            android:background="?android:attr/listDivider"
+            android:contentDescription="@string/image_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtFileFormat" />
+
+        <TextView
+            android:id="@+id/txtEncodingQuality"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            android:text="@string/encoding_quality"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vwFileFormatRight" />
+
+        <ImageView
+            android:id="@+id/imgEncodingQualityLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:contentDescription="@string/image_description"
+            android:paddingStart="24dp"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            android:src="@drawable/ic_settings_left"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/vwRecording"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/vwFileFormatRight"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/txvEncodingQuality"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fontFamily="@font/noto_sans_regular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/vwRecording"
+            app:layout_constraintEnd_toStartOf="@+id/imgEncodingQualityRight"
+            app:layout_constraintStart_toEndOf="@+id/imgEncodingQualityLeft"
+            app:layout_constraintTop_toBottomOf="@+id/vwFileFormatRight"
+            tools:text="@string/low" />
+
+        <ImageView
+            android:id="@+id/imgEncodingQualityRight"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:contentDescription="@string/image_description"
+            android:paddingTop="18dp"
+            android:paddingEnd="24dp"
+            android:paddingBottom="18dp"
+            android:src="@drawable/ic_settings_right"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/vwRecording"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vwFileFormatRight"
+            tools:ignore="RtlSymmetry" />
+
+        <View
+            android:id="@+id/vwRecording"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="14dp"
+            android:background="?android:attr/listDivider"
+            android:contentDescription="@string/image_description"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtEncodingQuality" />
+
+        <TextView
+            android:id="@+id/txtSamplingRate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            android:text="@string/sampling_rate"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vwRecording" />
+
+        <ImageView
+            android:id="@+id/imgSamplingRateLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:contentDescription="@string/image_description"
+            android:paddingStart="24dp"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            android:src="@drawable/ic_settings_left"
+            app:layout_constraintBottom_toTopOf="@+id/vwDataManagement"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/vwRecording"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/txvSamplingRate"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fontFamily="@font/noto_sans_regular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/vwDataManagement"
+            app:layout_constraintEnd_toStartOf="@+id/imgSamplingRateRight"
+            app:layout_constraintStart_toEndOf="@+id/imgSamplingRateLeft"
+            app:layout_constraintTop_toBottomOf="@+id/vwRecording"
+            tools:text="@string/_11025hz" />
+
+        <ImageView
+            android:id="@+id/imgSamplingRateRight"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:contentDescription="@string/image_description"
+            android:paddingTop="18dp"
+            android:paddingEnd="24dp"
+            android:paddingBottom="18dp"
+            android:src="@drawable/ic_settings_right"
+            app:layout_constraintBottom_toTopOf="@+id/vwDataManagement"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vwRecording"
+            tools:ignore="RtlSymmetry" />
+
+        <View
+            android:id="@+id/vwDataManagement"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="14dp"
+            android:background="?android:attr/listDivider"
+            android:contentDescription="@string/image_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtSamplingRate" />
+
+        <TextView
+            android:id="@+id/txtBitRate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:paddingTop="16dp"
+            android:paddingBottom="27dp"
+            android:text="@string/bit_rate"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vwDataManagement" />
+
+        <ImageView
+            android:id="@+id/imgBitRateLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:contentDescription="@string/image_description"
+            android:paddingStart="24dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="27dp"
+            android:src="@drawable/ic_settings_left"
+            app:layout_constraintBottom_toTopOf="@+id/vwContents"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/vwDataManagement"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/txvBitRate"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fontFamily="@font/noto_sans_regular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:paddingTop="16dp"
+            android:paddingBottom="27dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toTopOf="@+id/vwContents"
+            app:layout_constraintEnd_toStartOf="@+id/imgBitRateRight"
+            app:layout_constraintStart_toEndOf="@+id/imgBitRateLeft"
+            app:layout_constraintTop_toBottomOf="@+id/vwDataManagement"
+            tools:text="@string/_48kbps" />
+
+        <ImageView
+            android:id="@+id/imgBitRateRight"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:contentDescription="@string/image_description"
+            android:paddingTop="16dp"
+            android:paddingEnd="24dp"
+            android:paddingBottom="27dp"
+            android:src="@drawable/ic_settings_right"
+            app:layout_constraintBottom_toTopOf="@+id/vwContents"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vwDataManagement"
+            tools:ignore="RtlSymmetry" />
+
+        <View
+            android:id="@+id/vwContents"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="14dp"
+            android:background="?android:attr/listDivider"
+            android:contentDescription="@string/image_description"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtBitRate" />
+
+        <TextView
+            android:id="@+id/txtChannel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="26dp"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:paddingTop="17dp"
+            android:paddingBottom="19dp"
+            android:text="@string/channel"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vwContents" />
+
+        <ImageView
+            android:id="@+id/imgChannelLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:contentDescription="@string/image_description"
+            android:paddingStart="24dp"
+            android:paddingTop="17dp"
+            android:paddingBottom="19dp"
+            android:src="@drawable/ic_settings_left"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/vwImageManagement"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/vwContents"
+            tools:ignore="RtlSymmetry" />
+
+        <TextView
+            android:id="@+id/txvChannel"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fontFamily="@font/noto_sans_regular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:paddingTop="17dp"
+            android:paddingBottom="19dp"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/vwImageManagement"
+            app:layout_constraintEnd_toStartOf="@+id/imgChannelRight"
+            app:layout_constraintStart_toEndOf="@+id/imgChannelLeft"
+            app:layout_constraintTop_toBottomOf="@+id/vwContents"
+            tools:text="@string/mono" />
+
+        <ImageView
+            android:id="@+id/imgChannelRight"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:contentDescription="@string/image_description"
+            android:paddingTop="17dp"
+            android:paddingEnd="24dp"
+            android:paddingBottom="19dp"
+            android:src="@drawable/ic_settings_right"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/vwImageManagement"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/vwContents"
+            tools:ignore="RtlSymmetry" />
+
+        <View
+            android:id="@+id/vwImageManagement"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="14dp"
+            android:background="?android:attr/listDivider"
+            android:contentDescription="@string/image_description"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtChannel" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

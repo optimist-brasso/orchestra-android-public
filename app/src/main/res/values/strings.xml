@@ -1,0 +1,606 @@
+<resources>
+    <!--    <string name="app_name">Brasso</string>-->
+    <string name="facebook_app_id" translatable="false">ENTER_YOUR_FACEBOOK_ID_HERE</string>
+    <string name="fb_login_protocol_scheme" translatable="false">ENTER_YOUR_FACEBOOK_PROTOCOL_HERE</string>
+    <string name="facebook_client_token" translatable="false">ENTER_YOUR_FACEBOOK_CLIENT_TOKEN_HERE</string>
+    <string name="empty_email">Email is required</string>
+    <string name="empty_otp">OTP  is required</string>
+    <string name="email_invalid">Email is invalid</string>
+    <string name="empty_password">Password  is required</string>
+    <string name="empty_music_instrument">Music instrument is required</string>
+    <string name="ok">OK</string>
+    <string name="session_expired">Session expired</string>
+    <string name="loading">Loading…</string>
+    <string name="login_with_line">Continue with Line</string>
+    <string name="login_with_twitter">Continue on Twitter</string>
+    <string name="login_with_facebook">Continue on Facebook</string>
+    <string name="login_with_instagram">Continue on Instagram</string>
+    <string name="register_by_email">Register by email</string>
+    <string name="register">Register an account</string>
+    <string name="self_introduction">Self-Introduction</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="other">Other</string>
+    <string name="gender">Gender</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="profile_name">Profile name</string>
+    <string name="email">Email :</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="image_description">Image</string>
+    <string name="login_user">Login User</string>
+    <string name="send">Send</string>
+    <string name="register_with_email">Register with your email address</string>
+    <string name="register_with_an_sns_account">Register with an SNS account</string>
+    <string name="don_t_register_now">Don\'t register now</string>
+    <string name="cancel"><u>Cancel</u></string>
+    <string name="cancel_not_underlined">Cancel</string>
+    <string name="please_enter_your_email">Please enter your email address</string>
+    <string name="to_register">To Register</string>
+    <string name="please_enter_your_password">Please enter your password</string>
+    <string name="please_enter_your_one_time_password">Please enter your one-time password</string>
+    <string name="one_time_password">One-time password</string>
+    <string name="already_have_a_code"><u>Already have a code</u></string>
+    <string name="empty_username">Username  is required</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="song_list">List of songs</string>
+    <string name="favorites">Favorite</string>
+    <string name="my_page">My Page</string>
+    <string name="choose_an_icon">Choose an icon</string>
+    <string name="enter_your_name">Please enter your name</string>
+    <string name="full_name">Full name</string>
+    <string name="this_information_will_not_be_published">This information will not be published</string>
+    <string name="required">Required</string>
+    <string name="save">Save</string>
+    <string name="nickname_with_requirement">Nickname (full-width 12 characters or less)</string>
+    <string name="please_enter_your_nick_name">Please enter a nickname</string>
+    <string name="please_enter_instrument_name">Please name the instrument</string>
+    <string name="musical_instrument">Musical instrument</string>
+    <string name="post_code">Post Code</string>
+    <string name="prefectures_will_be_released">Prefectures will be released</string>
+    <string name="please_enter_your_zip_code">Please enter your zip code</string>
+    <string name="age">Date of birth</string>
+    <string name="profession">Profession</string>
+    <string name="_1997">1997</string>
+    <string name="_12">12</string>
+    <string name="_15">15</string>
+    <string name="student">Student</string>
+    <string name="send_the_one_time_password_again">Send the one-time password again</string>
+    <string name="complete_input">Complete the input</string>
+    <string name="register_password">Register password</string>
+    <string name="password_requirement">Use at least 1 uppercase/lowercase alphabetic character, number, and symbol (!\"\"\#\$\%\&amp;\'()=~), and be between 8 and 15 characters.</string>
+    <string name="select_gender">Gender  is required</string>
+    <string name="empty_dob">DOB cannot be empty</string>
+    <string name="profession_empty">Professional is required</string>
+    <string name="postal_code_empty">Postal code is required</string>
+    <string name="name_empty">Full name is required</string>
+    <string name="login_success">Login Successful</string>
+    <string name="to_the_next">To the next</string>
+    <string name="return_back">Return</string>
+    <string name="how_to_use_this_app">How to use this app</string>
+    <string name="i_will_explain_it">I will explain it. I will explain it. I will explain it. I will explain it. I will explain it. I will explain it. I will explain it. I will explain it. I will explain it.</string>
+    <string name="completion">Completion</string>
+    <string name="login">Login</string>
+    <string name="login_title">Log in</string>
+
+    <string-array name="YearList">
+        <item>1991</item>
+        <item>1992</item>
+        <item>1993</item>
+        <item>1994</item>
+        <item>1995</item>
+        <item>1996</item>
+        <item>1997</item>
+        <item>1998</item>
+        <item>1999</item>
+        <item>2000</item>
+        <item>2001</item>
+        <item>2002</item>
+        <item>2003</item>
+        <item>2004</item>
+        <item>2005</item>
+        <item>2006</item>
+        <item>2007</item>
+        <item>2008</item>
+        <item>2009</item>
+        <item>2010</item>
+        <item>2011</item>
+        <item>2012</item>
+        <item>2013</item>
+        <item>2014</item>
+        <item>2015</item>
+        <item>2016</item>
+        <item>2017</item>
+        <item>2018</item>
+        <item>2019</item>
+        <item>2020</item>
+        <item>2021</item>
+        <item>2022</item>
+    </string-array>
+
+    <string-array name="MonthList">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+    </string-array>
+
+    <string-array name="DayList">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+    </string-array>
+    <string name="reset_password">If you don\'t know or forget your password</string>
+
+    <string name="text_choose_from_library">Gallery</string>
+    <string name="text_take_photo">Photo</string>
+    <string name="text_add_photo">Add New Photo</string>
+    <string name="profile_image_not_selected">Profile image should be selected.</string>
+    <string name="error_no_internet_connection">No internet connection.Check your connection and try again.</string>
+    <string name="nick_name_empty">Nick name cannot be empty</string>
+
+    <string name="profile">Profile</string>
+    <string name="registration_date">Registration date</string>
+    <string name="change_photo">Change the photo</string>
+    <string name="select_picture">Please select a photo</string>
+
+    <string name="text_occupation">Occupation</string>
+
+    <string name="change_password">Change password</string>
+    <string name="list_of_purchased_contents">List of purchased contents</string>
+    <string name="recording_list">Recording list</string>
+    <string name="billing_history">Billing history</string>
+    <string name="logout">Logout</string>
+    <string name="withdrawal">Withdrawal</string>
+    <string name="setting">Setting</string>
+    <string name="streaming_download">Streaming / Download</string>
+    <string name="recording">Recording</string>
+    <string name="data_management">Data management</string>
+    <string name="push_notification">Push Notification</string>
+    <string name="image_quality_adjustment">Image quality adjustment during low-speed communication</string>
+    <string name="app_version_information">App version information</string>
+    <string name="other_page">Other</string>
+    <string name="for_first_time_users">For first-time users (tutorial)</string>
+    <string name="about_this_app">About this app</string>
+    <string name="faq_Inquiries">FAQ / Inquiries</string>
+    <string name="opinions_and_requests">Opinions and requests</string>
+    <string name="brasso_official_website">BRASSO official website</string>
+    <string name="ver_1_00_00">Ver. 1.00.00</string>
+
+    <string name="conductor">Conductor</string>
+    <string name="session">Session</string>
+    <string name="hall_sound">Hall Sound</string>
+    <string name="player">Player</string>
+
+    <string name="text_crop">Crop</string>
+    <string name="recommended_content">Recommended content</string>
+    <string name="see_more">See more</string>
+    <string name="about">About ○○○○○○</string>
+
+    <string name="tutorial">Tutorial</string>
+    <string name="old_password">Old password</string>
+    <string name="new_password">New password</string>
+    <string name="new_password_confirmation_input">New password (confirmation input)</string>
+    <string name="change">Change</string>
+    <string name="text_error_while_compressing_image">Error while compressing image.</string>
+
+    <string name="text_sure_want_to_logout">Are you sure you want to logout?</string>
+    <string name="please_selected_profile_image_of_size_less_then_or_equal_to">Please selected profile image of size less then or equal to</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="to_reset">To Reset</string>
+    <string name="password_and_confirm_password_must_be_same">Password and confirm password must be same</string>
+
+    <string name="edit">Edit</string>
+    <string name="your_profile">Your Profile</string>
+    <string name="nickname">Nickname</string>
+    <string name="part">MinusOne :</string>
+    <string name="area_prefecture">Area (Prefecture)</string>
+    <string name="text_text">Text Text</string>
+    <string name="tenor_Saxophone">Tenor Saxophone</string>
+    <string name="tokyo">Tokyo</string>
+    <string name="_17_years_old">17 Years Old</string>
+    <string name="self_intro_text">A self-introduction text is included. A self-introduction text is included. A self-introduction text is included. A self-introduction text is included. A self-introduction text is included. A self-introduction text is included. A self-introduction text is included. A self-introduction text is included.</string>
+
+    <string name="text_cart">My Cart</string>
+
+    <string name="update_profile">Update Profile</string>
+    <string name="profile_update_success">Profile updated successfully</string>
+
+    <string name="organization_chart">organization chart</string>
+    <string name="composer">composer</string>
+    <string name="orchestra_name">Orchestra name</string>
+    <string name="organization">Organization</string>
+    <string name="venue_name">Venue name</string>
+    <string name="lap">Lap</string>
+    <string name="release_date">Release date</string>
+    <string name="licence_number">License number</string>
+
+    <string name="new_password_empty">New password is required</string>
+    <string name="confirm_password_empty">Confirm password is required</string>
+    <string name="old_password_empty">Old password is required</string>
+
+    <string name="no_data">No data Available</string>
+    <string name="ver">Ver. </string>
+    <string name="txt_no_application_found">\"No application can handle this request. Please install a web browser\"</string>
+
+    <string name="login_failed">Login failed</string>
+
+    <string name="businessType">R2 Business restructuring</string>
+
+    <string name="text_notification">News</string>
+
+    <string name="buy">Buy</string>
+    <string name="center_seat">Center seat</string>
+    <string name="right_seat">Right floor seat</string>
+    <string name="left_seat">Left floor seat</string>
+    <string name="back_seat">Back floor seat</string>
+    <string name="question_to_buy">Would you like to buy?</string>
+    <string name="add_to_cart">Add to Cart</string>
+    <string name="text_error_in_twitter_login">Twitter login failed</string>
+    <string name="text_search_hint">楽曲名、作曲者名、またはキーワード</string>
+    <string name="birthday">Birthday :</string>
+    <string name="blood_type">Blood type :</string>
+    <string name="birth_place">Birth place :</string>
+    <string name="instrument_used">Instrument Used :</string>
+    <string name="message_from_player">◇ Message from the player ◇</string>
+    <string name="detailed_profile">▶︎Click here for detailed profile</string>
+    <string name="twitter">twitter</string>
+    <string name="instagram">instagram</string>
+    <string name="facebook">facebook</string>
+    <string name="youtube">youtube</string>
+    <string name="performance_music">Performance music</string>
+    <string name="text_premium">PREMIUM</string>
+    <string name="please_login">Please login to continue</string>
+
+    <string name="date">Date</string>
+    <string name="seats">〇〇席</string>
+
+    <string name="session_layout_heading_back">一緒に演奏</string>
+    <string name="session_layout_heading_second">曲名</string>
+    <string name="session_layout_close_text">データ購入済</string>
+    <string name="session_layout_dialog_first">タップして</string>
+    <string name="session_layout_dialog_second">楽器を選択してください</string>
+    <string name="flute">Flute</string>
+    <string name="violin">Violin</string>
+    <string name="bass">Bass</string>
+    <string name="piano">Piano</string>
+    <string name="drum">Drum</string>
+    <string name="clarinet">Clarinet</string>
+    <string name="session_id">session_id</string>
+
+    <string name="session_layout_dialog">タップして楽器を選択してください</string>
+
+    <string name="recording_editing">Recording / editing data list</string>
+    <string name="edition">edition</string>
+    <string name="original_recording">original recording</string>
+
+    <string name="_99_999">0</string>
+    <string name="purchase_cancellation">Purchase cancellation</string>
+    <string name="to_buy">To buy</string>
+    <string name="cart">Cart</string>
+
+
+    <string name="rec">REC :</string>
+    <string name="text_rec">REC</string>
+    <string name="txt_lap">Play time :</string>
+    <string name="text_lap">Lap:</string>
+    <string name="billing_history_text">Billing History</string>
+    <string name="date_of_purchase">Date of purchase: </string>
+    <string name="delete_cart">Are you sure you want to remove this item from cart?</string>
+    <string name="purchase_item_empty">Purchase item should be selected</string>
+    <string name="yes">Yes</string>
+    <string name="zero">0</string>
+    <string name="delete">Delete</string>
+    <string name="already_added_in_cart">Already added in cart</string>
+    <string name="are_you_sure_you_want_to_buy">Are you sure you want to purchase selected items?</string>
+    <string name="streaming_quality">Streaming quality</string>
+    <string name="during">During</string>
+    <string name="playback_on_wifi">Streaming playback is only when connected to Wi-Fi</string>
+    <string name="notify_on_data">Notify when using mobile data</string>
+    <string name="download_quality">Download quality</string>
+    <string name="high">High</string>
+    <string name="download_on_wifi">Download only when connected to Wi-Fi</string>
+    <string name="automatic_download">Automatic download</string>
+    <string name="valid">Valid</string>
+    <string name="not_yet">Not yet</string>
+    <string name="file_format">File format</string>
+    <string name="encoding_quality">Encoding quality</string>
+    <string name="sampling_rate">Sampling rate</string>
+    <string name="bit_rate">Bit rate</string>
+    <string name="channel">Channel</string>
+    <string name="cache_data">Cache data</string>
+    <string name="capacity_used">Capacity used</string>
+    <string name="temporary_storage_message">In order to improve the performance of the app, cache data such as songs and images are temporarily stored on the device.</string>
+    <string name="delete_cache_data">Delete cache data</string>
+    <string name="download_songs">Download songs</string>
+    <string name="download_complete">Download complete</string>
+    <string name="free_space">Free space</string>
+    <string name="download_data">Download data</string>
+    <string name="delete_download_data">Delete download data</string>
+    <string name="_150_50_MB">150.50 MB</string>
+    <string name="_10_songs">10 Songs</string>
+    <string name="_51_24_MB">51.24 MB</string>
+    <string name="_2_81_GB">2.81 GB</string>
+    <string name="m4a">M4A</string>
+    <string name="wav">WAV</string>
+    <string name="mp3">MP3</string>
+    <string name="low">Low</string>
+    <string name="medium">Medium</string>
+    <string name="_11025hz">11,025Hz</string>
+    <string name="_22050hz">22,050Hz</string>
+    <string name="_44100hz">44,100Hz</string>
+    <string name="_48000hz">48,000Hz</string>
+    <string name="_48kbps">48kbps</string>
+    <string name="_64kbps">64kbps</string>
+    <string name="_128kbps">128kbps</string>
+    <string name="_192kbps">192kbps</string>
+    <string name="_256kbps">256kbps</string>
+    <string name="_320kbps">320kbps</string>
+    <string name="mono">Mono</string>
+    <string name="stereo">Stereo</string>
+    <string name="imgProfile">PROFILE</string>
+
+    <string-array name="fileType">
+        <item>@string/wav</item>
+        <item>@string/mp3</item>
+    </string-array>
+
+    <string-array name="fileQuality">
+        <item>@string/low</item>
+        <item>@string/medium</item>
+        <item>@string/high</item>
+    </string-array>
+
+    <string-array name="samplingRate">
+        <item>@string/_11025hz</item>
+        <item>@string/_22050hz</item>
+        <item>@string/_44100hz</item>
+        <item>@string/_48000hz</item>
+    </string-array>
+
+    <string-array name="bitRate">
+        <item>@string/_48kbps</item>
+        <item>@string/_64kbps</item>
+        <item>@string/_128kbps</item>
+        <item>@string/_192kbps</item>
+        <item>@string/_256kbps</item>
+        <item>@string/_320kbps</item>
+    </string-array>
+
+    <string-array name="channelType">
+        <item>@string/mono</item>
+        <item>@string/stereo</item>
+    </string-array>
+    <string name="imgHome">Home</string>
+    <string name="imgSearch">Search</string>
+    <string name="imgListOfSongs">Playlist</string>
+    <string name="imgFavourite">Favorite</string>
+    <string name="imgMyPage">My Page</string>
+    <string name="purchase">Purchase</string>
+    <string name="record">Record</string>
+    <string name="c">C</string>
+    <string name="b">B</string>
+    <string name="l">L</string>
+    <string name="r">R</string>
+    <string name="logout_success">Logged Out</string>
+
+    <string name="whatIsPremium"><u>What is premium?</u></string>
+    <string name="playVideo">Play the Video</string>
+    <string name="english_title">English Title</string>
+    <string name="songNameJap">Song name in Japanese notation</string>
+    <string name="instrumentName">B ♭ trumpet</string>
+    <string name="playerName">Player name</string>
+    <string name="organizationChart">See the organization chart</string>
+    <string name="discountOffer">Release commemoration! 20% of the list price 0FF</string>
+    <string name="explanationPremiumVideo">A detailed explanation of the bonus video will be included. A detailed explanation of the bonus video will be included. A detailed explanation of the bonus video will be included. A detailed explanation of the bonus video will be included. A detailed explanation of the bonus video will be included. A detailed explanation of the bonus video will be included. \ n A detailed explanation of the bonus video will be included. A detailed explanation of the bonus video will be included. A detailed explanation of the bonus video will be included. A detailed explanation of the bonus video will be included. A detailed explanation of the bonus video will be included. A detailed explanation of the bonus video will be entered. \ N A detailed explanation of the bonus video will be entered. A detailed explanation of the bonus video will be included. A detailed explanation of the bonus video will be included. A detailed explanation of the bonus video will be included. A detailed explanation of the bonus video will be included. A detailed explanation of the bonus video will be included.</string>
+    <string name="afterBought">It will be displayed after purchasing the premium video.</string>
+    <string name="buyPart">Buy MinusOne Footage</string>
+    <string name="checkPremiumVideo">Enjoy the performers! Click here for PREMIUM video</string>
+    <string name="buyMultiPart">Buy other part</string>
+    <string name="buyMultiPremium">Buy other premium</string>
+    <string name="purchasePartAndPremium">Purchase part video and premium video as a set</string>
+    <string name="premiumAppendix">Click here for purchase bonus video</string>
+    <string name="premiumCannotBePurchasedSeparately">* Premium video cannot be purchased separately.</string>
+    <string name="returnToPart">Go back to the previous page</string>
+    <string name="songs">songs</string>
+    <string name="wePurchasedInBulk">We purchased in bulk</string>
+    <string name="IPutItIn">I put it in</string>
+    <string name="moveToCart">Move to cart</string>
+    <string name="returnTo">Return</string>
+    <string name="doYouWantToBuy">Do you want to buy?</string>
+    <string name="recordingTitle">original recording\n Genban Hyoki</string>
+    <string name="partHarp">MinusOne [harp]</string>
+    <string name="iBought">I bought</string>
+    <string name="buyHarp">MinusOne [Harp]</string>
+    <string name="wouldYouLikeToBuy">Would you like to buy?</string>
+    <string name="wasAddedToTheCart">Was added to the cart</string>
+    <string name="wantToStartRecording">Do you want to start recording?</string>
+    <string name="descGoes">Description goes. Description goes. Description goes. Description goes. Description goes. Description goes. Description goes. Description goes. Description goes. Description goes. vinegar. Description goes. Description goes. Description goes. Description goes.</string>
+    <string name="mixSetting">Microphone settings</string>
+    <string name="recordStartCount">Recording start count</string>
+    <string name="three">3</string>
+    <string name="partAlreadyBought">This part has been purchased</string>
+    <string name="buyPremiumFootage">Buy premium footage</string>
+    <string name="trans_conductor">Conductor</string>
+
+    <string name="game_view_content_description">Game view</string>
+
+    <string name="text_no_video_file">Video file empty.</string>
+
+    <string name="player_image">Player image</string>
+    <string name="harp">Harp</string>
+    <string name="player_name">Player name</string>
+    <string name="here_is_the_introductory_text_here_is_the_introductory_text">Here is the introductory text. Here is the introductory text.</string>
+    <string name="text_buy">Buy</string>
+    <string name="text_select_one_instrument">Select one or more instruments to add to the cart.</string>
+    <string name="text_buy_multi_part">Buy in bulk</string>
+    <string name="add_to_cart_multipart">Add to cart all at once</string>
+    <string name="empty_video">No video found</string>
+    <string name="wouldYouLikeToBuyPremiumSet">Would you like to buy a premium video set?</string>
+    <string name="wouldYouLikeToBuyPremiumFootage">Would you like to buy premium footage?</string>
+    <string name="checkPremiumAppendix">Check the premium appendix video</string>
+    <string name="cannotBuyPremium">* Premium video cannot be purchased separately.</string>
+    <string name="buyThisPart">Buy this part</string>
+
+    <string name="textPremium">BUY PREMIUM VIDEOS</string>
+    <string name="toBuy">To buy</string>
+
+    <string name="zeroYen">0</string>
+    <string name="playSampleVideo">Play sample video</string>
+    <string name="organizationChartUnderLined"><u>See the organization chart</u></string>
+    <string name="buyMultiPartSet">Do you want to buy a set?</string>
+    <string name="premiumVideo">Premium video</string>
+    <string name="premiumSet">Premium set</string>
+    <string name="text_record">Record</string>
+    <string name="dateOfPurchase">Date of purchase :</string>
+    <string name="year">year</string>
+    <string name="month">month</string>
+    <string name="imgPart">MinusOne</string>
+    <string name="text_play_video">動画を再生する</string>
+    <string name="retake">Retake</string>
+    <string name="confirm">Confirm</string>
+    <string name="suspend">Suspend</string>
+    <string name="date_of_birth">Date of birth</string>
+    <string name="want_to_unsubscribe">Do you want to unsubscribe?</string>
+    <string name="withdraw">Withdraw</string>
+    <string name="withdraw_message">When unsubscribed\nPurchased / edited content\nCannot be restored</string>
+    <string name="withdraw_confirm">Do you still withdraw?</string>
+    <string name="withdrawn">Withdrawn</string>
+    <string name="textPremiumVideo">Premium video</string>
+    <string name="textSetBought">I bought a set</string>
+    <string name="text_no_audio_file">Audio file empty.</string>
+    <string name="text_mic_permission_denied">This app needs you to allow this permission in order to function.Will you allow it.</string>
+    <string name="text_file_is_downloading">ダウンロード中です</string>
+    <string name="confirmBuyThisPart">Would you like to buy this part?</string>
+    <string name="confirmBuyThisPremium">Would you like to buy premium footage?</string>
+    <string name="purchased">Purchased</string>
+    <string name="in_a_cart">In a cart</string>
+    <string name="delete_image">Delete Image</string>
+    <string name="text_item_already_owned">Product already owned.</string>
+    <string name="text_subscription_purchased_canceled">Product purchased canceled.</string>
+    <string name="text_product_not_found">Product not found.</string>
+    <string name="part_song">Part Song:</string>
+
+    <string name="removeImage">Are you sure you want to remove your image?</string>
+    <string name="buyPremium">"Buy Premium"</string>
+    <string name="manufacturer">Manufacturer :</string>
+
+    <string name="noInstrument">No instrument found for this session</string>
+    <string name="text_select_only_one_instrument">Please select only one instrument in order to purchase.</string>
+    <string name="appendixDetailExplanation">A detailed explanation of the bonus video is included. A detailed explanation of the bonus video is included.</string>
+    <string name="faq">FAQ (Frequently Asked Questions) / Inquiries</string>
+    <string name="frequently_asked_questions">We have summarized frequently asked questions. Please check from various buttons.</string>
+    <string name="click_here_for_frequently_asked_questions">Click here for frequently asked questions</string>
+    <string name="contact_us_here">Contact us here</string>
+    <string name="text_wifi_download_only">You can download only from Wi-Fi.</string>
+    <string name="text_cellular_download_warning">You are about to start download from cellular data. Are you sure you want to continue download?</string>
+    <string name="brief_overview">Brief Overview</string>
+    <string name="contains_introduction">演奏する人も、聴く人も。吹奏楽の楽しみ方が180°変わるVR アプリ Brasso。
+        \n\nまるで、その場にいるかの様な「立体音響（スペシャルオーディオ）」と「VR 映像」を楽しむなら、＜Conductor（コンダクター）＞か、＜Session（セッション）＞で。Conductor は、指揮者になった気分が…Session では、奏者になった気分が存分に味わえます。また、VRゴーグルを装着すれば、更なる没入感が得られ、まるでステージの上に立っているかの様な体験ができます。
+        \n\n本格的なホールの音を楽しむなら、＜Hall Sound＞。いろんなホールの音*1 が楽しめるだけでなく、聞いた事が無かった場所の音が聞くことができ、様々な場所で演奏を楽しむ事ができます。（映像はありません）*1 初期段階では1 会場・4 箇所での提供になります。
+        \n\nあなた自身が合奏に参加して、演奏を楽しむなら＜Session＞。一緒のステージに立っている疑似体験ができるほか、あなた自身の演奏で、足りない音を埋めて、楽曲を完成させる事ができます。また、録音機能*2 を使えば、あなたが合奏に参加した楽曲が完成します。*2 今後実装予定
+        \n\n＜Player＞では、演奏に参加していただいたプロ奏者全員のプロフィールを閲覧することができます。
+        \n\nもっと詳しく知りたい方は、Brasso のホームページ（https://brasso.jp/）をご覧ください。</string>
+    <string name="review_rating">Review rating</string>
+    <string name="terms_of_services">Terms of services</string>
+    <string name="privacy_policy">Privacy policy</string>
+    <string name="notation_based_on_the_act">Notation based on the Act on Specified Commercial Transactions</string>
+    <string name="software_license">Software license</string>
+    <string name="song_license">Song license</string>
+    <string name="clear_cache_confirmation">Are you sure you want to clear all your caches?</string>
+    <string name="delete_download_confirmation">Are you sure you want to clear all your downloads?</string>
+    <string name="comment_request_query">If you have any comments or requests, please contact us using the form below.</string>
+    <string name="opinions_and_request_submission">Click here for opinions and requests</string>
+    <string name="text_wifi_stream_only">You can stream only from Wi-Fi.</string>
+    <string name="text_cellular_stream_warning">You are about to stream from cellular data. Are you sure you want to continue stream?</string>
+    <string name="pause">Pause</string>
+    <string name="points">Points</string>
+    <string name="are_you_sure_you_want_to_buy_this_point">Are you sure you want to buy this point bundle?</string>
+    <string name="service">service</string>
+    <string name="total_points">Total Points</string>
+    <string name="_10_000">0</string>
+    <string name="paid_points">Paid Points</string>
+    <string name="limited_time_points">Limited time points</string>
+    <string name="until">Until</string>
+    <string name="point_expiry_date">Point expiry date</string>
+    <string name="year_text">年</string>
+    <string name="month_text">月</string>
+    <string name="day_text">日</string>
+    <string name="pointBoughtSuccess">Points bought successfully</string>
+    <string name="sort">Sort</string>
+    <string name="filter">Filter</string>
+    <string name="musicTitle">Music Title</string>
+    <string name="duration">Duration</string>
+    <string name="venue_title">Venue Title</string>
+    <string name="part_multi_part">Multiple parts can be purchased together</string>
+    <string name="premium_multi_part">Multiple sets can be purchased together</string>
+    <string name="cannotBuy">Not purchasable</string>
+    <string name="textSession">Session</string>
+    <string name="textSessionPremium">Session Premium</string>
+    <string name="textConductor">Conductor</string>
+    <string name="textHallSound">Hall Sound</string>
+    <string name="textPoints">Point</string>
+    <string name="P">P</string>
+    <string name="skip">Skip</string>
+    <string name="to_play_part_download">I purchased the video. Please re-download the video to enable full functionality. </string>
+    <string name="terms_and_conditions"><a href="https://brasso.jp/terms">利用規約 </a> : 利用規約に同意する</string>
+    <string name="all_part_purchased">Parts on the list have already been purchased.</string>
+    <string name="all_multi_part_purchase">Combo on the list have already been purchased.</string>
+    <string name="please_check_term_and_condition">Please check the box if you want to proceed.</string>
+    <string name="no_parts_to_add_to_cart">No parts to add to cart</string>
+    <string name="no_combo_to_add_to_cart">No sets available to add to cart</string>
+    <string name="point_purchase_history">Point purchase history</string>
+
+    <string name="msg_downloading">Downloading song, Please wait.</string>
+
+    <string name="text_conductor_display">最高の特等席で、プロの気迫を感じる！</string>
+    <string name="text_Session_display">プロの奏者と夢のセッションを楽しむ！</string>
+    <string name="text_hall_sound_display">客席のいろいろな場所から楽しむ！</string>
+    <string name="part_notice">This VR video is for the purpose of a replacement experience. The angle of view is limited.</string>
+    <string name="premiumNotice">PREMIUM video is a professional model video, so
+This content is limited to MinusOne video purchasers.</string>
+    <string name="minus_one">MinusOne</string>
+    <string name="sign_up_to_login">アカウントをお待ちの方はこちら</string>
+    <string name="text_downloading">Downloading...</string>
+    <string name="point_balance">Point balance</string>
+    <string name="register_an_account">登録する</string>
+
+</resources>

@@ -1,0 +1,480 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feature.landing.myPage.tab.myPage.profile.MyProfileFragment">
+
+    <LinearLayout
+        android:id="@+id/lltTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/textViewBackground"
+        android:orientation="horizontal"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:text="@string/profile"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/lltTitleBar"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/lltMainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingStart="25dp"
+            android:visibility="gone"
+            android:paddingTop="27dp"
+            android:paddingEnd="23dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgProfilePic"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/ic_profile_pic"
+                android:contentDescription="@string/image_description" />
+
+            <LinearLayout
+                android:id="@+id/llyEditProfile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/radius_four_grey"
+                android:orientation="horizontal"
+                android:paddingStart="42dp"
+                android:paddingTop="3dp"
+                android:paddingEnd="42dp"
+                android:paddingBottom="3dp">
+
+                <ImageView
+                    android:id="@+id/imgEditProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:contentDescription="@string/image_description"
+                    app:srcCompat="@drawable/ic_edit" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/noto_sans_regular"
+                    android:includeFontPadding="false"
+                    android:text="@string/edit"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtYourProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/noto_sans_medium"
+                    android:includeFontPadding="false"
+                    android:text="@string/your_profile"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:id="@+id/lltFullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="19dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="0.75"
+                        android:fontFamily="@font/noto_sans_regular"
+                        android:includeFontPadding="false"
+                        android:text="@string/full_name"
+                        android:textColor="@color/tab_unselected"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/txtFullName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.25"
+                        android:fontFamily="@font/noto_sans_light"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        tools:text="@string/text_text" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/dvdFullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:background="?android:attr/listDivider" />
+
+                <LinearLayout
+                    android:id="@+id/lltGender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="19dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="0.75"
+                        android:fontFamily="@font/noto_sans_regular"
+                        android:includeFontPadding="false"
+                        android:text="@string/gender"
+                        android:textColor="@color/tab_unselected"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/txtGender"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.25"
+                        android:fontFamily="@font/noto_sans_light"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        tools:text="@string/text_text" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/dvdGender"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:background="?android:attr/listDivider" />
+
+                <LinearLayout
+                    android:id="@+id/lltNickName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="19dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="0.75"
+                        android:fontFamily="@font/noto_sans_regular"
+                        android:includeFontPadding="false"
+                        android:text="@string/nickname"
+                        android:textColor="@color/tab_unselected"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/txtNickName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.25"
+                        android:fontFamily="@font/noto_sans_light"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        tools:text="@string/text_text" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/dvdNickname"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:background="?android:attr/listDivider" />
+
+                <LinearLayout
+                    android:id="@+id/lltPart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="0.75"
+                        android:fontFamily="@font/noto_sans_regular"
+                        android:includeFontPadding="false"
+                        android:text="@string/musical_instrument"
+                        android:textColor="@color/tab_unselected"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/txtPart"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.25"
+                        android:fontFamily="@font/noto_sans_light"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        tools:text="@string/tenor_Saxophone" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/dvdPart"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="17dp"
+                    android:background="?android:attr/listDivider" />
+
+                <LinearLayout
+                    android:id="@+id/lltPostalCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="19dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="0.75"
+                        android:fontFamily="@font/noto_sans_regular"
+                        android:includeFontPadding="false"
+                        android:text="@string/post_code"
+                        android:textColor="@color/tab_unselected"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/txtPostalCode"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.25"
+                        android:fontFamily="@font/noto_sans_light"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        tools:text="@string/text_text" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/dvdPostalCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:background="?android:attr/listDivider" />
+
+                <LinearLayout
+                    android:id="@+id/lltAge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="19dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="0.75"
+                        android:fontFamily="@font/noto_sans_regular"
+                        android:includeFontPadding="false"
+                        android:text="@string/age"
+                        android:textColor="@color/tab_unselected"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/txtAge"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.25"
+                        android:fontFamily="@font/noto_sans_light"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        tools:text="@string/_17_years_old" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/dvdAge"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="22dp"
+                    android:background="?android:attr/listDivider" />
+
+                <LinearLayout
+                    android:id="@+id/lltEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="19dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="0.75"
+                        android:fontFamily="@font/noto_sans_regular"
+                        android:includeFontPadding="false"
+                        android:text="@string/email_address"
+                        android:textColor="@color/tab_unselected"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/txtEmail"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.25"
+                        android:fontFamily="@font/noto_sans_light"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        tools:text="@string/text_text" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/dvdEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:background="?android:attr/listDivider" />
+
+                <LinearLayout
+                    android:id="@+id/lltProfession"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="19dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="0.75"
+                        android:fontFamily="@font/noto_sans_regular"
+                        android:includeFontPadding="false"
+                        android:text="@string/profession"
+                        android:textColor="@color/tab_unselected"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/txtProfession"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.25"
+                        android:fontFamily="@font/noto_sans_light"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        tools:text="@string/text_text" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/dvdProfession"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="16dp"
+                    android:background="?android:attr/listDivider" />
+
+                <LinearLayout
+                    android:id="@+id/lltSelfIntroduction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="21dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="8dp"
+                        android:layout_weight="0.75"
+                        android:fontFamily="@font/noto_sans_regular"
+                        android:includeFontPadding="false"
+                        android:text="@string/self_introduction"
+                        android:textColor="@color/tab_unselected"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/txtSelfIntroduction"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.25"
+                        android:fontFamily="@font/noto_sans_light"
+                        android:includeFontPadding="false"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        tools:text="@string/self_intro_text" />
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/dvdSelfIntroduction"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="20dp"
+                    android:background="?android:attr/listDivider" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/incProgressbar"
+        layout="@layout/progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/lltTitleBar"
+        android:visibility="gone" />
+
+</RelativeLayout>

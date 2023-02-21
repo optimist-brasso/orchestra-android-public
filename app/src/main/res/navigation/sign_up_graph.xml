@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav_graph"
+    app:startDestination="@id/emailFragment">
+
+    <fragment
+        android:id="@+id/emailFragment"
+        android:name="com.co.brasso.feature.auth.signUp.email.EmailFragment"
+        android:label="fragment_email"
+        tools:layout="@layout/fragment_email">
+        <action
+            android:id="@+id/action_emailFragment_to_OTPFragment"
+            app:destination="@id/OTPFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/OTPFragment"
+        android:name="com.co.brasso.feature.auth.signUp.otp.OTPFragment"
+        android:label="OTPFragment">
+        <action
+            android:id="@+id/action_OTPFragment_to_passwordFragment"
+            app:destination="@id/passwordFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/passwordFragment"
+        android:name="com.co.brasso.feature.auth.signUp.password.PasswordFragment"
+        android:label="PasswordFragment">
+        <action
+            android:id="@+id/action_passwordFragment_to_profileFragment"
+            app:destination="@id/registrationFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="com.co.brasso.feature.auth.signUp.registration.RegistrationFragment"
+        android:label="RegistrationFragment" />
+
+</navigation>

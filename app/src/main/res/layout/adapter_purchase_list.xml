@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rllMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="15dp"
+    android:paddingTop="2dp"
+    android:paddingEnd="26dp"
+    android:paddingBottom="16dp">
+
+    <RelativeLayout
+        android:id="@+id/rltImage"
+        android:layout_width="138dp"
+        android:layout_height="85dp">
+
+        <ImageView
+            android:id="@+id/imvPurchaseList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_thumbnail"
+            android:contentDescription="@string/image_description"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/txvLength"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="7dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="7dp"
+            android:background="@drawable/black_bg"
+            android:includeFontPadding="false"
+            android:padding="3dp"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            tools:text="59:59" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/padding_10"
+        android:layout_toEndOf="@+id/rltImage"
+        android:fontFamily="@font/noto_sans_bold"
+        android:includeFontPadding="false"
+        android:text="@string/original_recording"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        tools:ignore="RelativeOverlap" />
+
+    <TextView
+        android:id="@+id/txvTitleDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txvTitle"
+        android:layout_marginStart="@dimen/padding_10"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="4dp"
+        android:layout_toEndOf="@+id/rltImage"
+        android:ellipsize="marquee"
+        android:fontFamily="@font/noto_sans_bold"
+        android:includeFontPadding="false"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        tools:text="ゲンバンヒョウキ" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/txvInstrument"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/txvTitle"-->
+<!--        android:layout_marginStart="@dimen/padding_10"-->
+<!--        android:layout_marginTop="4dp"-->
+<!--        android:layout_toEndOf="@+id/txvTitleDescription"-->
+<!--        android:ellipsize="marquee"-->
+<!--        android:fontFamily="@font/noto_sans_bold"-->
+<!--        android:includeFontPadding="false"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="9sp"-->
+<!--        tools:ignore="SmallSp"-->
+<!--        tools:text="ゲンバンヒョウキ" />-->
+
+    <TextView
+        android:id="@+id/txvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txvTitleDescription"
+        android:layout_marginStart="@dimen/padding_10"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/rltImage"
+        android:fontFamily="@font/noto_sans_regular"
+        android:includeFontPadding="false"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        tools:text="1:59:59" />
+
+    <TextView
+        android:id="@+id/txtDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txvTime"
+        android:layout_marginStart="@dimen/padding_10"
+        android:layout_marginTop="2dp"
+        android:layout_toEndOf="@+id/rltImage"
+        android:fontFamily="@font/noto_sans_regular"
+        android:includeFontPadding="false"
+        android:text="@string/date"
+        android:textColor="@color/black"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/txvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txvTime"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="2dp"
+        android:layout_toEndOf="@+id/txtDate"
+        android:fontFamily="@font/noto_sans_regular"
+        android:includeFontPadding="false"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        tools:text="2022/2/10" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="18dp"
+        android:contentDescription="@string/image_description"
+        android:src="@drawable/ic_operation"
+        android:visibility="gone" />
+
+</RelativeLayout>
